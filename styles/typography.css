@@ -1,0 +1,131 @@
+/* set TH 24 / 28 */
+* {
+	font-family: Talhertz;
+	font-size: 24px;
+	line-height: 1.45em;
+	-moz-line-height: 1.5em;
+	padding: 0;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased; /* for Webkit and Blink-based browsers (Chrome, Opera, Safari) */
+	-moz-osx-font-smoothing: grayscale; /* for Firefox browsers */
+}
+
+html { /* grey background */
+	background-color: #e0e0e0;
+}
+
+nav * { /* navigation is always Talhertz */
+	font-family: Talhertz;
+}
+
+/* white navigation */
+nav.white > .nav-left, nav.white > .nav-right > ul > li > a {
+	color: white;
+}
+
+/* dark navigation */
+nav.dark > .nav-left, nav.dark > .nav-right > ul > li > a {
+	color: black;
+}
+
+/* quickly apply a different typeface */
+.ymirsson { font-family: Ymirsson; font-weight: 600 }
+
+.runa { font-family: Runa; }
+
+.will { font-family: Willamette }
+
+.subj_sans { font-family: SubjectSans }
+
+/* apply small caps */
+.sc {
+	letter-spacing: calc(0.1em / 3);
+	-moz-font-feature-settings: 'smcp';
+    -webkit-font-feature-settings: 'smcp';
+    -ms-font-feature-settings: 'smcp';
+    font-feature-settings: 'smcp';
+}
+
+/* apply oldstyle figures */
+.osf {
+font-variant-numeric: oldstyle-nums;
+-moz-font-feature-settings: "onum";
+-webkit-font-feature-settings: "onum";
+font-feature-settings: "onum";
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal; }
+
+/* used for type specimens */
+h1 { text-align: center; }
+
+h2 { font-size: 30px; }
+
+/* used for main blog heading */
+h3 {
+	font-family: Talhertz;
+	text-align: left;
+	font-weight: bold;
+	font-size: 30px;
+	color: #4d4d4d;
+}
+
+.entry {padding-right: 15px;}
+
+.indent > .entry {
+	display: inline-block;
+	letter-spacing: calc(0.1em / 3);
+	-moz-font-feature-settings: 'smcp';
+    -webkit-font-feature-settings: 'smcp';
+    -ms-font-feature-settings: 'smcp';
+    font-feature-settings: 'smcp';
+}
+
+.indent { 
+	padding-left: 42px;
+	text-indent: -21px;
+}
+
+.indent-2 { padding-left: 42px}
+
+.indent-3 { padding-left: 84px}
+
+.indent-2 > .entry, .indent-3 > .entry {
+	font-style: italic;
+}
+
+.indent-2 > .entry:after, .indent-3 > .entry:after {
+	content: "\2022";
+	padding-left: 15px
+}
+
+footer > p { 
+	font-size: 17.5px; 
+	text-align: center;
+	color: #999;
+}
+
+.page > h3 { 
+	margin-top: 14px;
+}
+
+.container > p > * {
+	margin-top: 28px;
+	font-size: 21px;
+}
+
+.page > p {
+	color: #4d4d4d;
+	margin-top: 32px;
+}
+
+.rule {
+	height: 3px;
+	width: 60px;
+	background: #a0a0a0;
+	position: relative;
+	margin: 42px auto;
+}
+
+.page > .rule { position: relative }
