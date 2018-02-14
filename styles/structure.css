@@ -46,10 +46,13 @@ nav {
 }
 
 /* hide left nav */
-@media (max-width: 768px) and (orientation:portrait) {
+@media (orientation:portrait) {
     .nav-left {display:none;}
-    .nav-right {width:290px; padding-left: 24px;
-;}
+    .nav-right {
+        width:290px; 
+        padding-left: 24px;
+        
+    }
     .logo {margin-left: calc(50% - 176px)}
 }
 
@@ -90,6 +93,7 @@ nav {
 /* me */
 .mewrap {
 	width: 700px;
+    max-width: calc(100% - 20px);
 	position: relative;
 	background: #d0d0d0;
 	height: 144px;
@@ -100,9 +104,8 @@ nav {
 
 .mewrap p {
 	font-family: Ymirsson;
-    max-width: calc(100% - 20px);
     color: #a0a0a0;
-	font-size: 72px;
+	font-size: 2em;
 	line-height: 152px;
 	text-align: center
 }
