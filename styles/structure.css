@@ -55,6 +55,10 @@ nav {
     .logo {margin-left: calc(50% - 176px)}
 }
 
+@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
+	body {
+		
+	}
 
 /* link wrapper for logo images */
 .logo { 
