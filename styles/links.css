@@ -1,10 +1,11 @@
 /* brick structure */
 .brick {
+    flex: 0 1 auto;
 	float: left;
 	width: calc(100% / 3);
 	position: relative;
     background-color: #b8b8b8;
-	color: white;
+	color: white; */
 }
 
 /* block structure */
@@ -15,14 +16,17 @@
     background-color: #b8b8b8;
 	color: white;
 	margin-bottom: 20px;
-
 }
+
+.block > img {width: 100%}
+.block > p {padding: 15px 30px 0px 30px}
+.block > h3 {padding: 0px 30px 15px 30px}
 
 /* grey glyph */
 .thumb-1 {
 	display: block;
 	opacity: 1;
-	-webkit-transition-property: visibility;
+	/*-webkit-transition-property: visibility;*/
 	transition-property: opacity;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
@@ -139,7 +143,7 @@ a:hover:before, a:focus:before, a:active:before {
 .grey:hover > .rule, .grey:focus > .rule {
 	background: #4d4d4d;
 }
-.grey:before { background: #515352 }
+.grey:before { background: #4d4d4d }
 .grey:after { content: ""}
 
 .teal { background: #9a9a9a; }

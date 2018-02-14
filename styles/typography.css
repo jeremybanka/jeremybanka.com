@@ -1,14 +1,12 @@
 /* set TH 24 / 28 */
 * {
 	font-family: Talhertz;
-	font-size: 24px;
-	line-height: 1.45em;
+	font-size: 21px;
+	line-height: 1.5em;
 	-moz-line-height: 1.5em;
 	padding: 0;
 	margin: 0;
-	text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased; /* for Webkit and Blink-based browsers (Chrome, Opera, Safari) */
-	-moz-osx-font-smoothing: grayscale; /* for Firefox browsers */
+	
 }
 
 html { /* grey background */
@@ -84,7 +82,6 @@ h3 {
 
 .indent { 
 	padding-left: 42px;
-	text-indent: -21px;
 }
 
 .indent-2 { padding-left: 42px}
@@ -106,18 +103,21 @@ footer > p {
 	color: #999;
 }
 
-.page > h3 { 
+.container > h3 { 
 	margin-top: 14px;
 }
 
-.container > p > * {
-	margin-top: 28px;
+.container > p {
+	margin-top: 30px;
 	font-size: 21px;
 }
 
-.page > p {
+.container > p, .container > ol, .container > ul {
 	color: #4d4d4d;
-	margin-top: 32px;
+}
+
+.container > ol > li, .container > ul > li {
+	margin-top: 30px;
 }
 
 .rule {
@@ -128,4 +128,4 @@ footer > p {
 	margin: 42px auto;
 }
 
-.page > .rule { position: relative }
+.container > .rule { position: relative }
