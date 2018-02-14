@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Blog</title>
-		<meta name="viewport" content="width=420">
-		<link rel="stylesheet" href="styles/webfonts.css" type="text/css" media="all">
-		<link rel="stylesheet" href="styles/links.css" type="text/css" media="all">
-		<link rel="stylesheet" href="styles/typography.css" type="text/css" media="all">
-		<link rel="stylesheet" href="styles/structure.css" type="text/css" media="all">
-		<link rel="icon" href="images/jem_favicon.png">
-		<link rel="apple-touch-icon" href="images/jem_touch-icon.png">
-	</head>
-	<body>
-		<nav>
-			<div class="nav-left">
-				<div class="sc">JEREMY BANKA DESIGN</div>
-			</div>
-			<a href="index.html" class="logo">
-				<img class="logo-1" src="images/jem_4d.svg">
-				<img class="logo-2" src="images/jem_e5.svg">
-			</a>
-			<div class="nav-right">
-				<ul>
-					<li><a href="index.html">WORK</a></li>
-					<li><a href="blog.html" class="current">BLOG</a></li>
-					<li><a href="about.html">ABOUT</a></li>
-				</ul>
-			</div>
-		</nav>
+---
+layout: default
+title: Blog
+---
 		<div class="wrap">
 			<div class="container">
-				<a href="capitals.html" class="block grey ">
-					<p>24 April, 2017</p>
-					<h3>Capitals</h3>
+			{% for post in site.posts %}
+				<a href="{{ post.url }}" class="block grey ">
+					<p>{{ post.date | date: '%B %d, %Y' }}</p>
+					<h3>{{ post.title }}</h3>
 				</a>
-				<a href="typolinguistics.html" class="block grey">
-					<p>14 March, 2016</p>
-					<h3>Typolinguistics</h3>
-				</a>
+            {% endfor %}
 			</div>
         <br style="clear:both;">
-		<footer>
-			<p>&copy; 2018 Jeremy Banka. All rights reserved.</p>
-		</footer>
-		</div>
-	</body>
-</html>

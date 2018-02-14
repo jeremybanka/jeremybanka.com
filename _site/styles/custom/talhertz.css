@@ -1,0 +1,87 @@
+* { font-family: Talhertz; }
+
+html {
+	background-color: #e0e0e0;
+}
+
+.container > p {
+	font-size: 21px;
+	color: #4d4d4d;
+	line-height: calc(3em / 2);
+	margin-bottom: 35px;
+}
+
+h1 {
+	color: #0033ff;
+	margin: 144px auto 180px;
+	font-size: 72px;
+	letter-spacing: calc(0.1em);
+}
+
+h2 {
+	text-align: center;
+	color: #4d4d4d;
+	font-weight: 500
+}
+
+p.ymirsson-display-1 {
+	text-align-last: justify;
+	color: #ff5a27;
+	font-size: 4.5vw;
+	letter-spacing: 0;
+	line-height: calc(4em / 3);
+	padding: 12px 0;
+	overflow: hidden;
+}
+
+p.demo, p.demo > * {
+	font-size: 30px;
+}
+
+.slant {
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
+}
+
+.wrap > img { 
+	margin-top: 21px;
+	width: 100%;
+	height: auto;
+}
+
+.img-wrap {
+	width: 720px;
+	position: relative;
+	margin: 28px auto 0;
+	overflow: hidden
+}
+
+.img-wrap > img {
+	width: 100%;
+	height: auto;
+}
+
+p.ymirsson-display-2, p.ymirsson-display-2 > * {
+	color: #ff5a27; 
+	font-size: 126px;
+	line-height: 140px;
+	height: 150px;
+}
+
+p.ymirsson-display-3 {
+	color: #ff5a27;
+	font-size: 36px;
+	line-height: 72px;
+	height: 54px;
+}
+
+p.ymirsson-display-4 {
+	color: #088aa1;
+	font-style: italic;
+	font-size: 36px;
+	line-height: 72px;
+	height: 54px;
+}
