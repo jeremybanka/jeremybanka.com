@@ -4,7 +4,6 @@
 	float: left;
 	width: calc(100% / 3);
 	position: relative;
-    background-color: #b8b8b8;
 	color: white; */
 }
 
@@ -125,13 +124,9 @@ a:hover:before, a:focus:before, a:active:before {
   transform: scaleX(1);
 }
 
-.current {
-	color: #e0e0e0;
-	background-color: #4d4d4d;
-}
-
 .grey { 
 	color: #4d4d4d;
+    background:white; 
 	border: 0px solid black;
 }
 .grey:hover, .grey:focus {

@@ -2,13 +2,14 @@
 layout: default
 title: Blog
 ---
-		<div class="wrap">
-			<div class="container">
-			{% for post in site.posts %}
-				<a href="{{ post.url }}" class="block grey ">
-					<p>{{ post.date | date: '%B %d, %Y' }}</p>
-					<h3>{{ post.title }}</h3>
-				</a>
-            {% endfor %}
-			</div>
-        <br style="clear:both;">
+<head>
+	<link rel="stylesheet" href="styles/nav/blog.css" type="text/css" media="all">
+</head>
+<div class="wrap" style="max-width:720px;">
+    {% for post in site.posts %}
+        <a href="{{ post.url }}" class="block grey ">
+            <p>{{ post.date | date: '%B %d, %Y' }}</p>
+            <h3>{{ post.title }}</h3>
+        </a>
+    {% endfor %}
+</div>
