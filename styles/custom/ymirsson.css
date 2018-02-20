@@ -42,31 +42,7 @@ p.demo, p.demo > * {
 	font-size: 30px;
 }
 
-.slant {
-    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
-    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
-    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
-    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
-    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-10deg, 0deg);
-}
 
-.wrap > img { 
-	margin-top: 21px;
-	width: 100%;
-	height: auto;
-}
-
-.img-wrap {
-	width: 720px;
-	position: relative;
-	margin: 28px auto 0;
-	overflow: hidden
-}
-
-.img-wrap > img {
-	width: 100%;
-	height: auto;
-}
 
 p.ymirsson-display-2, p.ymirsson-display-2 > * {
 	color: #ff5a27; 

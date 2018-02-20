@@ -121,6 +121,12 @@ nav {
 	margin: auto;
 }
 
+.wrap > img { 
+	margin-top: 21px;
+	width: 100%;
+	height: auto;
+}
+
 .img-wrap {
 	width: 720px;
     max-width: calc(100% - 20px);

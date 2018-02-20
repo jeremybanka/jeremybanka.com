@@ -2,12 +2,18 @@
 layout: default
 ---
 <head>
+	<meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:image" content="{{ post.thumbnail }}" />
+    <meta property="og:description" 
+  content="{{ post.excerpt }}" />
 	<link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
 </head>
 <div class="wrap">
     <div class="container">
         <p>{{ page.date | date: '%B %d, %Y' }}</p>
-        <h3>{{ page.title }}</h3>
+        <h2>{{ page.title }}</h2>
         <p class="rule">
           {{ content }}
     </div>

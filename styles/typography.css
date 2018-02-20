@@ -27,45 +27,25 @@ nav.dark > .nav-left, nav.dark > .nav-right > ul > li > a {
 	color: #4d4d4d;
 }
 
-/* quickly apply a different typeface */
-.ymirsson { font-family: Ymirsson; font-weight: 600 }
 
-.runa { font-family: Runa; }
-
-.will { font-family: Willamette }
-
-.subj_sans { font-family: SubjectSans }
-
-/* apply small caps */
-.sc {
-	letter-spacing: calc(0.1em / 3);
-	-moz-font-feature-settings: 'smcp';
-    -webkit-font-feature-settings: 'smcp';
-    -ms-font-feature-settings: 'smcp';
-    font-feature-settings: 'smcp';
-}
-
-/* apply oldstyle figures */
-.osf {
-font-variant-numeric: oldstyle-nums;
--moz-font-feature-settings: "onum";
--webkit-font-feature-settings: "onum";
-font-feature-settings: "onum";
-}
 
 h1, h2, h3, h4, h5, h6 {font-weight: normal; }
 
 /* used for type specimens */
-h1 { text-align: center; }
+h1 { 
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+}
 
-h2 { font-size: 30px; }
+h2 { font-size: 30px;
+}
 
 /* used for main blog heading */
-h3 {
+h2, h3 {
 	font-family: Talhertz;
 	text-align: left;
 	font-weight: bold;
-	font-size: 30px;
 	color: #4d4d4d;
 }
 
@@ -97,23 +77,23 @@ h3 {
 	padding-left: 15px
 }
 
-footer > p { 
-	font-size: 17.5px; 
-	text-align: center;
-	color: #999;
-}
-
 .container > h3 { 
 	margin-top: 14px;
 }
 
 .container > p {
 	margin-top: 30px;
-	font-size: 21px;
+	font-size: ;
 }
 
 .container > p, .container > ol, .container > ul {
-	color: #4d4d4d;
+	color:;
+}
+
+footer > p, .caption { 
+	font-size: 17.5px; 
+	text-align: center;
+	color: #999;
 }
 
 .container > ol > li, .container > ul > li {
@@ -130,3 +110,12 @@ footer > p {
 }
 
 .container > .rule { position: relative }
+
+/* quickly apply a different typeface */
+.ymirsson { font-family: Ymirsson; font-weight: 600 }
+
+.runa { font-family: Runa; }
+
+.will { font-family: Willamette }
+
+.subj_sans { font-family: SubjectSans }
