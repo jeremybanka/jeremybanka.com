@@ -1,0 +1,7 @@
+author: Jeremy Banka
+twitter:
+    username: jeremybanka
+image: /images/jem_touch-icon.png
+
+plugins:
+    - jekyll-seo-tag
