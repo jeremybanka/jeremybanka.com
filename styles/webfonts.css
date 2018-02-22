@@ -114,6 +114,30 @@
 /* Talhertz */
 @font-face {
     font-family: Talhertz;
+    src: url('/type/Ergata-Talhertz1.woff') format("woff");
+    font-weight:thin;
+	font-style:normal;
+} /* regular */
+@font-face {
+    font-family: Talhertz;
+    src: url('/type/Ergata-Talhertz1.woff') format("woff");
+    font-weight:100;
+	font-style:normal;
+} /* regular */
+@font-face {
+    font-family: Talhertz;
+    src: url('/type/Ergata-Talhertz2.woff') format("woff");
+    font-weight:200;
+	font-style:normal;
+} /* regular */
+@font-face {
+    font-family: Talhertz;
+    src: url('/type/Ergata-Talhertz3.woff') format("woff");
+    font-weight:300;
+	font-style:normal;
+} /* regular */
+@font-face {
+    font-family: Talhertz;
     src: url('/type/Ergata-Talhertz4.woff') format("woff");
     font-weight:medium;
 	font-style:normal;
