@@ -7,8 +7,8 @@
     width: auto;
     height: auto;
     max-height: 80%;
-    overflow: scroll;
-    margin: 0px calc(50%-126px) 0px calc(50%-126px);
+    overflow-y: scroll;
+    margin: margin: 0px calc(50%-126px) 0px calc(50%-126px);
     z-index: 1;
 }
 
@@ -125,4 +125,5 @@
 
 @media screen and (min-width: 920px) { 
     .tocbar {bottom: 33%;}
+/*    .wrap {margin-left: 72px}*/
 }
