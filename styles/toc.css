@@ -96,6 +96,7 @@
   .tocbar a.icon {
     display: block;
     width: auto;
+    background-color: #ddd;
   }
 }
 
