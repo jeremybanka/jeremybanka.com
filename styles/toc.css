@@ -4,7 +4,7 @@
     color: #4d4d4d;
     position: fixed;
     bottom: 0;
-    width: 144px;
+    width: auto;
     height: auto;
     max-height: 80%;
     overflow: scroll;
@@ -112,6 +112,7 @@
     display: block;
     text-align: center;
     }
+    .tocbar {width: 100%;}
     .tocbar.responsive .dropdown {float: none;}
     .tocbar.responsive .dropdown-content {position: relative;}
     .tocbar.responsive .dropdown .dropbtn {
@@ -122,3 +123,6 @@
     .dropdown-content {bottom: -5px;}
 }
 
+@media screen and (min-width: 920px) { 
+    .tocbar {bottom: 33%;}
+}
