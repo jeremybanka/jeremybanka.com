@@ -2,6 +2,7 @@ author: Jeremy Banka
 twitter:
     username: jeremybanka
 image: /images/jem_touch-icon.png
+description: Type, graphics, and the Wayfarer Card Game.
 
 plugins:
     - jekyll-seo-tag

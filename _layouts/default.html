@@ -2,13 +2,8 @@
 <html>
 	<head>
 	    {% seo %}
+	    {% include head.html %}
 		<title>{{ page.title }}</title>
-		<meta property="og:title" content="{{ page.title }}" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="{{ page.url }}" />
-        <meta property="og:image" content="{{ page.thumbnail }}" />
-        <meta property="og:description" 
-      content="{{ post.excerpt }}">
 		<meta name="viewport" content="width=420">
 		<link rel="stylesheet" href="/styles/webfonts.css" type="text/css" media="all">
 		<link rel="stylesheet" href="/styles/links.css" type="text/css" media="all">
