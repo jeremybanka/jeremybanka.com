@@ -22,6 +22,7 @@
     text-decoration: none;
     font-size: 17px;
 }
+.tocbar a:before { background: #4d4d4d }
 
 /* Change the color of links on hover */
 .tocbar:hover {
