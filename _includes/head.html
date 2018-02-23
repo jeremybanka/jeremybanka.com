@@ -10,10 +10,19 @@
 <link rel="stylesheet" href="/styles/typography.css" type="text/css" media="all">
 <link rel="stylesheet" href="/styles/structure.css" type="text/css" media="all">
 
-<!-- Phone Compatible -->
-<!--<meta name="viewport" content="width=420">-->
+<!-- Phone Compatible 
+<meta name="viewport" content="width=420">-->
 <meta name="viewport" content="width=device-width, initial-scale=.75">
 
+<script>
+<script>
+window.onload = function() {
+    if (screen.width < 420) {
+        var mvp = document.getElementById('vp');
+        mvp.setAttribute('content','user-scalable=no,width=420');
+    }
+}
+</script>
 <!-- Tablet Compatible 
 <script type="text/javascript">
     var vpw = (screen.width>=768)?'980':'device-width';
