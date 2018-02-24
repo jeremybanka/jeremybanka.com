@@ -33,8 +33,8 @@ nav {
 	margin-right: 10px;
 	list-style-type: none;
 	color: #4d4d4d;
-	letter-spacing: calc(0.1em / 3);
-	/* -moz-font-feature-settings: 'smcp';
+	/*letter-spacing: calc(0.1em / 3);
+	-moz-font-feature-settings: 'smcp';
     -webkit-font-feature-settings: 'smcp';
     -ms-font-feature-settings: 'smcp';
     font-feature-settings: 'smcp'; */
