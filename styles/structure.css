@@ -140,6 +140,18 @@ nav {
 	width: 100%;
 }
 
+.img-strip {
+    max-width: 600px;
+	overflow-x: scroll;
+    overflow-y: hidden;
+	margin: 30px auto 0;
+    height: 300px;
+}
+
+.img-strip > img {
+	height: 100%;
+}
+
 .break {
 	position: relative;
 	padding-bottom: 27px;
