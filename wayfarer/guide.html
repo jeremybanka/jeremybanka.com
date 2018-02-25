@@ -23,6 +23,7 @@ light-color: #DAD5AF
         <a href="#cards-1">Unit Cards</a>
         <a href="#cards-2">Item Cards</a>
         <a href="#cards-1">Condition Cards</a>
+        <div class="close">&times;</div>
     </div>
     <a href="#trials" class="accordion">Trials</a>
     <div class="panel">
@@ -84,6 +85,7 @@ The adoption of this system has led to vast improvement in the aesthetics and fu
 
 <script>
     var acc = document.getElementsByClassName("accordion");
+    var close = document.getElementsByClassName("close");
     var i;
 
     for (i = 0; i < acc.length; i++) {
@@ -94,6 +96,17 @@ The adoption of this system has led to vast improvement in the aesthetics and fu
           panel.style.maxHeight = null;
         } else {
           panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    } 
+    for (i = 0; i < close.length; i++) {
+      close[i].addEventListener("click", function() {
+        var sect = this.parentElement;
+        sect.previousElementSibling.classList.toggle("active");
+        if (sect.style.maxHeight){
+          sect.style.maxHeight = null;
+        } else {
+          sect.style.maxHeight = auto;
         }
       });
     } 
