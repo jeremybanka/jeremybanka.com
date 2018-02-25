@@ -1,5 +1,8 @@
 .toc-wrap {
     /*background-color: white;*/
+    display:block;
+    width: auto;
+    height: auto;
     position: fixed;
     top: 0;
     height: 100%;
@@ -29,7 +32,6 @@
     width: auto;
     height: auto;
     z-index: 1;
-    overflow-x: visible;
     /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2); */
 }
 
