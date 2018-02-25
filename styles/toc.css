@@ -1,6 +1,18 @@
-/* Place the navbar at the bottom of the page, and make it stick */
+.toc-wrap {
+    /*background-color: white;*/
+    position: fixed;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick 
 .tocbar {
-    background-color: white;
     color: #4d4d4d;
     position: fixed;
     bottom: 0;
@@ -10,6 +22,15 @@
     overflow-y: scroll;
     margin: margin: 0px calc(50%-126px) 0px calc(50%-126px);
     z-index: 1;
+    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2); */
+}*/
+.tocbar {
+    color: #4d4d4d;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    overflow-x: visible;
+    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2); */
 }
 
 /* Style the links inside the navigation bar */
@@ -21,8 +42,9 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    overflow: visible;
 }
-.tocbar a:before { background: #4d4d4d }
+.tocbar a:before { background: #4d4d4d; }
 
 /* Change the color of links on hover */
 .tocbar:hover {
@@ -41,6 +63,7 @@
 .tocbar .icon {
     display: none;
 }
+.tocbar .icon:before { background: none; }
 
 /* Dropdown container - needed to position the dropdown content */
 .dropdown {
@@ -93,12 +116,13 @@
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 920px) {
-  .tocbar a {display: none;}
-  .tocbar a.icon {
-    display: block;
-    width: auto;
-    background-color: #ddd;
-  }
+    .tocbar {position: fixed; bottom: 0;}
+    .tocbar a {display: none;}
+    .tocbar a.icon {
+        display: block;
+        width: auto;
+        background-color: #ddd;
+}
 }
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
@@ -112,7 +136,7 @@
     display: block;
     text-align: center;
     }
-    .tocbar {width: 100%;}
+    .tocbar {width: 100%; background-color: #ddd;}
     .tocbar.responsive .dropdown {float: none;}
     .tocbar.responsive .dropdown-content {position: relative;}
     .tocbar.responsive .dropdown .dropbtn {
@@ -122,8 +146,15 @@
     }
     .dropdown-content {bottom: -5px;}
 }
-
+/*
 @media screen and (min-width: 920px) { 
-    .tocbar {bottom: 33%;}
+    .tocbar {
+        bottom: 33%;  
+    }*/
 /*    .wrap {margin-left: 72px}*/
+}
+
+/* Save the footer */
+footer { 
+	height: 180px;
 }

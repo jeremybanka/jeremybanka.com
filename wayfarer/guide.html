@@ -1,0 +1,100 @@
+---
+layout: manual
+title: Wayfarer Battle Guide
+image: /images/wayfarer/ ... FIND IMAGE
+description: Learn the battle system used in Wayfarer.
+light-color: #DAD5AF
+---
+<link rel="stylesheet" href="/styles/toc.css">
+<link rel="stylesheet" href="/styles/custom/wayfarer.css">
+<script src="/scripts/table-of-contents.js"></script>
+
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div class="toc-wrap">
+<div class="tocbar" id="contents">
+    <a href="#nav" style="font-size: 21px">&uarr;</a>
+    <a href="#cards" class="accordion">Card Types</a>
+    <div class="panel">
+        <a href="#cards-1">Action Cards</a>
+        <a href="#cards-1">Unit Cards</a>
+        <a href="#cards-2">Item Cards</a>
+        <a href="#cards-1">Condition Cards</a>
+    </div>
+    <a href="#trials" class="accordion">Trials</a>
+    <div class="panel">
+        <a href="#cards-1">Action Cards</a>
+        <a href="#cards-2">Item Cards</a>
+    </div>
+    <a href="#icons" class="accordion">Icon Glossary</a>
+    <div class="panel">
+        <a href="#cards-1">Action Cards</a>
+        <a href="#cards-2">Item Cards</a>
+    </div>
+    <a href="#arena" class="accordion">Arena Games</a>
+    <div class="panel">
+        <a href="#cards-1">King of The Ring</a>
+        <a href="#cards-2">Three-for-All</a>
+        <a href="#cards-2">Doubles Royale</a>
+        <a href="#cards-2">Triples Royale</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>    
+</div>
+</div>
+        
+	<h1>Sound &amp; Vision</h1>
+    <div class="img-wrap">
+        <img src="/images/sound-vision/cover.png"></div>
+    <div id="abstract" class="container">
+        
+        <p class="rule">
+        		
+<div class="wrap">
+        <p>
+AS GRAPHIC DESIGNERS, we should strive to make to world around us a better place for people through convenience and aesthetics. Color is a powerful conduit for aesthetic joy, so we should strive to be as sophisticated in our use of color as possible. For people with good aesthetic sense (which most all designers are) choosing color intuitively yields good results&#x2014;it&#x2019;s easy enough to play with the color mixing UI until a pleasant combination reveals itself. However, as the complexity of a job increases, a purely intuitive approach will prove more tedious and frustrating. In the case of a deep brand system with a modular color set used in multiple subordinate combinations, an algorithm to help designers safeguard against unaesthetic, system-breaking coincidences is extremely helpful.</p>        
+        <p>
+The project that inspired my in-depth research into color was Delve, a card game with a very complicated color system. I realized that the cards I had designed were beautiful in an isolated context, but could produce ugly combinations with one another.  I decided to return to the drawing board an invent a system that would use aesthetic combinations of color as its foundation, and would control as much as possible against disharmonious coincidence.</p>
+<div id="cards" class="container"><br><br>
+        <h2>Cards</h2>
+        
+        <p>
+To design such a system, I started with the basics. I was working in print, so I experimented by mixing colors with different combinations of process hues and catalogued the results. I learned that a full measure of only one process hue yields a primary color. I learned that a full measure of two process hues yields a secondary color, and I learned that a full measure of one process hue and a half measure of another yields a tertiary color that falls exactly between an adjacent primary and secondary in hue. I also discovered that colors created through this method were maximally saturated, and that colors were less saturated when they (1) did not have 100% in a process hue, (2) had more than 0K, or (3) had some of all three process hues. I devised a simple mathematical algorithm to design a color of a hue at a specific darkness value through proportional reduction of its constituents or the addition of K, then devised a regular nomenclature for colors generated through this process.</p>
+        <p>
+I then realized that the extraction of twelve regularly spaced intervals from a spectrum and a theory of their interaction was not new: this is what music theory is. I imagined that my twelve colors were notes, and then began to play chords. </p>
+</div>
+<div id="trials" class="container"><br><br>
+<h2>Trials</h2>
+        
+        <p>
+A tritone is equivalent to a direct complement. Fourth and fifth intervals are akin to indirect complements, and also have pronounced aethetic resonance in the visual medium. An augmented chord is analogous to a perfect trine, while a diminished chord is analogous to a half-square. Diatonic scales function wonderfully as the kind of rationally-constructed but deeply complex palette system architecture I had originally envisioned.</p>
+        <p>
+While this system helped me create excellent hue architectures, some combinations of colors whose hues were diatonically related still looked awful together. The principles of disharmony are quite different between sound and vision: sounds close in tone or with certain tone relationships are ugly, while colors close in darkness are ugly.
+</div>
+<div id="icons" class="container"><br><br>
+<h2>Icon Glossary</h2>
+        <p>
+Finally, I designed a series of &#x201C;palette modes&#x201D; to which any hue structure could be applied, each specifically devised to control against any instances of colors of the same darkness competing. Gay palettes use loud colors and a dynamic darkness range. Dour palettes use quiet colors clustered around medium darkness. Soft palettes are light and unobtrusive, favoring pale colors and making its darkest colors relative to the background the most desaturated. Bold and Accent palettes cluster most of their colors at the extremes of the darkness scale, clearing the floor to one maximally saturated color somewhere in the middle. Bold palettes are dark-dominant, while Accent palettes are light-dominant.
+        <p>
+The adoption of this system has led to vast improvement in the aesthetics and functional coherence of the Delve system. The Chromata Colortuner system is a powerful piece of visual design technology.</p>
+</div>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    } 
+</script>
