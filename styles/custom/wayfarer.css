@@ -27,7 +27,7 @@ a:hover {color: #EFE9BE;}
     .tocbar a:before {background-color: #34454E;}
 
     .tocbar a.icon {
-        background-color: #34454E;
+        background-color: #000;
         color: #EFE9BE;
     }
 
@@ -50,6 +50,11 @@ a:hover {color: #EFE9BE;}
 		}
 		#top { top: 0; }
 		#bottom { bottom: 0; }
+@media screen and (max-width: 920px) {
+    #top, #bottom, #left, #right {
+        background: #000;
+    }
+}
 
 /* STRUCTURE */
 .wrap {
