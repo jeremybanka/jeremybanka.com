@@ -10,9 +10,9 @@
     justify-content: center;
     z-index: 1;
     overflow: hidden;
-    width: 162px;
+    width: 180px;
 }
-.tocbar {overflow-y: scroll; width: 180px;}
+.tocbar {overflow-y: hidden; width: 210px;}
 /* OLD FORMULA 
 .tocbar {
     color: #4d4d4d;
@@ -61,7 +61,7 @@
 
 /* When the screen is less than 920 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 920px) {
-    .toc-wrap { bottom: 0; width: 100%; height: auto;}
+    .toc-wrap { bottom: 0; width: calc(100% + 18px); height: auto;}
     .tocbar { background-color: #ddd; width: 100%;}
     .tocbar a {display: none;}
     .tocbar a.icon {

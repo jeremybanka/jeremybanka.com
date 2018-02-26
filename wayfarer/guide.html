@@ -8,6 +8,7 @@ light-color: #DAD5AF
 <link rel="stylesheet" href="/styles/toc.css">
 <link rel="stylesheet" href="/styles/custom/wayfarer.css">
 <script src="/scripts/table-of-contents.js"></script>
+<script src="/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <div id="left"></div>
 <div id="right"></div>
@@ -15,7 +16,7 @@ light-color: #DAD5AF
 <div id="bottom"></div>
 
 <div class="toc-wrap">
-<div class="tocbar" id="contents">
+<div class="tocbar" data-mcs-theme="dark" id="contents">
     <a href="#nav" style="font-size: 21px">&uarr;</a>
     <a href="#getting-started" class="accordion">Getting Started</a>
     <div class="panel">
@@ -144,4 +145,11 @@ But I must explain to you how all this mistaken idea of denouncing of a pleasure
         }
       });
     } 
+</script>
+<script>
+    (function($){
+        $(window).on("load",function(){
+            $(".tocbar").mCustomScrollbar({alwaysShowScrollbar: 2});
+        });
+    })(jQuery);
 </script>

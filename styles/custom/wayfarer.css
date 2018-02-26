@@ -65,23 +65,24 @@ a:hover {color: #EFE9BE;}
         padding-left: 36px;
         overflow: hidden;
         position: relative;
-    } .strip {
-        display: inline;
-        overflow-x: scroll;
-        width: 100%;
-        height: 67px;
-        
+    } nav .stripbox { 
+        float: left;
+max-width: calc(100% - 49px); overflow-x: scroll;}
+    .strip {
+        width: 500px;
+        height: 67px; 
     }
     nav .item { 
         font-weight: 500;
-        margin-left: 15px;
-        display: inline;
-        padding: 3px 3px;
+        margin-left: 18px;
+        margin-top: 18px;
+        padding: 0px 5px;
     }
     @media screen and (min-width: 840px) { 
         .wrap {padding-left: }
     }
     .W {
+        float: left;
         height: 49px;
         width: 49px;
         background: #DAD5AF;
@@ -141,3 +142,12 @@ a:hover {color: #EFE9BE;}
         color: #EFE9BE;
         transition: 0.4s;
     }
+
+/* SCROLLBAR TEST 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 18px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #34454E;
+}*/
