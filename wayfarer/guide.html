@@ -16,33 +16,41 @@ light-color: #DAD5AF
 
 <div class="toc-wrap">
 <div class="tocbar" id="contents">
-    <a href="#cover" style="font-size: 21px">&uarr;</a>
+    <a href="#nav" style="font-size: 21px">&uarr;</a>
+    <a href="#getting-started" class="accordion">Getting Started</a>
+    <div class="panel">
+        <a href="#winning">Winning a Battle</a>
+        <a href="#building">Building a Character</a>
+        <a href="#turn">Taking Your Turn</a>
+        <div class="close">&times;</div>
+    </div>
+    <a href="#general" class="accordion">General Concepts</a>
+    <div class="panel">
+        <a href="#stamina">Stamina</a>
+        <a href="#reach">Reach</a>
+        <a href="#trials">Trials</a>
+        <div class="close">&times;</div>
+    </div>
     <a href="#cards" class="accordion">Card Types</a>
     <div class="panel">
-        <a href="#cards-1">Action Cards</a>
-        <a href="#cards-1">Unit Cards</a>
-        <a href="#cards-2">Item Cards</a>
-        <a href="#cards-1">Condition Cards</a>
+        <a href="#action-cards">Action Cards</a>
+        <a href="#unit-cards">Unit Cards</a>
+        <a href="#item-cards">Item Cards</a>
+        <a href="#condition-cards">Condition Cards</a>
         <div class="close">&times;</div>
     </div>
-    <a href="#trials" class="accordion">Trials</a>
+    <a href="#co-op" class="accordion">Cooperative Games</a>
     <div class="panel">
-        <a href="#cards-1">Action Cards</a>
-        <a href="#cards-2">Item Cards</a>
-        <div class="close">&times;</div>
-    </div>
-    <a href="#icons" class="accordion">Icon Glossary</a>
-    <div class="panel">
-        <a href="#cards-1">Action Cards</a>
-        <a href="#cards-2">Item Cards</a>
+        <a href="#delve">Delve</a>
+        <a href="#quest">Quest</a>
         <div class="close">&times;</div>
     </div>
     <a href="#arena" class="accordion">Arena Games</a>
     <div class="panel">
-        <a href="#cards-1">King of The Ring</a>
-        <a href="#cards-2">Three-for-All</a>
-        <a href="#cards-2">Doubles Royale</a>
-        <a href="#cards-2">Triples Royale</a>
+        <a href="#kotr">King of the Ring</a>
+        <a href="#3fa">Three-for-All</a>
+        <a href="#2x-royale">Doubles Royale</a>
+        <a href="#3x-royale">Triples Royale</a>
         <div class="close">&times;</div>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>    
@@ -56,39 +64,56 @@ light-color: #DAD5AF
 </div></div>
         		
 <div class="wrap">
-  <div id="abstract" class="container">
-    
+<div id="overview" class="container"><br><br>
+        <h2>Overview</h2>    
         <p>
-AS GRAPHIC DESIGNERS, we should strive to make to world around us a better place for people through convenience and aesthetics. Color is a powerful conduit for aesthetic joy, so we should strive to be as sophisticated in our use of color as possible. For people with good aesthetic sense (which most all designers are) choosing color intuitively yields good results&#x2014;it&#x2019;s easy enough to play with the color mixing UI until a pleasant combination reveals itself. However, as the complexity of a job increases, a purely intuitive approach will prove more tedious and frustrating. In the case of a deep brand system with a modular color set used in multiple subordinate combinations, an algorithm to help designers safeguard against unaesthetic, system-breaking coincidences is extremely helpful.</p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
     </div>
     <div class="img-strip">
         <img src="/images/wayfarer/strip-test.png">
     </div>
     <div class="container">
         <p>
-The project that inspired my in-depth research into color was Delve, a card game with a very complicated color system. I realized that the cards I had designed were beautiful in an isolated context, but could produce ugly combinations with one another.  I decided to return to the drawing board an invent a system that would use aesthetic combinations of color as its foundation, and would control as much as possible against disharmonious coincidence.</p>
-<div id="cards" class="container"><br><br>
-        <h2>Cards</h2>
-        
-        <p>
-To design such a system, I started with the basics. I was working in print, so I experimented by mixing colors with different combinations of process hues and catalogued the results. I learned that a full measure of only one process hue yields a primary color. I learned that a full measure of two process hues yields a secondary color, and I learned that a full measure of one process hue and a half measure of another yields a tertiary color that falls exactly between an adjacent primary and secondary in hue. I also discovered that colors created through this method were maximally saturated, and that colors were less saturated when they (1) did not have 100% in a process hue, (2) had more than 0K, or (3) had some of all three process hues. I devised a simple mathematical algorithm to design a color of a hue at a specific darkness value through proportional reduction of its constituents or the addition of K, then devised a regular nomenclature for colors generated through this process.</p>
-        <p>
-I then realized that the extraction of twelve regularly spaced intervals from a spectrum and a theory of their interaction was not new: this is what music theory is. I imagined that my twelve colors were notes, and then began to play chords. </p>
-</div>
-<div id="trials" class="container"><br><br>
-<h2>Trials</h2>
-        
-        <p>
-A tritone is equivalent to a direct complement. Fourth and fifth intervals are akin to indirect complements, and also have pronounced aethetic resonance in the visual medium. An augmented chord is analogous to a perfect trine, while a diminished chord is analogous to a half-square. Diatonic scales function wonderfully as the kind of rationally-constructed but deeply complex palette system architecture I had originally envisioned.</p>
-        <p>
-While this system helped me create excellent hue architectures, some combinations of colors whose hues were diatonically related still looked awful together. The principles of disharmony are quite different between sound and vision: sounds close in tone or with certain tone relationships are ugly, while colors close in darkness are ugly.
-</div>
-<div id="icons" class="container"><br><br>
-<h2>Icon Glossary</h2>
-        <p>
-Finally, I designed a series of &#x201C;palette modes&#x201D; to which any hue structure could be applied, each specifically devised to control against any instances of colors of the same darkness competing. Gay palettes use loud colors and a dynamic darkness range. Dour palettes use quiet colors clustered around medium darkness. Soft palettes are light and unobtrusive, favoring pale colors and making its darkest colors relative to the background the most desaturated. Bold and Accent palettes cluster most of their colors at the extremes of the darkness scale, clearing the floor to one maximally saturated color somewhere in the middle. Bold palettes are dark-dominant, while Accent palettes are light-dominant.
-        <p>
-The adoption of this system has led to vast improvement in the aesthetics and functional coherence of the Delve system. The Chromata Colortuner system is a powerful piece of visual design technology.</p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    </div>
+    <div id="getting-started" class="container"><br><br>
+        <h2>Getting Started</h2>
+         <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    </div>
+    <div id="general" class="container"><br><br>
+        <h2>General Concepts</h2>
+         <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    </div>
+    <div id="cards" class="container"><br><br>
+        <h2>Card Types</h2>
+         <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    </div>
+    <div id="co-op" class="container"><br><br>
+        <h2>Cooperative Games</h2>
+         <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+    </div>
+    <div id="arena" class="container"><br><br>
+        <h2>Arena Games</h2>
+         <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+   <br id="kotr"><h3>KING OF THE RING</h3>
+   <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+   <br id="3fa"><h3>THREE FOR ALL</h3>
+      <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+   <br id="2x-royale"><h3>DOUBLES ROYALE</h3>
+      <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+   <br id="3x-royale"><h3>TRIPLES ROYALE</h3>
+      <p>
+But I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+    </div>
+    
 </div>
 
 
