@@ -22,7 +22,6 @@ a:hover {color: #EFE9BE;}
     @media screen and (max-width: 920px) {
         .tocbar{
             background-color: #DAD5AF;
-            border-radius: 7px;
             }
     }
     .tocbar a:before {background-color: #34454E;}
