@@ -1,106 +1,130 @@
-/* SETUP */
+/* BRAND COLORS */
+
+a:before {background: #34454E;}
+a:hover {color: #EFE9BE;}
 
     /* background */
-    html {background-color: #EFE9BE;} p {color: #403E31}
+    html {background-color: #EFE9BE;} p {color: #34454E}
     
     /* text color */
     footer p {color: #86856E;}
-    .tocbar {color: #403E31;}
-    .tocbar a, .tocbar div {color: #403E31;}
+    .tocbar {
+        color: #34454E;
+        background: #EFE9BE;
+    }
+    .tocbar a, .tocbar div {color: #34454E;}
 
     /* recolo */
     .tocbar:hover {
         background-color: #DAD5AF;
         color: black;
     }
-@media screen and (max-width: 920px) {
-    .tocbar{
-    background-color: #DAD5AF;
+    @media screen and (max-width: 920px) {
+        .tocbar{
+            background-color: #DAD5AF;
+            }
     }
-    
-}
-.tocbar a:before {background-color: #403E31;}
+    .tocbar a:before {background-color: #34454E;}
 
-.tocbar a.icon 
-    {background-color: #DAD5AF;}
+    .tocbar a.icon {
+        background-color: #34454E;
+        color: #EFE9BE;
+    }
 
 /* BORDER */
-#top, #bottom, #left, #right {
-	background: #DAD5AF;
-	position: fixed;
-    z-index: 1;
-	}
+    #top, #bottom, #left, #right {
+        background: #34454E;
+        position: fixed;
+        z-index: 1;
+        }
 	#left, #right {
 		top: 0; bottom: 0;
-		width: 5px;
+		width: 7px;
 		}
 		#left { left: 0; }
 		#right { right: 0; }
 		
 	#top, #bottom {
 		left: 0; right: 0;
-		height: 5px;
+		height: 7px;
 		}
 		#top { top: 0; }
 		#bottom { bottom: 0; }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    cursor: pointer;
-    transition: 0.4s;
-    overflow-x: visible;
+/* STRUCTURE */
+    nav { 
+        position: fixed;
+        height: 49px;
+        width: 100%;
+        z-index: 1;
+        background: #DAD5AF;
+        padding: 0;
+        padding-left: 36px;
+        overflow-x: scroll;
+    }
+    nav .item { 
+        font-weight: 500;
+        margin-left: 15px;
+        display: inline;
+        padding: 3px 3px;
+    }
+    @media screen and (min-width: 840px) { 
+        .wrap {padding-left: }
+    }
+    .W {
+        height: 49px;
+        width: 49px;
+        background: #DAD5AF;
+    } .W:before {background:white}
+    .W img {
+        width: 100%;
+    }
+    #cover {
+        max-height: ;
+        max-width: 100%;
+        background: #C4C19F;
+    } 
+    #cover img {
+        max-width: 500px;
+        width: 100%;
+        padding-top: 72px;
+}
+#cover h1 {
+    font-weight: bold;
+    text-align: left;
+    color: #34454E;
+    padding: 0 24px 18px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-    background-color: #DAD5AF;
-}
+/* ADVANCED NAVIGATION */
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        cursor: pointer;
+        transition: 0.4s;
+        overflow-x: visible;
+    } .active, .accordion:hover {
+        background-color: #DAD5AF;
+    }
 
-/* Subdirectory */
-.panel {
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
+    /* Style the subdirectory panels */
+    .panel {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
 
-/*.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) 
-    font-size: 13px;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) 
-}*/
-
-.accordion button {
-    display: none;
-    z-index: 3;
-}
-
-.active button {
-    position: fixed;
-    display: inline-block;
-    float: right;
-    z-index: 3;
-    transform: translate(00%, -100%);
-    background: none;
-    color: #403E31;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-.close {
-    background-color: white;
-    height: 36px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    padding: 10px;
-}
-.close:hover {background-color: }
+    /* Style the close button */
+    .close {
+        background-color: white;
+        height: 36px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px;
+    } .close:hover {
+        background-color: #86856E;
+        color: #EFE9BE;
+        transition: 0.4s;
+    }

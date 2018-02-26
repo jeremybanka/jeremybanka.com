@@ -1,3 +1,4 @@
+/* Vertically align and float the TOC */
 .toc-wrap {
     /*background-color: white;*/
     position: fixed;
@@ -10,8 +11,7 @@
     overflow-y: scroll;
     overflow-x: visible;
 }
-
-/* Place the navbar at the bottom of the page, and make it stick 
+/* OLD FORMULA 
 .tocbar {
     color: #4d4d4d;
     position: fixed;
@@ -24,16 +24,16 @@
     z-index: 1;
     /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2);
 }*/
-.tocbar {
-    color: #4d4d4d;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    /* box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2); */
+
+/* Call out the TOC when browsing */
+.tocbar:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 /* Style the links inside the navigation bar */
 .tocbar a {
+    font-weight: 500;
     float: center;
     display: block;
     color: #4d4d4d;
@@ -42,38 +42,31 @@
     text-decoration: none;
     font-size: 17px;
     overflow: visible;
-}
+} 
 .tocbar a:before { background: #4d4d4d; }
+.tocbar a:hover {color:white;}
 
-/* Change the color of links on hover */
-.tocbar:hover {
-    background-color: #ddd;
-    color: black;
-}
-.tocbar a:hover { color:white}
-
-/* Add a green background color to the active link */
-.navbar a.active {
+/* Add a green background color to the active link
+.tocbar a.active {
     background-color: #4CAF50;
     color: white;
-}
+} */
 
-/* Hide the link that should open and close the navbar on small screens */
+/* Hide the link that should open and close the navbar on small screens. Remove the link highlight. */
 .tocbar .icon {
     display: none;
-}
-.tocbar .icon:before { background: none; }
+} .tocbar .icon:before { background: none; }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+/* When the screen is less than 920 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 920px) {
     .toc-wrap { bottom: 0; width: 100%; height: auto;}
     .tocbar { background-color: #ddd;}
     .tocbar a {display: none;}
     .tocbar a.icon {
         display: block;
-        width: auto;
         background-color: #ddd;
-}
+        /*width: auto;*/
+    }
 }
 
 /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
@@ -94,17 +87,4 @@
     width: 100%;
     text-align: center;
     }
-    .dropdown-content {bottom: -5px;}
-}
-/*
-@media screen and (min-width: 920px) { 
-    .tocbar {
-        bottom: 33%;  
-    }*/
-/*    .wrap {margin-left: 72px}*/
-}
-
-/* Save the footer */
-footer { 
-	height: 180px;
 }
