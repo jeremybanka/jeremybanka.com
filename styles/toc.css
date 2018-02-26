@@ -61,7 +61,7 @@
 
 /* When the screen is less than 920 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 920px) {
-    .toc-wrap { bottom: 0; width: calc(100% + 18px); height: auto;}
+    .toc-wrap { bottom: 0; width: calc(100% + 30px); height: auto;}
     .tocbar { background-color: #ddd; width: 100%;}
     .tocbar a {display: none;}
     .tocbar a.icon {
