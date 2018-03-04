@@ -141,15 +141,18 @@ nav {
 }
 
 .img-strip {
-    max-width: 600px;
+    max-width: 720px;
 	overflow-x: scroll;
     overflow-y: hidden;
 	margin: 30px auto 0;
     height: 300px;
+    text-align: center;
 }
 
 .img-strip > img {
 	height: 100%;
+    margin: auto;
+    display: inline;
 }
 
 .break {

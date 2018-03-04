@@ -237,3 +237,10 @@
     font-weight:500;
 	font-style:normal;
 } /* bold */
+
+/* Aktivo */
+@font-face {
+    font-family: Icon;
+    src: url('/fonts/DelveSystem-Regular.woff') format("woff");
+    font-weight:normal;
+	font-style:italic;

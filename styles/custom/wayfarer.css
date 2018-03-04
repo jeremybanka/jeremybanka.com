@@ -1,3 +1,5 @@
+i {font-family: Icon}
+
 /* BRAND COLORS */
 
 a:before {background: #34454E;}
@@ -75,7 +77,7 @@ a:hover {color: #EFE9BE;}
 max-width: calc(100% - 49px); overflow-x: scroll;}
     .strip {
         width: 500px;
-        height: 67px; 
+        height: 67px;
     }
     nav .item { 
         font-weight: 500;
@@ -83,8 +85,8 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
         margin-top: 18px;
         padding: 0px 5px;
     }
-    @media screen and (min-width: 840px) { 
-        .wrap {padding-left: }
+    @media screen and (min-width: 920px) { 
+        .container, .img-strip {padding-left: 100px}
     }
     .W {
         float: left;
@@ -113,19 +115,20 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
 }
 
 /* ADVANCED NAVIGATION */
-    /* Style the buttons that are used to open and close the accordion panel */
+    /* Buttons that open panels */
     .accordion {
         cursor: pointer;
         transition: 0.4s;
         overflow-x: visible;
-    } .active, .accordion:hover {
+    } 
+
+    .active, .accordion:hover {
         background-color: #DAD5AF;
     } .active:before { 
         display: none;
     } a.active:hover {color: #34454E;}
 
-
-    /* Style the subdirectory panels */
+    /* Subdirectory panels */
     .panel {
         background-color: white;
         max-height: 0;
@@ -133,26 +136,27 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
         transition: max-height 0.2s ease-out;
     }
 
-    /* Style the close button */
+    /* Close button */
     .close {
-        background-color: white;
+        background-color: #F7F4DF;
         height: 36px;
         cursor: pointer;
         font-size: 24px;
         font-weight: 400;
         text-align: center;
-        padding: 10px;
+        padding: 6px;
+        /* border-top: 3px solid #EFE9BE; */    
     } .close:hover {
         background-color: #86856E;
         color: #EFE9BE;
         transition: 0.4s;
     }
 
-/* SCROLLBAR TEST 
-::-webkit-scrollbar {
+/* SCROLLBAR TEST */
+.img-strip::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 18px;
 }
-::-webkit-scrollbar-thumb {
+.img-strip::-webkit-scrollbar-thumb {
   background-color: #34454E;
-}*/
+}
