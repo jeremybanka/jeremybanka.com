@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: "Circle";
+      src: url("./circlegx.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @keyframes expand {
+      from {
+        font-variation-settings: "TIME" 0;
+      }
+      to {
+        font-variation-settings: "TIME" 1000;
+      }
+    }
+
+    #target {
+      background-color: green;
+      font-family: "Circle", serif;
+      font-size: 120px;
+      animation: expand 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id='target'>0</div>
+</body>
+</html>
