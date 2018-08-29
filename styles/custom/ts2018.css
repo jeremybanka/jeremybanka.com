@@ -1,43 +1,41 @@
 i {font-family: Icon}
 
 /* BRAND COLORS */
-@media screen and (min-width: 920px) { 
-    a:before {background: #34454E;}
-    a:hover {color: #EFE9BE;}
-}
+
+a:before {background: #345;}
+a:hover {color: #;}
+
     /* background */
-    html {background-color: #EFE9BE;} p {color: #34454E}
+    html {background-color: #EED;} p {color: #345}
     
     /* text color */
-    footer p {color: #86856E;}
+    footer p {color: #664;}
     .tocbar {
-        color: #34454E;
-        background: #EFE9BE;
+        color: #345;
+        background: #EED;
     }
-    .tocbar a, .tocbar div {color: #34454E;}
+    .tocbar a, .tocbar div {color: #345;}
 
-    /* recolo */
-@media screen and (min-width: 920px) { 
+    /* recolor */
     .tocbar:hover {
-        background-color: #DAD5AF;
+        background-color: #CCB;
         color: black;
     }
-}
     @media screen and (max-width: 920px) {
         .tocbar{
-            background-color: #DAD5AF;
+            background-color: #EED;
             }
     }
-    .tocbar a:before {background-color: #34454E;}
+    .tocbar a:before {background-color: #345;}
 
     .tocbar a.icon {
         background-color: #000;
-        color: #EFE9BE;
+        color: #EED;
     }
 
 /* BORDER */
     #top, #bottom, #left, #right {
-        background: #34454E;
+        background: #345;
         position: fixed;
         z-index: 1;
         }
@@ -123,13 +121,13 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
         transition: 0.4s;
         overflow-x: visible;
     } 
-@media screen and (min-width: 920px) { 
+
     .active, .accordion:hover {
-        background-color: #DAD5AF;
+        background-color: #CCB;
     } .active:before { 
         display: none;
     } a.active:hover {color: #34454E;}
-}
+
     /* Subdirectory panels */
     .panel {
         background-color: white;
@@ -139,9 +137,8 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
     }
 
     /* Close button */
-
     .close {
-        background-color: #F7F4DF;
+        background-color: #DDC;
         height: 36px;
         cursor: pointer;
         font-size: 24px;
@@ -149,14 +146,12 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
         text-align: center;
         padding: 6px;
         /* border-top: 3px solid #EFE9BE; */    
-    } 
-@media screen and (min-width: 920px) { 
-    .close:hover {
-        background-color: #86856E;
+    } .close:hover {
+        background-color: #887;
         color: #EFE9BE;
         transition: 0.4s;
     }
-}
+
 /* SCROLLBAR TEST */
 .img-strip::-webkit-scrollbar {
   -webkit-appearance: none;

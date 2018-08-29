@@ -9,17 +9,19 @@
 
 /* block structure */
 .block {
-	float: left;
-	width: calc(100%);
-	position: relative;
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    max-height: 300px;
+    overflow: hidden;
+	margin: auto;
+    margin-bottom: 20px;
     background-color: #b8b8b8;
-	color: white;
-	margin-bottom: 20px;
 }
 
 .block > img {width: 100%}
 .block > p {padding: 15px 30px 0px 30px}
-.block > h3 {padding: 0px 30px 15px 30px}
+.block > h2, .block figure {padding: 0px 30px 15px 30px}
 
 /* grey glyph */
 .thumb-1 {
@@ -70,28 +72,23 @@ a {
 	vertical-align: bottom;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
-	/*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
-	-webkit-transition-property: color;
 	transition-property: color;
-	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
 }
 
-/* links in text */
-p > a:after { /* adds red deg */
+/* links in text 
+p > a:after { /* adds red deg !!! REPLACED BY UNDERLINE !!!
 	content: "\b0";
-	padding-right: 1px; /* cuts off otherwise*/
+	padding-right: 1px; /* cuts off otherwise
 	color: #ff5a27;
 	-webkit-transition-property: color;
 	transition-property: color;
 	-webkit-transition-duration: 0.2s;
 	transition-duration: 0.2s;
-}
-
+}*/
 a:hover, a:focus, a:active { color: white }
 
 a:hover:after, a:focus:after, a:active:after { color: white }
@@ -123,23 +120,11 @@ a:hover:before, a:focus:before, a:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+section a:hover:before, section a:focus:before, section a:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1.05);
+}
 
-.grey { 
-	color: #4d4d4d;
-    background:white; 
-	border: 0px solid black;
-}
-.grey:hover, .grey:focus {
-	/* border: 3px solid #4d4d4d;*/
-}
-.grey:hover > *, .grey:focus > * { 
-	color: white; 
-	padding-right: 0;}
-.grey:hover > .rule, .grey:focus > .rule {
-	background: #4d4d4d;
-}
-.grey:before { background: #4d4d4d }
-.grey:after { content: ""}
 
 .teal { background: #9a9a9a; }
 .teal:before { background: #11ddaa; }
@@ -155,3 +140,93 @@ a:hover:before, a:focus:before, a:active:before {
 
 .cyan { background: #dbdbdb; }
 .cyan:before { background: #11ddff; }
+
+.hvr-grow-shadow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform, color;
+  transition-property: box-shadow, transform, color;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* radial out fill */
+.hvr-radial-out {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  background: #e1e1e1;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transform-origin: center;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+  color: white;
+}
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+.panel {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-property: box-shadow, transform;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+.panel:before {
+ content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 100%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+}
+.panel:hover, .panel:focus, .panel:active {
+    box-shadow: 0 0px 0px 4px rgba(0, 136, 204, .75);
+    transform: scale(1.02);
+    color: white;
+}
+.panel:hover:before, .panel:focus:before, .panel:active:before {
+    transform: scale(2);
+}

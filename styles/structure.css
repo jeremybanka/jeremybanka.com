@@ -1,14 +1,32 @@
+/*
+GENERAL————————————————————————————————
+*/
+* {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.logo * {
+    font-family: Logo;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1em;
+}
+/* 
+NAVIGATION—————————————————————————————
+*/
+
+nav * { /* navigation is always the same font */
+	font-family: Brahmin;
+}
 nav {
 	padding: 30px;
 	height: 108px;
 	box-sizing: border-box;
     width: auto;
 }
-
-
 .nav-left {
 	width: calc(50% - 26px);
-	color: #4d4d4d;
 	float: left;
 	display: inline-block;
 	text-align: right;
@@ -16,9 +34,6 @@ nav {
 	padding-right: 54px;
 	box-sizing: border-box;
 }
-
-
-/* right navigation structure*/
 .nav-right {
 	width:  calc(50% - 26px);
 	float: left;
@@ -27,66 +42,159 @@ nav {
 	padding-left: 54px;
 	box-sizing: border-box;
 }
-
 .nav-right > ul > li {
 	display: inline-block;
 	margin-right: 10px;
 	list-style-type: none;
-	color: #4d4d4d;
-	/*letter-spacing: calc(0.1em / 3);
-	-moz-font-feature-settings: 'smcp';
-    -webkit-font-feature-settings: 'smcp';
-    -ms-font-feature-settings: 'smcp';
-    font-feature-settings: 'smcp'; */
 }
-
-/* gives nav type a little breathing room */
 .nav-right > ul > li > a {
-	padding: 0 3px;
-}
-
-/* hide left nav */
-@media (orientation:portrait) {
-    .nav-left {display:none;}
+	padding: 0 3px; /* widen link boxes */
+} 
+@media (orientation:portrait) { 
+    .nav-left {
+        display:none;
+    }
     .nav-right {
         width:290px; 
         padding-left: 24px;
     }
     .logo {margin-left: calc(50% - 176px)}
+} /* small nav on tall screens */
+
+    /* 
+    LOGO———————————————————————————————————
+    */
+
+    /* link wrapper for logo images */
+    .logo { 
+        width: 52px;
+        height: 52px;
+        float: left
+    }
+
+    /* default logo */
+    .logo * { 
+        width: 46px;
+        float: left;
+        display: inline-block;
+        position: absolute;
+        padding: 3px;
+        transition-property: color;
+        transition-duration: .2s;
+    }
+
+/* 
+HEADER—————————————————————————————————
+*/
+header > * {    
+    margin: auto;
+    width: calc(100% - 20px);
+}
+h1 { /* for major works */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+}
+h2 { /* for blog posts and section titles */
+    max-width: 630px; 
+    font-size: 30px;
+    line-height: 40px;
+    font-weight 700;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+h3 {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 400;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    padding-top: 20px;
+}
+h4 {font-weight: 700}
+header p {
+    font-size: 20px;
+    max-width: 630px;
+    font-weight: 400;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+header img {
+    display: block;
+    max-width: 810px;
+    width: 100%;
+    margin: 30px auto 0;
+}
+hr {
+    height: 3px;
+	width: 60px;
+    margin: 45px auto 45px;
 }
 
-/* link wrapper for logo images */
-.logo { 
-	width: 52px;
-	height: 52px;
-	float: left
+/* 
+BODY———————————————————————————————————
+*/
+section {position: relative;}
+section > *, section li {
+    margin: auto;
+    width: calc(100% - 20px);
+    position: relative;
+}
+section h2, section h3, section h4, section p, section li {
+    max-width: 630px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 700px) { 
+    section ul, section ol {
+        padding-left: 30px;
+    }
+}
+section h2 {
+    padding-top: 60px;
+}
+section p, section li {
+    font-weight: 500;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+} .indent { padding-left: 45px }
+
+aside {
+    width: 180px;
+    float: right;
+    display: inline;
 }
 
-/* default logo */
-.logo-1 { 
-	width: 46px;
-	float: left;
-	display: inline-block;
+section figure {
+    max-width: 720px;
+}
+    figure img {
+        width: 100%;
+    }
+    figcaption {
+        font-weight: 600;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+        padding-top: 10px;
+        font-size: 17.5px;
+        line-height: 30px;
+        text-align: center;
+
+    }
+/* 
+FOOTER—————————————————————————————————
+*/
+footer { 
+	max-width: 600px;
+	height: 150px;
+	position: relative;
+	margin: auto;
+}
+
+footer p {
+    width: 100%;
 	position: absolute;
-	padding: 3px;
+	top: 45px;
+    font-size: 17.5px; 
+	text-align: center;
+
 }
 
-/* recolor logo */
-.logo-2 {
-	width: 46px;
-	z-index: 1;
-	float: left;
-	display: inline-block;
-	position: absolute;
-	padding: 3px;
-	opacity: 0;
-	-webkit-transition-property: visibility;
-	transition-property: opacity;
-	-webkit-transition-duration: 0.1s;
-	transition-duration: 0.1s;
-}
 
-.logo:hover > .logo-2, .logo:focus > .logo-2 { opacity: 1; }
+/****************************
+************LEGACY***********
+****************************/
 
 /* me */
 .mewrap {
@@ -101,7 +209,7 @@ nav {
 }
 
 .mewrap p {
-	font-family: Ymirsson;
+	font-family: Urun;
     color: #a0a0a0;
 	font-size: 2em;
 	line-height: 152px;
@@ -166,29 +274,6 @@ nav {
 	margin: auto;
 }
 
-.page {
-	position: relative;
-    align-self: center;
-    width: 700px;
-	/* box-sizing: border-box;
-	border: 3px solid #a0a0a0; */
-	padding: 26px 0px 54px 0px; /* horizontal was 70 */
-	margin-top: 60px; margin-left:;
-}
-
-.cut { 
-	padding: 0 70px 32px;
-	margin-top: 12px;	
-	background: #d6d6d6;
-}
-
-.cut p {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-}
 
 /* button structure */
 .button {
@@ -196,21 +281,9 @@ nav {
 	display:block;position:relative;margin:auto;
 	text-align: center;
 	font-size: 34px;
-	font-family: Talhertz;
+	font-family: Brahmin;
 	background: black;
 	color: white;
 	font-weight: bold;
 }
 
-footer { 
-	max-width: 600px;
-	height: 150px;
-	position: relative;
-	margin: auto;
-}
-
-footer > p {
-	width: 100%;
-	position: absolute;
-	top: 45px;
-}

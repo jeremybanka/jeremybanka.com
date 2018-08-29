@@ -6,28 +6,27 @@
   <title>Document</title>
   <style>
     @font-face {
-      font-family: "Circle";
-      src: url("./circlegx.ttf") format("truetype");
-      font-weight: 400;
+      font-family: "Talhertz";
+      src: url("/fonts/ergatagx.ttf") format("truetype");
     }
     @keyframes expand {
       from {
-        font-variation-settings: "TIME" 0;
+        font-variation-settings: "wght" 30;
       }
       to {
-        font-variation-settings: "TIME" 1000;
+        font-variation-settings: "wght" 210;
       }
     }
 
     #target {
       background-color: green;
-      font-family: "Circle", serif;
+      font-family: "Talhertz", serif;
       font-size: 120px;
       animation: expand 1s infinite;
     }
   </style>
 </head>
 <body>
-  <div id='target'>0</div>
+  <div id='target'>A</div>
 </body>
 </html>

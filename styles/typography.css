@@ -1,7 +1,6 @@
-/* set TH 24 / 28 */
 * {
-	font-family: Talhertz;
-	font-size: 21px;
+	font-family: Brahmin;
+	font-size: 20px;
 	line-height: 1.5em;
 	-moz-line-height: 1.5em;
 	padding: 0;
@@ -9,13 +8,8 @@
 	
 }
 
-html { /* grey background */
-	background-color: #e0e0e0;
-}
 
-nav * { /* navigation is always Talhertz */
-	font-family: Talhertz;
-}
+
 
 /* white navigation */
 nav.white > .nav-left, nav.white > .nav-right > ul > li > a {
@@ -29,29 +23,8 @@ nav.dark > .nav-left, nav.dark > .nav-right > ul > li > a {
 
 
 
-h1, h2, h3, h4, h5, h6 {font-weight: normal; }
 
-/* used for type specimens */
-h1 { 
-    text-align: center;
-    font-size: 45px;
-    font-weight: 600;
-}
 
-h2 { font-size: 30px;
-}
-
-/* used for main blog heading */
-h2, h3 {
-	font-family: Talhertz;
-	text-align: left;
-	font-weight: bold;
-	color: #4d4d4d;
-}
-
-h3 {font-size: 25px; margin-bottom: -15px;}
-
-.entry {padding-right: 15px;}
 
 .indent > .entry {
 	display: inline-block;
@@ -79,28 +52,38 @@ h3 {font-size: 25px; margin-bottom: -15px;}
 	padding-left: 15px
 }
 
-.container > h3 { 
-	margin-top: 14px;
+
+
+/****************************
+************LEGACY***********
+****************************/
+
+/* used for type specimens 
+h1 { 
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
 }
 
-.container > p {
+h2 { 
+    font-size: 30px;
+    font-weight: 700;
+}*/
+
+/* used for main blog heading
+h2, h3 {
+	text-align: left;
+	font-weight: bold;
+	color: #4d4d4d;
+}
+
+h3 {font-size: 25px; margin-bottom: -15px;}
+
+.entry {padding-right: 15px;} */
+
+/* .container > ol > li, .container > ul > li {
 	margin-top: 30px;
-	font-size: ;
-}
-
-.container > p, .container > ol, .container > ul {
-	color:;
-}
-
-footer p, .caption { 
-	font-size: 17.5px; 
-	text-align: center;
-	color: #999;
-}
-
-.container > ol > li, .container > ul > li {
-	margin-top: 30px;
-    margin-left: 1em;
+    margin-left: 1em; */
 }
 
 .rule {
@@ -112,6 +95,13 @@ footer p, .caption {
 }
 
 .container > .rule { position: relative }
+
+
+footer p, .caption { 
+	font-size: 17.5px; 
+	text-align: center;
+	color: #999;
+}
 
 /* quickly apply a different typeface */
 .ymirsson { font-family: Ymirsson; font-weight: 600 }

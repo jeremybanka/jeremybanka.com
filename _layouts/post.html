@@ -2,12 +2,12 @@
 layout: default
 ---
 <link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-<div class="wrap">
-    <div class="container">
-        <p>{{ page.date | date: '%B %d, %Y' }}</p>
-        <h2>{{ page.title }}</h2>
-        <p class="rule">
-          {{ content }}
-    </div>
-</div>
-			
+<link rel="stylesheet" href="/styles/themes/neutral.css" type="text/css" media="all">
+<header>
+    <p>{{ page.date | date: '%B %d, %Y' }}</p>
+    <h2>{{ page.title }}</h2>
+    <hr>
+</header>
+<main>
+{{ content }}
+</main>
