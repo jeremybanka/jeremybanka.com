@@ -1,76 +1,11 @@
-/* brick structure */
-.brick {
-    flex: 0 1 auto;
-	float: left;
-	width: calc(100% / 3);
-	position: relative;
-	color: white; */
-}
-
-/* block structure */
-.block {
-    display: block;
-    width: 100%;
-    max-width: 720px;
-    max-height: 300px;
-    overflow: hidden;
-	margin: auto;
-    margin-bottom: 20px;
-    background-color: #b8b8b8;
-}
-
-.block > img {width: 100%}
-.block > p {padding: 15px 30px 0px 30px}
-.block > h2, .block figure {padding: 0px 30px 15px 30px}
-
-/* grey glyph */
-.thumb-1 {
-	display: block;
-	opacity: 1;
-	/*-webkit-transition-property: visibility;*/
-	transition-property: opacity;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}	
-
-.brick:hover > .thumb-1, .brick:focus > .thumb-1 { opacity: 0; }
-.block:hover > .thumb-1, .block:focus > .thumb-1 { opacity: 0; }
-
-/* color glyph */
-.thumb-2 {
-	position: absolute;
-	top: 0;
-	opacity: 0;
-	-webkit-transition-property: visibility;
-	transition-property: opacity;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}	
-
-.brick:hover > .thumb-2, .brick:focus > .thumb-2 { opacity: 1; }
-.block:hover > .thumb-2, .block:focus > .thumb-2 { opacity: 1; }
-
-/* properties */
-.properties {
-	position: absolute;
-	top: 10%;
-	left: 10%;
-	width: 80%;
-	opacity: 0;
-	z-index: 2;
-	-webkit-transition-property: visibility;
-	transition-property: opacity;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}	.brick:hover > .properties { opacity: 1; }
-
-/* basic link properties */
+/*
+BASICS————————————————————————————————————————————————————————————————
+common link properties */
 a { 
 	color: black;
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: bottom;
-	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
@@ -78,62 +13,142 @@ a {
 	transition-property: color;
 	transition-duration: 0.2s;
 }
-
-/* links in text 
-p > a:after { /* adds red deg !!! REPLACED BY UNDERLINE !!!
-	content: "\b0";
-	padding-right: 1px; /* cuts off otherwise
-	color: #ff5a27;
-	-webkit-transition-property: color;
-	transition-property: color;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
-}*/
-a:hover, a:focus, a:active { color: white }
-
-a:hover:after, a:focus:after, a:active:after { color: white }
-
 /* sweep (collapsed) */
 a:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ff5a27;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
 } 
-
-/* extend sweep */
-a:hover:before, a:focus:before, a:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+@media (min-width:920px) {
+    /* turn white and extend sweep */
+    a:hover, a:focus, a:active { color: white }
+    a:hover:before, a:focus:before { transform: scaleX(1) }
+    /* in the main, overshoot the reach */
+    section a:hover:before, section a:focus:before, section a:active:before {
+        transform: scaleX(1.05);
+    }
 }
-section a:hover:before, section a:focus:before, section a:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1.05);
-}
+/*
+PANELS———————————————————————————————————————————————————————————————
+big fancy links have a different treatment */
 
+.panel {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-property: box-shadow, transform;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+.panel:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform-origin: center;
+}
+.panel:hover, .panel:focus, .panel:active { 
+    transform: scale(1.02);
+    z-index: 2;
+}
+.panel:hover:before, .panel:focus:before { transform: scale(2) }
+
+.panel:hover > .icon { color:  }
+
+.brick:hover .properties { opacity: 1 }
+
+
+/* themed panels */
+.neutral:hover, .neutral:focus { box-shadow: 0 0px 0px 4px #08C; }
+.neutral:hover *, .neutral:focus * { color: white; }
+.neutral:before { background: #444; }
+
+.pure:hover, .pure:focus { box-shadow: 0 0px 0px 4px #08C; }
+.pure:hover *, .pure:focus * { color: black }
+.pure:before { background: white }
+
+.red:hover, .red:focus { 
+    box-shadow: 0 0px 0px 4px #c30; 
+    background: #c30; }
+.red:hover *, .red:focus * { color: white }
+.red:hover .icon, .red:focus .icon { color: #d83800 }
+.red:before { background: #e40 }
+
+.blue:hover, .blue:focus { 
+    box-shadow: 0 0px 0px 4px #07B; 
+    background: #07B; }
+.blue:hover *, .blue:focus * { color: white }
+.blue:hover .icon, .blue:focus .icon { color: #0079b9 }
+.blue:before { background: #08C }
+
+.amber:hover, .amber:focus { 
+    box-shadow: 0 0px 0px 4px #a70; 
+    background: #a70; }
+.amber:hover *, .amber:focus * { color: white }
+.amber:hover .icon, .amber:focus .icon { color: #b80 }
+.amber:before { background: #c90 }
+
+.violet:hover, .violet:focus { 
+    box-shadow: 0 0px 0px 4px #50c; 
+    background: #60d    ; }
+.violet:hover *, .violet:focus * { color: white }
+.violet:hover .icon, .violet:focus .icon { color: #60d }
+.violet:before { background: #80f }
+
+.aqua:hover *, .aqua:focus * { color: white }
+.aqua:hover .icon, .aqua:focus .icon { color: #0ba }
+.aqua:before { background: #0cb }
+.aqua:hover, .aqua:focus { 
+    box-shadow: 0 0px 0px 4px #0a9; 
+    background: #0a9; }
+
+.pink:hover *, .pink:focus * { color: white }
+.pink:hover .icon, .pink:focus .icon { color: #e59 }
+.pink:before { background: #f6a }
+.pink:hover, .pink:focus { 
+    box-shadow: 0 0px 0px 4px #e59; 
+    background: #e59; }
+
+.green:hover *, .green:focus * { color: white }
+.green:hover .icon, .green:focus .icon { color: #0c0 }
+.green:before { background: #0d0 }
+.green:hover, .green:focus { 
+    box-shadow: 0 0px 0px 4px #0b0; 
+    background: #0b0; }
+
+.dark:hover, .dark:focus { 
+    box-shadow: 0 0px 0px 4px #fff; 
+    background: #fff; }
+.dark:hover *, .dark:focus * { color: white }
+.dark:hover .icon, .dark:focus .icon { color: #222 }
+.dark:before { background: #000 }
+
+/****************************
+ ***********LEGACY***********
+ ****************************/
 
 .teal { background: #9a9a9a; }
-.teal:before { background: #11ddaa; }
+.teal:before { background: #1da; }
 
 .brown { background: #a7a7a7; }
-.brown:before { background: #ddaa00; }
+.brown:before { background: #da0; }
 
-.pink { background: #b8b8b8; }
-.pink:before { background: #ff6699; }
+.old-pink { background: #b8b8b8; }
+.old-pink:before { background: #f69; }
 
 .navy { background: #c9c9c9; }
 .navy:before { background: #2255ff; }
@@ -141,23 +156,13 @@ section a:hover:before, section a:focus:before, section a:active:before {
 .cyan { background: #dbdbdb; }
 .cyan:before { background: #11ddff; }
 
-.hvr-grow-shadow {
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform, color;
-  transition-property: box-shadow, transform, color;
-}
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
 
-/* radial out fill */
+.brick:hover > .thumb-1, .brick:focus > .thumb-1 { opacity: 0; }
+.block:hover > .thumb-1, .block:focus > .thumb-1 { opacity: 0; }
+
+.brick:hover > .thumb-2, .brick:focus > .thumb-2 { opacity: 1; }
+.block:hover > .thumb-2, .block:focus > .thumb-2 { opacity: 1; }
+
 .hvr-radial-out {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -197,36 +202,32 @@ section a:hover:before, section a:focus:before, section a:active:before {
   transform: scale(2);
 }
 
-.panel {
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transition-property: box-shadow, transform;
-    position: relative;
-    overflow: hidden;
-    transition-duration: 0.3s;
+
+/* links in text 
+p > a:after { /* adds red deg !!! REPLACED BY UNDERLINE !!!
+	content: "\b0";
+	padding-right: 1px; /* cuts off otherwise
+	color: #ff5a27;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
 }
-.panel:before {
- content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    border-radius: 100%;
-    transform: scale(0);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transform-origin: center;
-    transition-timing-function: ease-out;
+.hvr-grow-shadow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform, color;
+  transition-property: box-shadow, transform, color;
 }
-.panel:hover, .panel:focus, .panel:active {
-    box-shadow: 0 0px 0px 4px rgba(0, 136, 204, .75);
-    transform: scale(1.02);
-    color: white;
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.panel:hover:before, .panel:focus:before, .panel:active:before {
-    transform: scale(2);
-}
+
+
+*/

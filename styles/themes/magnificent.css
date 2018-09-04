@@ -1,16 +1,21 @@
 /* ff5a27
 BEHIND————————————————————————————————
 */
-html { background: #ddd }
-section {background: #eee}
-nav { background: #e4e4e4}
+html { background: #def }
+section {background: #ffe}
+nav { background: #ccddf0}
+.toc-wrap {
+    background: #ccddf0;
+    border-right: solid 3px #bbd4e8;
+}
 @media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #eee; }
+.logo:hover span, .logo:focus span { color: #def; }
 }
 /* 
 TEXT—————————————————————————————
 */
-nav *, .logo *, h1, h2, h3, p, li { color: #444 } 
+nav *, .logo *, h1, h2, h3, p, li { color: #404 } 
+h2 {color: black}
 /*
 FLARE———————————————————————————————————
 */
@@ -38,21 +43,21 @@ PANEL—————————————————————————
 
 .panel {background:#f9f9f9;}
 
-.pure { background: #f9f9f9 }
+.pure { background: #e4f0ff }
 
-.dark { background: #aaa }
-.dark .icon { color: #bbb }
+.dark { background: #cde }
+.dark .icon { color: #d6eaff }
 
-.red { background: #c8c8c8 }
-.red .icon { color: #b6b6b6 }
+.red { background: #d4e5f6 }
+.red .icon { color: #c0d2e4 }
 
-.blue { background: #c0c0c0 }
-.blue .icon { color: #b0b0b0 }
+.blue { background: #ddeef8 }
+.blue .icon { color: #cde }
 
 .amber { background: #d0d0d0 }
 .amber .icon { color: #bbb }
 
-.violet { background: #c8c8c8 }
+.violet { background: #CCe5FF }
 .violet .icon { color: #b6b6b6 }
 
 .aqua { background: #d0d0d0 }
@@ -63,14 +68,3 @@ PANEL—————————————————————————
 
 .green { background: #c0c0c0 }
 .green .icon { color: #aaa }
-
-
-
-
-/*
- .panel:hover, .panel:focus { 
-    box-shadow: 0 0px 0px 4px rgba(0, 136, 204, .75);}
-
-.panel:hover *, .panel:focus * { color: white }
-
-.panel:before { background: #444 } */

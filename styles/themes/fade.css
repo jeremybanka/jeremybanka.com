@@ -1,16 +1,23 @@
 /* ff5a27
 BEHIND————————————————————————————————
 */
-html { background: #ddd }
-section {background: #eee}
-nav { background: #e4e4e4}
+html { background: #eedcdf }
+section {background: #fceaed}
+nav { background: #f8e6e9}
+@media (min-width:1260px) { 
+    .toc-wrap {
+        background: #f8e6e9;
+        border-right: solid 3px #eedcdf;
+    }
+}
 @media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #eee; }
+.logo:hover span, .logo:focus span { color: #f8e6e9; }
 }
 /* 
 TEXT—————————————————————————————
 */
-nav *, .logo *, h1, h2, h3, p, li { color: #444 } 
+nav *, .logo *, h1, h2, h3, p, li { color: #3c505a } 
+h2 {color: #00324b}
 /*
 FLARE———————————————————————————————————
 */
@@ -24,6 +31,12 @@ p > a { box-shadow: inset 0 -2px 0 #08C }
 @media (min-width:920px) {
 p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
 }
+@media (min-width:1260px) { 
+    .jump:hover {
+        color: black;
+        background: #eedcdf
+    }
+}
 /*
 SUBTLE—————————————————————————————————
 */
@@ -36,41 +49,36 @@ aside { border-left: solid 3px #aaa }
 PANEL———————————————————————————————————
 */
 
-.panel {background:#f9f9f9;}
+.panel {
+    background:#dcc;}
 
-.pure { background: #f9f9f9 }
 
-.dark { background: #aaa }
-.dark .icon { color: #bbb }
+.pure { background: #ffedf0 }
 
-.red { background: #c8c8c8 }
-.red .icon { color: #b6b6b6 }
+.dark { background: #dac8cb }
+.dark .icon { color: #c6b4b7 }
 
-.blue { background: #c0c0c0 }
-.blue .icon { color: #b0b0b0 }
+.red { background: #dac8cb }
+.red .icon { color: #eedcdf }
+
+.blue { background: #dfcdd0 }
+.blue .icon { color: #eedcdf }
+
+.canary { background: #dfcdd0 }
+.canary .icon { color: #eedcdf }
 
 .amber { background: #d0d0d0 }
 .amber .icon { color: #bbb }
 
-.violet { background: #c8c8c8 }
-.violet .icon { color: #b6b6b6 }
+.violet { background: #dac8cb }
+.violet .icon { color: #eedcdf }
 
-.aqua { background: #d0d0d0 }
-.aqua .icon { color: #bbb }
+.aqua { background: #e4d2d5 }
+.aqua .icon { color: #c6b4b7 }
 
 .pink { background: #d0d0d0 }
 .pink .icon { color: #bbb }
 
 .green { background: #c0c0c0 }
 .green .icon { color: #aaa }
-
-
-
-
-/*
- .panel:hover, .panel:focus { 
-    box-shadow: 0 0px 0px 4px rgba(0, 136, 204, .75);}
-
-.panel:hover *, .panel:focus * { color: white }
-
-.panel:before { background: #444 } */
+*/

@@ -9,7 +9,7 @@ a:hover {color: #;}
     html {background-color: #EED;} p {color: #345}
     
     /* text color */
-    footer p {color: #664;}
+    footer p {color: #654;}
     .tocbar {
         color: #345;
         background: #EED;
@@ -129,7 +129,7 @@ max-width: calc(100% - 49px); overflow-x: scroll;}
     } a.active:hover {color: #34454E;}
 
     /* Subdirectory panels */
-    .panel {
+    .sub {
         background-color: white;
         max-height: 0;
         overflow: hidden;

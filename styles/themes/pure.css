@@ -1,16 +1,14 @@
-/* ff5a27
+/*
 BEHIND————————————————————————————————
 */
-html { background: #ddd }
-section {background: #eee}
-nav { background: #e4e4e4}
+html { background: #fff }
 @media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #eee; }
+.logo:hover span, .logo:focus span { color: #fff; }
 }
 /* 
 TEXT—————————————————————————————
 */
-nav *, .logo *, h1, h2, h3, p, li { color: #444 } 
+nav *, .logo *, h1, h2, h3, p, li { color: #555 } 
 /*
 FLARE———————————————————————————————————
 */
@@ -29,45 +27,15 @@ SUBTLE————————————————————————�
 */
 hr { background: #aaa; }
 
-aside, figcaption { color: #aaa }
-aside { border-left: solid 3px #aaa }
+aside, figcaption, footer p { color: #aaa }
+aside { border-left: solid 2px #ccc }
+
 
 /* 
 PANEL———————————————————————————————————
-*/
 
 .panel {background:#f9f9f9;}
 
-.pure { background: #f9f9f9 }
-
-.dark { background: #aaa }
-.dark .icon { color: #bbb }
-
-.red { background: #c8c8c8 }
-.red .icon { color: #b6b6b6 }
-
-.blue { background: #c0c0c0 }
-.blue .icon { color: #b0b0b0 }
-
-.amber { background: #d0d0d0 }
-.amber .icon { color: #bbb }
-
-.violet { background: #c8c8c8 }
-.violet .icon { color: #b6b6b6 }
-
-.aqua { background: #d0d0d0 }
-.aqua .icon { color: #bbb }
-
-.pink { background: #d0d0d0 }
-.pink .icon { color: #bbb }
-
-.green { background: #c0c0c0 }
-.green .icon { color: #aaa }
-
-
-
-
-/*
  .panel:hover, .panel:focus { 
     box-shadow: 0 0px 0px 4px rgba(0, 136, 204, .75);}
 

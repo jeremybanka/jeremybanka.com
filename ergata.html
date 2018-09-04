@@ -7,7 +7,8 @@ light-color: #DAD5AF
 ---
 <link rel="stylesheet" href="/styles/nav/work.css">
 <link rel="stylesheet" href="/styles/toc.css">
-<link rel="stylesheet" href="/styles/custom/ts2018.css">
+<link rel="stylesheet" href="/styles/themes/neutral.css">
+<!--<link rel="stylesheet" href="/styles/custom/ts2018.css">-->
 <script src="/scripts/table-of-contents.js"></script>
 <script src="/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
 
@@ -17,46 +18,53 @@ light-color: #DAD5AF
 <div id="bottom"></div>
 
 <div class="toc-wrap">
-<div class="tocbar" data-mcs-theme="dark" id="contents">
-    <a href="#nav" style="font-size: 21px">&uarr;</a>
-    <a href="#getting-started" class="accordion">Candor</a>
-    <div class="panel">
-        <a href="#winning">Winning a Battle</a>
-        <a href="#building">Building a Character</a>
-        <a href="#turn">Taking Your Turn</a>
-        <div class="close">&times;</div>
+    <div class="tocbar" data-mcs-theme="dark" id="contents">
+        <a href="#nav" class="jump" style="font-size: 21px">&uarr;</a>
+        
+        <a href="#getting-started" class="accordion jump">Candor</a>
+        <div class="sub">
+            <a href="#winning" class="jump">Winning a Battle</a>
+            <a href="#building" class="jump">Building a Character</a>
+            <a href="#turn" class="jump">Taking Your Turn</a>
+            <div class="close">&times;</div>
+        </div>
+        
+        <a href="#general" class="accordion jump new">Canticle</a>
+        <div class="sub">
+            <a href="#stamina" class="jump">Stamina</a>
+            <a href="#reach" class="jump">Reach</a>
+            <a href="#trials" class="jump">Trials</a>
+            <div class="close">&times;</div>
+        </div>
+        
+        <a href="#cards" class="accordion jump">Card Types</a>
+        <div class="sub">
+            <a href="#action-cards" class="jump">Action Cards</a>
+            <a href="#unit-cards" class="jump">Unit Cards</a>
+            <a href="#item-cards" class="jump">Item Cards</a>
+            <a href="#condition-cards" class="jump">Condition Cards</a>
+            <div class="close">&times;</div>
+        </div>
+        
+        <a href="#co-op" class="accordion jump">Cooperative Games</a>
+        <div class="sub">
+            <a href="#delve" class="jump">Delve</a>
+            <a href="#quest" class="jump">Quest</a>
+            <div class="close" class="jump">&times;</div>
+        </div>
+        
+        <a href="#arena" class="accordion jump">Arena Games</a>
+        <div class="sub">
+            <a href="#kotr" class="jump">King of the Ring</a>
+            <a href="#3fa" class="jump">Three-for-All</a>
+            <a href="#2x-royale" class="jump">Doubles Royale</a>
+            <a href="#3x-royale" class="jump">Triples Royale</a>
+            <div class="close">&times;</div>
+        </div>
+        
+        <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>    
     </div>
-    <a href="#general" class="accordion new">Canticle</a>
-    <div class="panel">
-        <a href="#stamina">Stamina</a>
-        <a href="#reach">Reach</a>
-        <a href="#trials">Trials</a>
-        <div class="close">&times;</div>
-    </div>
-    <a href="#cards" class="accordion">Card Types</a>
-    <div class="panel">
-        <a href="#action-cards">Action Cards</a>
-        <a href="#unit-cards">Unit Cards</a>
-        <a href="#item-cards">Item Cards</a>
-        <a href="#condition-cards">Condition Cards</a>
-        <div class="close">&times;</div>
-    </div>
-    <a href="#co-op" class="accordion">Cooperative Games</a>
-    <div class="panel">
-        <a href="#delve">Delve</a>
-        <a href="#quest">Quest</a>
-        <div class="close">&times;</div>
-    </div>
-    <a href="#arena" class="accordion">Arena Games</a>
-    <div class="panel">
-        <a href="#kotr">King of the Ring</a>
-        <a href="#3fa">Three-for-All</a>
-        <a href="#2x-royale">Doubles Royale</a>
-        <a href="#3x-royale">Triples Royale</a>
-        <div class="close">&times;</div>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>    
-</div></div>
+</div>
 
 <div id="cover"><div class="wrap">
     <div class="container">
@@ -127,11 +135,11 @@ But I must explain to you how all this mistaken idea of denouncing of a pleasure
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-          panel.style.maxHeight = null;
+        var sub = this.nextElementSibling;
+        if (sub.style.maxHeight){
+          sub.style.maxHeight = null;
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+          sub.style.maxHeight = sub.scrollHeight + "px";
         }
       });
     } 

@@ -3,12 +3,15 @@ layout: default
 title: About
 ---
 <link rel="stylesheet" href="styles/nav/about.css" type="text/css" media="all">
+<link rel="stylesheet" href="/styles/toc.css" type="text/css" media="all">
 <link rel="stylesheet" href="/styles/themes/neutral.css" type="text/css" media="all">
-<link rel="stylesheet" href="styles/toc.css" type="text/css" media="all">
 <style>
     .date {
         float: right;
-        font-weight: 200;
+        font-weight: 500;
+        color: #444;
+        font-size: 20px;
+        line-height: 33px;
         padding-top: 0;
     }
 </style>
@@ -24,6 +27,7 @@ title: About
     <a href="#awards" class="jump">Awards</a>
     <a href="#background" class="jump">Background</a>
     <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
+    
 </div></div>
 
 		
@@ -31,29 +35,63 @@ title: About
             <p>Hi, I&rsquo;m Jeremy.<img class="me" src="images/me.svg"></p>
         </div> -->
 <main>
+
 <section>
-    <p>I'm a visual designer. I am best at making information systems, typefaces, and user interfaces.</p>
-    <p>Get in touch! You can email me at &ldquo;me&rdquo; at jeremybanka dot com or connect with me on <a href="https://www.linkedin.com/in/jeremy-banka-27914aa3" target="_blank">LinkedIn</a>.</p>
+    <div class="chunk wide">        
+        <figure class="column left smol">
+            <img src="images/about/profile.jpg">
+        </figure>
+        <div class="gutter"></div>
+        <div class="column right">
+            <h3>Hi, I'm Jeremy.</h3>
+            <p>I make visual systems. I am best at making typefaces, iconography, layouts, and user interfaces.</p>
+            <p>Let's get in touch! You can email me at &ldquo;me&rdquo; at jeremybanka dot com or message me on <a href="https://www.twitter.com/jeremybanka" target="_blank">Twitter</a>.</p>
+        </div>
+    </div>
 </section>
+
 <section id="skills">
     <h2>Skills &amp; Tools</h2>
-            
-    <h3>type and icon design</h3>
-    <p>Self-taught in Glyphs, I've finished more than fifty text font masters, each 50–244 unique letters, and several logotypes.
-    </p>
-    <h3>color theory</h3>
-    <p>I design meticulously coordinated color palettes using Adobe Illustrator, precise ratios, and a well trained eye.</p>
-    <h3>web design</h3>
-    <p>I wrote this site from scratch using Adobe Brackets and Jekyll. I also learned techniques from <a href="https://ianlunn.github.io/Hover/#">Ian Lunn</a> (hyperlink effects), <a href="https://css-tricks.com/snippets/jquery/smooth-scrolling/">CSS Tricks</a> (smooth scrolling), and <a href="http://manos.malihu.gr/jquery-custom-content-scroller/#expand-info">Malihu</a> (scrollbars).
-    </p>
+    <div class="chunk slim">        
+        <figure class="column left tiny">
+            <img src="images/about/type.png">
+        </figure>
+        <div class="gutter"></div>
+        <div class="column right">
+            <h3>type and icon design</h3>
+            <p>Self-taught in Glyphs, I've finished more than fifty text font masters, each 50–244 unique letters, and several logotypes.
+            </p>
+        </div>
+    </div>
+    <div class="chunk slim">        
+        <figure class="column left tiny">
+            <img src="images/about/color.png">
+        </figure>
+        <div class="gutter"></div>
+        <div class="column right">
+            <h3>color theory</h3>
+            <p>I design meticulously coordinated color palettes using Adobe Illustrator, precise ratios, and a well trained eye.</p>
+        </div>
+    </div>
+    <div class="chunk slim">        
+        <figure class="column left tiny">
+            <img src="images/about/web.png">
+        </figure>
+        <div class="gutter"></div>
+        <div class="column right">
+            <h3>web design</h3>
+            <p>I wrote this site from scratch using Adobe Brackets and Jekyll. I also learned techniques from <a href="https://ianlunn.github.io/Hover/#">Ian Lunn</a> (hyperlink effects), <a href="https://css-tricks.com/snippets/jquery/smooth-scrolling/">CSS Tricks</a> (smooth scrolling), and <a href="http://manos.malihu.gr/jquery-custom-content-scroller/#expand-info">Malihu</a> (scrollbars).
+            </p>
+        </div>
+    </div>
 </section>
 <section id="experience">
     <h2>Experience</h2>
-    <h3>AIGA Chapter President <span class="date">2017 – 2018</span></h3>
+    <h3>AIGA Chapter President <span class="date">2017&ndash;2018</span></h3>
     <p>Ran weekly officer meetings, planned events, delegated promotional tasks, and conducted a typography design workshop for OSU's AIGA Graphic Design Club.</p>
-    <h3>Student Health Services  <span class="date">2016 &ndash; 2017</span></h3>
+    <h3>Student Health Services  <span class="date">2016&ndash;2017</span></h3>
     <p>Produced building signage, promotional posters, and informational brochures for Oregon State University's on-campus clinic.</p>
-    <h3>PACE <span class="date">2015 &ndash; 2016</span></h3>
+    <h3>PACE <span class="date">2015&ndash;2016</span></h3>
     <p>Produced web graphics with a team of social media administrators and copywriters to market OSU's Professional and Continuing Education division.</p>
     <h3>Occupy: Posters by the People for a Digital Age <span class="date">2015</span></h3>
     <p>Collaborated with the head of OSU's graphic design school to design an art exhibit featuring more than thirty works from the Occupy Wall Street movement.</p>
@@ -78,35 +116,31 @@ title: About
 <section id="awards">
     <h2>Awards</h2>
 
-    <p>
-CDAK Certificate of Merit  2017 
-[Communication Design Association of Korea] —animated poster using original display type.
-CDAK Certificate of Merit  2016 
-—abstract typographic poster designs.
-International Baccalaureate Diploma  2014</p>
+    <h3>CDAK Certificate of Merit <span class="date">2017</span></h3>
+    <p>[Communication Design Association of Korea] for an animated poster using original display type.</p>
+    <h3>CDAK Certificate of Merit <span class="date">2016</span></h3> 
+    <p>For abstract typographic poster designs.</p>
+    <h3>International Baccalaureate Diploma <span class="date">2014</span></h3>
 </section>
 <section id="background">
     <h2>Background</h2>
 
     <p>
-In my sophomore year of high school, I took an English class that changed my life. In stunning contrast to my previous English teachers, Mr. Hammonds was a grammar stickler. Observing correctly that proper conventions were utterly neglected in our school&#x2019;s curricula, he would give us a grammatical warmup of his own design each day of his class. I quickly discovered that I intuitively used almost every rule Mr. Hammonds described, but had never heard them referred to before.</p>
-    <aside>
-        Lorem ipsum dolor sit amet.
-    </aside>
+In my sophomore year of high school, I took an English class that inspired me. My teacher, Mr. Jeff Hammonds, was an incisive critic, a storyteller, and truly pedantic grammatician. Realizing that our high school curriculum gave us no formal instruction in technical grammar, he would give us a  warmup of his own design each day of his class. These would demonstrate some convention in English syntax or punctuation. I had read enough at this point to 'feel' all the correct answers, but I couldn't explain why a given answer was correct. It was the first time I'd really thought about the rules of language, and I was amazed at the invisible complexity within the laws of language.</p>
     <p>
-Enthralled, I pored over Wikipedia pages on linguistic typology and ultimately synthesized my own material from what I learned. By my senior year, I had developed an aprioristic constructed language called Srailese with a lexicon of around a thousand English-word equivalents and a slew of bizarre linguistic features&#x2014;for instance, a unified word class that could be dually inflected as verbs or nouns, and a set of five noun genders/classes based on East Asian classical elements.</p>
+Enthralled, I pored over any Wikipedia pages I could find on linguistic typology. I started paying less attention in classes, using what I learned to come up with my own structures and ideas for strange languages. It was an entertaining way to test my own knowledge, and fill the empty hours of school. By my senior year, I had developed an aprioristic constructed language called Srailese with a lexicon of around a thousand English-word equivalents and several totally unique features.</p>
     <p>
-It was during my period of work on Srailese that I read my mother&#x2019;s copy of Ellen Lupton&#x2019;s Thinking with Type. I fell in love with Martin Majoor&#x2019;s Scala, in which the volume was set. I based the first typographic alphabet for Srailese on Majoor&#x2019;s digital&#x2013;Baroque masterpiece, and the second on Akzidenz Grotesk.</p>
+It was during my period of work on Srailese that I read my mother&#x2019;s copy of Ellen Lupton&#x2019;s Thinking with Type. The book was good, but its typesetting was amazing. I fell in love with Martin Majoor&#x2019;s Scala, in which the volume was set. I based the first typographic alphabet for Srailese on Majoor&#x2019;s neo-Baroque masterpiece, and the second on Akzidenz Grotesk.</p>
     <figure>
         <img src="images/about/srai.png">
     </figure>
      <p>
-I discovered that the visual aspects of language gripped me even more strongly than the structural aspects, and during my first year of college, embarked upon typographic design as a personal hobby. With the extracurricular guidance of a typographically knowledgeable professor, I proceeded to design the 2015 Ergata type family, my first set of Roman fonts.</p>
+I discovered that the visual structures of language gripped me as strongly as the abstract structures, and during my first year of college, embarked upon typographic design as a personal hobby. With the extracurricular guidance of a typographically knowledgeable professor, I proceeded to design the 2015 Ergata type family, my first set of Roman fonts.</p>
     <figure>
         <img src="images/about/ergata2015.png">
     </figure>
     <p>
-Since my freshman year, I have continued to design typography, chiefly text faces for my own design work. In 2017, I published <a href="/type/talhertz.html">Talhertz</a>, my first public-release font.</p>
+Since then, I have continued to design typography, chiefly text faces for my own design work. In 2017, I published <a href="/type/talhertz.html">Talhertz</a>, my first public-release font.</p>
     <figure>
         <img src="images/about/talhertz.png">
     </figure>

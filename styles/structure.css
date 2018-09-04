@@ -1,9 +1,12 @@
 /*
-GENERAL————————————————————————————————
+GENERAL————————————————————————————————————————————————————
 */
 * {
+    font-family: Brahmin; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     font-size: 20px;
     line-height: 1.5em;
+    padding: 0;
+	margin: 0;
 }
 
 .logo * {
@@ -13,7 +16,7 @@ GENERAL————————————————————————�
     line-height: 1em;
 }
 /* 
-NAVIGATION—————————————————————————————
+NAVIGATION—————————————————————————————————————————————————
 */
 
 nav * { /* navigation is always the same font */
@@ -23,7 +26,6 @@ nav {
 	padding: 30px;
 	height: 108px;
 	box-sizing: border-box;
-    width: auto;
 }
 .nav-left {
 	width: calc(50% - 26px);
@@ -55,15 +57,14 @@ nav {
         display:none;
     }
     .nav-right {
-        width:290px; 
+        width:280px; 
         padding-left: 24px;
     }
     .logo {margin-left: calc(50% - 176px)}
-} /* small nav on tall screens */
-
-    /* 
-    LOGO———————————————————————————————————
-    */
+}
+/* 
+LOGO———————————————————————————————————————————————————————
+*/
 
     /* link wrapper for logo images */
     .logo { 
@@ -84,11 +85,11 @@ nav {
     }
 
 /* 
-HEADER—————————————————————————————————
+HEADER—————————————————————————————————————————————————————
 */
 header > * {    
     margin: auto;
-    width: calc(100% - 20px);
+    width: calc(100%);
 }
 h1 { /* for major works */
     text-align: center;
@@ -108,7 +109,10 @@ h3 {
     font-weight: 400;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     padding-top: 20px;
 }
-h4 {font-weight: 700}
+h4 {
+    font-weight: 700;
+    font-size: 21px
+}
 header p {
     font-size: 20px;
     max-width: 630px;
@@ -124,12 +128,34 @@ hr {
     height: 3px;
 	width: 60px;
     margin: 45px auto 45px;
+    border-width: 0px;
+}
+/* 
+FOOTER—————————————————————————————————————————————————————
+*/
+footer { 
+	max-width: 600px;
+	height: 120px;
+	position: relative;
+    margin: auto;
 }
 
+footer p {
+	position: relative;
+    margin: auto;
+	top: 20px;
+    font-size: 17.5px; 
+	text-align: center;
+
+}
 /* 
-BODY———————————————————————————————————
+BODY———————————————————————————————————————————————————————
 */
-section {position: relative;}
+main {padding-bottom: 30px;}
+section {
+    position: relative;
+    padding-bottom: 20px;
+}
 section > *, section li {
     margin: auto;
     width: calc(100% - 20px);
@@ -150,14 +176,30 @@ section h2 {
 }
 section p, section li {
     font-weight: 500;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-} .indent { padding-left: 45px }
+} 
 
-aside {
-    width: 180px;
-    float: right;
-    display: inline;
+.indent { 
+    padding-left: 45px;
+    width: calc(100% - 65px)
 }
 
+aside {
+    float: right;
+    display: inline;
+    width: calc(100vw / 4);
+    max-width: 240px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    font-weight: 600;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    font-size: 15px;
+    line-height: 20px;
+} 
+aside a {
+    font-weight: 600;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    font-size: 15px;
+    line-height: 20px;
+}
 section figure {
     max-width: 720px;
 }
@@ -172,25 +214,135 @@ section figure {
         text-align: center;
 
     }
+
 /* 
-FOOTER—————————————————————————————————
+PANELS—————————————————————————————————————————————————————
 */
-footer { 
-	max-width: 600px;
-	height: 150px;
+/* bricks are square elements that come in threes. */
+.brick {
+    flex: 0 1 auto;
+	float: left;
+	width: calc(100% / 3);
+    height: calc((100vw - 20px) / 3);
+    max-height: 240px;
 	position: relative;
-	margin: auto;
+	color: white;
 }
-
-footer p {
+/* block panels fill the horizontal space */
+.block {
+    display: block;
     width: 100%;
-	position: absolute;
-	top: 45px;
-    font-size: 17.5px; 
-	text-align: center;
+    max-width: 720px;
+    min-height: 100px;
+    max-height: 300px;
+    overflow: hidden;
+	margin: auto;
+    margin-bottom: 20px;
+}
+.block > img {width: 100%}
+.block > p {
+    padding: 15px 30px 0px 30px;
+    margin: auto;
+}
+.block > h2, .block > h3, .block figure {padding: 0px 30px 15px 30px}
 
+/* some panels house icons and reveal information on hover.
+ the icons are typographic, and use a query to shrink */
+.panel > .icon {
+	font-family: Logo;
+    position: inline;
+    font-size: 180px;
+    line-height: 1.13em;
+    width: 100%;
+    text-align: center;
+	transition-property: color;
+	transition-duration: 0.3s;
+    z-index: 1;
+}	
+@media (max-width:740px) {
+    .panel > .icon { font-size: calc( (100vw - 20px) / 4) }
 }
 
+/* properties */
+.panel > .properties {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	opacity: 0;
+	z-index: 2;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+}
+/* 
+MULTICOLUMN————————————————————————————————————————————————
+*/
+.column.tiny {
+        margin: auto;
+        position: relative;
+        max-width: 180px;
+        margin-top: 40px;
+    }
+
+@media (min-width: 600px) {
+    .chunk {
+        margin: auto;
+        display: flex;
+    } 
+
+    .column {
+        position: relative;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .gutter {width: 20px}
+    
+    .wide { max-width: 810px }
+    .slim { max-width: 680px }
+    .half { max-width: 360px }
+    .smol { max-width: 250px }
+    .tiny { max-width: 120px }
+    
+    .column { 
+        margin:auto;
+    }
+}
+@media (min-width: 650px) and (max-width: 920px) {
+    .right > * {     
+        margin: auto;
+        width: calc(100% - 20px);
+        position: relative;
+    }
+}
+/* 
+EXTRAWIDE——————————————————————————————————————————————————
+*/
+@media (min-width:1260px) { 
+    header, main { padding-left: 25%; }
+    footer { padding-left: 25%; }
+    html { padding-top: 30px}
+    nav {
+        position:fixed; 
+        z-index: 2;
+        padding-right: 0px;
+        width: 380px;
+    }
+    .nav-left {
+        display:none;
+    }
+    .nav-right {
+        width:290px; 
+        padding-left: 24px;
+    }
+    .toc-wrap {
+        position: fixed;
+        bottom: 0;
+        height: 100%;
+        width: 380px;
+        background: #e4e4e4;
+        border-right: solid 3px #ddd;
+    }
+} 
 
 /****************************
 ************LEGACY***********
@@ -287,3 +439,21 @@ footer p {
 	font-weight: bold;
 }
 
+/* grey glyph */
+.thumb-1 {
+	display: block;
+	opacity: 1;
+	/*-webkit-transition-property: visibility;*/
+	transition-property: opacity;
+	transition-duration: 0.2s;
+}	
+/* color glyph */
+.thumb-2 {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	-webkit-transition-property: visibility;
+	transition-property: opacity;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}	
