@@ -32,13 +32,22 @@ hr { background: #aaa; }
 aside, figcaption { color: #aaa }
 aside { border-left: solid 3px #aaa }
 
+/*
+TOC—————————————————————————————————————
+*/
+@media (min-width:1260px) {
+    #left {
+        background: #e4e4e4;
+        /*border-right: solid 3px #ddd; */
+    }
+}
 /* 
 PANEL———————————————————————————————————
 */
 
-.panel {background:#f9f9f9;}
+.panel {background:#f8f8f8;}
 
-.pure { background: #f9f9f9 }
+.pure { background: #f8f8f8 }
 
 .dark { background: #aaa }
 .dark .icon { color: #bbb }

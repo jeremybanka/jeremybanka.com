@@ -1,0 +1,112 @@
+:root {
+    --main-color:#3c505a
+}
+
+/* ff5a27
+BEHIND————————————————————————————————
+*/
+html { background: #dcd6d3 }
+.zoom-overlay { background: #dcd6d3 }
+section {background: #f5efec}
+@media (min-width:1260px) { 
+    #left {
+        background: #ebe5e2;
+    }
+/*    nav { background: #ebe5e2} */
+}
+@media (min-width:920px) {
+.logo:hover span, .logo:focus span { color: #f8e6e9; }
+}
+/* 
+TEXT—————————————————————————————
+*/
+nav *, .logo *, h1, h2, h3, p, li, .tocbar a { color: #3c505a } 
+h2 {color: #00324b}
+/*
+FLARE———————————————————————————————————
+*/
+/* link color sweep */
+a:before { background: #08C }
+
+/* link underline */
+p > a { box-shadow: inset 0 -2px 0 #08C }
+
+/* left padding for links */
+@media (min-width:920px) {
+p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
+}
+@media (min-width:1260px) { 
+    .jump:hover {
+        color: black;
+        background: #dcd6d3
+    }
+}
+/*
+SUBTLE—————————————————————————————————
+*/
+hr { background: #d28c00; }
+
+aside, figcaption { color: #aa5a32 }
+aside { border-left: solid 3px #aa5a32 }
+
+/*
+TOC—————————————————————————————————————
+*/
+.active { background-color: #d7d1ce; }
+.close { background-color: #e1dbd8;}
+
+@media screen and (min-width: 920px) {
+    .accordion:hover { background-color: #d7d1ce; } /* !!!!!!!!!!!!!!!!!!!!! */
+    .tocbar:hover .sub {background:#c8c2bf} /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+    .sub .jump:hover, .close:hover {background: #b9b3b0}
+    .tocbar a:before {background: #b9b3b0;}
+}
+
+@media screen and (max-width: 920px) {
+    .sub {background:#cdc7c4}
+}
+
+/* 
+PANEL———————————————————————————————————
+*/
+
+.panel {
+    background:#d2ccc9;
+}
+.panel * {    color: #3c505a;}
+
+.pure { background: #f5efec }
+
+.orange { background: #cdc7c4}
+.orange .icon { color: #b9b3b0 }
+
+.canary { background: #c3bdba }
+.canary .icon { color: #dcd6d3 }
+
+.indigo { background: #cdc7c4 }
+.indigo .icon { color: #b9b3b0 }
+
+.blue { background: #c3bdba }
+.blue .icon { color: #dcd6d3 }
+
+.dark { background: #dcd6d3 }
+.dark .icon { color: #c3bdba }
+
+.aqua { background: #c3bdba }
+.aqua .icon { color: #dcd6d3 }
+
+.violet { background: #b9b3b0 }
+.violet .icon { color: #cdc7c4 }
+
+.red { background: #c3bdba }
+.red .icon { color: #dcd6d3 }
+
+.amber { background: #b9b3b0 }
+.amber .icon { color: #cdc7c4 }
+
+.pink { background: #d0d0d0 }
+.pink .icon { color: #bbb }
+
+.green { background: #c0c0c0 }
+.green .icon { color: #aaa }
+*/

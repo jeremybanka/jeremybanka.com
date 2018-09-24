@@ -68,29 +68,47 @@
 
 /* Ymirsson */
 @font-face {
-    font-family: Urun;
-    src: url('/fonts/Fokuso-Ymirsson4.woff') format("woff");
+    font-family: Uruz;
+    src: url('/fonts/Ergata-Ymirsson4.woff') format("woff");
     font-weight:medium;
 	font-style:normal;
 } /* regular */
 @font-face {
-    font-family: Urun;
-    src: url('/fonts/Fokuso-Ymirsson5.woff') format("woff");
+    font-family: Uruz;
+    src: url('/fonts/Ergata-Ymirsson5.woff') format("woff");
     font-weight:500;
 	font-style:normal;
 } /* medium */
 @font-face {
-    font-family: Urun;
-    src: url('/fonts/Fokuso-Ymirsson6.woff') format("woff");
+    font-family: Uruz;
+    src: url('/fonts/Ergata-Ymirsson6.woff') format("woff");
     font-weight:600;
 	font-style:normal;
 } /* semibold */
 @font-face {
-    font-family: Urun;
-    src: url('/fonts/Fokuso-Ymirsson7.woff') format("woff");
+    font-family: Uruz;
+    src: url('/fonts/Ergata-Ymirsson7.woff') format("woff");
     font-weight:bold;
 	font-style:normal;
 } /* bold */
+@font-face {
+    font-family: UruzC;
+    src: url('/fonts/Ergata-Ymirsson4C.woff') format("woff");
+    font-weight:400;
+    font-style:normal;
+} /* reg-condensed */
+@font-face {
+    font-family: UruzC;
+    src: url('/fonts/Ergata-Ymirsson5C.woff') format("woff");
+    font-weight:500;
+    font-style:normal;
+} /* med-condensed */
+@font-face {
+    font-family: UruzC;
+    src: url('/fonts/Ergata-Ymirsson6C.woff') format("woff");
+    font-weight:600;
+	font-style:normal;
+} /* smb-condensed */
 
 /* Antoinette */
 @font-face {

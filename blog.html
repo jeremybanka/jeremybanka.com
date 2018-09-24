@@ -3,10 +3,12 @@ layout: default
 title: Blog
 ---
 	<link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-	<link rel="stylesheet" href="/styles/themes/neutral.css" type="text/css" media="all">
+	<link rel="stylesheet" href="/styles/themes/paper.css" type="text/css" media="all">
 	
-<div class="toc-wrap"></div>
-	
+<div id="left"></div>
+
+<header></header>
+
 <main>
     {% for post in site.posts %}
         <a href="{{ post.url }}" class="block panel pure">

@@ -81,12 +81,16 @@ big fancy links have a different treatment */
 .pure:hover *, .pure:focus * { color: black }
 .pure:before { background: white }
 
+.paper:hover, .paper:focus { box-shadow: 0 0px 0px 4px #788c96; }
+.paper:hover *, .paper:focus * { color: black }
+.paper:before { background: #d7d1ce }
+
 .red:hover, .red:focus { 
-    box-shadow: 0 0px 0px 4px #c30; 
-    background: #c30; }
+    box-shadow: 0 0px 0px 4px #960019; 
+    background: #960019; }
 .red:hover *, .red:focus * { color: white }
-.red:hover .icon, .red:focus .icon { color: #d83800 }
-.red:before { background: #e40 }
+.red:hover .icon, .red:focus .icon { color: #960019 }
+.red:before { background: #a50f28 }
 
 .blue:hover, .blue:focus { 
     box-shadow: 0 0px 0px 4px #07B; 
@@ -95,6 +99,13 @@ big fancy links have a different treatment */
 .blue:hover .icon, .blue:focus .icon { color: #0079b9 }
 .blue:before { background: #08C }
 
+.canary:hover, .canary:focus { 
+    box-shadow: 0 0px 0px 4px #d2af00; 
+    background: #d2af00; }
+.canary:hover *, .canary:focus * { color: white }
+.canary:hover .icon, .canary:focus .icon { color: #d2af00 }
+.canary:before { background: #deb900 }
+
 .amber:hover, .amber:focus { 
     box-shadow: 0 0px 0px 4px #a70; 
     background: #a70; }
@@ -102,19 +113,33 @@ big fancy links have a different treatment */
 .amber:hover .icon, .amber:focus .icon { color: #b80 }
 .amber:before { background: #c90 }
 
-.violet:hover, .violet:focus { 
-    box-shadow: 0 0px 0px 4px #50c; 
-    background: #60d    ; }
-.violet:hover *, .violet:focus * { color: white }
-.violet:hover .icon, .violet:focus .icon { color: #60d }
-.violet:before { background: #80f }
+.orange:hover, .orange:focus { 
+    box-shadow: 0 0px 0px 4px #9b4b23; 
+    background: #9b4b23; }
+.orange:hover *, .orange:focus * { color: white }
+.orange:hover .icon, .orange:focus .icon { color: #9b4b23 }
+.orange:before { background: #aa5a32 }
 
-.aqua:hover *, .aqua:focus * { color: white }
-.aqua:hover .icon, .aqua:focus .icon { color: #0ba }
-.aqua:before { background: #0cb }
+.indigo:hover, .indigo:focus { 
+    box-shadow: 0 0px 0px 4px #5a14e6; 
+    background: #5a14e6    ; }
+.indigo:hover *, .indigo:focus * { color: white }
+.indigo:hover .icon, .indigo:focus .icon { color: #5a14e6 }
+.indigo:before { background: #6e28fa }
+
+.violet:hover, .violet:focus { 
+    box-shadow: 0 0px 0px 4px #820096; 
+    background: #820096; }
+.violet:hover *, .violet:focus * { color: white }
+.violet:hover .icon, .violet:focus .icon { color: #820096 }
+.violet:before { background: #9600b4 }
+
 .aqua:hover, .aqua:focus { 
-    box-shadow: 0 0px 0px 4px #0a9; 
-    background: #0a9; }
+    box-shadow: 0 0px 0px 4px #00c0a0; 
+    background: #00c0a0; }
+.aqua:hover *, .aqua:focus * { color: white }
+.aqua:hover .icon, .aqua:focus .icon { color: #00c0a0 }
+.aqua:before { background: #00d2af }
 
 .pink:hover *, .pink:focus * { color: white }
 .pink:hover .icon, .pink:focus .icon { color: #e59 }
@@ -131,11 +156,19 @@ big fancy links have a different treatment */
     background: #0b0; }
 
 .dark:hover, .dark:focus { 
+    box-shadow: 0 0px 0px 4px #3c505a; 
+    background: #3c505a; }
+.dark:hover *, .dark:focus * { color: white }
+.dark:hover .icon, .dark:focus .icon { color: #3c505a }
+.dark:before { background: #00324b }
+
+
+.noir:hover, .noir:focus { 
     box-shadow: 0 0px 0px 4px #fff; 
     background: #fff; }
-.dark:hover *, .dark:focus * { color: white }
-.dark:hover .icon, .dark:focus .icon { color: #222 }
-.dark:before { background: #000 }
+.noir:hover *, .noir:focus * { color: white }
+.noir:hover .icon, .noir:focus .icon { color: #222 }
+.noir:before { background: #000 }
 
 /****************************
  ***********LEGACY***********

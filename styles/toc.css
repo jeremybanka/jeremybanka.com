@@ -74,7 +74,7 @@ Used in documents with subdirectories.
     transition: height 0.1s ease-out;
 } 
 
-.active { background-color: #ccc; } 
+.active { background-color: #ccc; } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
 .active:before { display: none;} 
 /* An */
 
@@ -90,7 +90,7 @@ Used in documents with subdirectories.
 
 /* Close button */
 .close {
-    background-color: #ddd;
+    background-color: #ddd; /* !!!!!!!!!!!!!!!!!!!!!!!!! */
     height: 36px;
     cursor: pointer;
     font-size: 24px;
@@ -102,8 +102,8 @@ Used in documents with subdirectories.
 }
 
 @media screen and (min-width: 920px) {
-    .accordion:hover { background-color: #ccc; }
-    .tocbar:hover .sub {background:#bbb}
+    .accordion:hover { background-color: #ccc; } /* !!!!!!!!!!!!!!!!!!!!! */
+    .tocbar:hover .sub {background:#bbb} /* !!!!!!!!!!!!!!!!!!!!!!!!! */
     .close:hover {
         background-color: #aaa;
         color: white;
@@ -153,7 +153,7 @@ Not enough room for the sidebar!
     text-align: center;
     }
     
-    .sub {background:#bbb}
+    .sub {background:#bbb} /* !!!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
 /* 
@@ -165,7 +165,7 @@ enough room for sidebar
 @media screen and (min-width: 920px) { 
     
     /* Clear space on the left for the sidebar to fit. */
-    main, footer { padding-left: 25%; }
+    main, footer { padding-left: 20vw; }
     
     /* Style ID links on hover */
     .jump:hover { color:white; }
@@ -188,18 +188,15 @@ enough room for side panel
 */
 
 @media (min-width:1260px) { 
+    main, footer { padding-left: 400px; }
     .toc-wrap {
         width: 360px;
-        background: #e4e4e4;
-        border-right: solid 3px #ddd;
     }
     .tocbar {
         width: 390px;
     }
     .tocbar a {transition: 0.2s}
-    .jump:first-of-type {display: none;}
-    .jump:before {display: none}
-    .jump:hover {background: #666}
+    .jump:hover {background: #666} /* !!!!!!!!!!!!!!!!!!!!!!!!! */
     .tocbar:hover {background: none;}
 }
 

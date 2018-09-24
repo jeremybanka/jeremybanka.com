@@ -2,12 +2,11 @@
 layout: default
 ---
 <link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-<link rel="stylesheet" href="/styles/themes/fade.css" type="text/css" media="all">
+<link rel="stylesheet" href="/styles/themes/flare.css" type="text/css" media="all">
 
 <script src="/scripts/table-of-contents.js"></script>
 
-<div class="toc-wrap">
-</div>
+<div id="left"></div>
    
 <header>
     <p>{{ page.date | date: '%B %d, %Y' }}</p>
@@ -18,12 +17,10 @@ layout: default
 <main>
 {{ content }}
 
-<div class="chunk wide">
         {% if page.previous.url %}
-        <a class="right column slim panel block pure"  href="{{page.previous.url}}">
+        <a class="slim panel block pure"  href="{{page.previous.url}}">
             <p>previous post</p>
             <h3>{{ page.previous.title }}</h3>
         </a>
         {% endif %}
-    </div>
 </main>

@@ -1,9 +1,18 @@
+:root {
+    --main-color:#555
+}
 /*
 BEHIND————————————————————————————————
 */
 html { background: #fff }
 @media (min-width:920px) {
 .logo:hover span, .logo:focus span { color: #fff; }
+}
+@media (min-width:1260px) {
+    #left {
+        background: #e4e4e4;
+        /*border-right: solid 3px #ddd; */
+    }
 }
 /* 
 TEXT—————————————————————————————
@@ -33,7 +42,12 @@ aside { border-left: solid 2px #ccc }
 
 /* 
 PANEL———————————————————————————————————
+*/
+.panel {background:#f8f8f8;}
 
+.pure { background: #f8f8f8 }
+
+/*
 .panel {background:#f9f9f9;}
 
  .panel:hover, .panel:focus { 

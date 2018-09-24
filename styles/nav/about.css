@@ -1,4 +1,4 @@
 .view-about {
-	color: #eee;
-	background-color: #555;
+	color: white;
+	background-color: var(--main-color);
 }
