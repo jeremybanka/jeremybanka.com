@@ -10,25 +10,41 @@ description: A guide detailing the color system used in Wayfarer.
 <link rel="stylesheet" href="styles/specimen.css">
 
 <style>
-    body {background-color: #fff;} 
-    
-    p {color: #4d4d4d}
-@media 
-    .tocbar:hover {
+    body {
+        background-color: #fff;
+    }
+
+    p {
+        color: #4d4d4d
+    }
+
+    @media .tocbar:hover {
         background-color: #ddd;
         color: black;
     }
+
     @media screen and (max-width: 920px) {
-        .tocbar{
+        .tocbar {
             background-color: #ddd;
-            }
+        }
     }
-    .tocbar a.icon {background-color: #ddd;}
-    #top {background: #deb900 }
-    #bottom {background: #e4e4e4}
-    
+
+    .tocbar a.icon {
+        background-color: #ddd;
+    }
+
+    #top {
+        background: #deb900
+    }
+
+    #bottom {
+        background: #e4e4e4
+    }
+
     @media (max-width: 1260px) {
-        nav {background:#deb900}
+        nav {
+            background: #deb900
+        }
     }
 </style>
 <script src="scripts/table-of-contents.js"></script>
@@ -39,18 +55,19 @@ description: A guide detailing the color system used in Wayfarer.
 <div id="bottom"></div>
 
 <div class="toc-wrap">
-<div class="tocbar" id="contents">
+    <div class="tocbar" id="contents">
 
-    <a href="#top" id="return" class='jump' style="font-size: 21px">&uarr;</a>
-    <a href="#intro" class='jump'>Introduction</a>
-    <a href="#terms" class='jump'>Terminology</a>
-    <a href="#mix" class='jump'>Colormixing</a>
-    <a href="#chromata" class='jump'>Chromata</a>
-    <a href="#dnd" class='jump'>Dissonance</a>
-    <a href="#modes" class='jump'>Palette Modes</a>
-    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
+        <a href="#top" id="return" class='jump' style="font-size: 21px">&uarr;</a>
+        <a href="#intro" class='jump'>Introduction</a>
+        <a href="#terms" class='jump'>Terminology</a>
+        <a href="#mix" class='jump'>Colormixing</a>
+        <a href="#chromata" class='jump'>Chromata</a>
+        <a href="#dnd" class='jump'>Dissonance</a>
+        <a href="#modes" class='jump'>Palette Modes</a>
+        <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
 
-</div>   </div>
+    </div>
+</div>
 
 <header style="
     background: #f6cd00; 
@@ -61,371 +78,534 @@ description: A guide detailing the color system used in Wayfarer.
 </header>
 
 <main>
-<section id="abstract">
-   <h1 style="color: #deb900;">Sound &amp; Vision</h1>
-    <p>
-AS GRAPHIC DESIGNERS, we should strive to make to world around us a better place for people through convenience and aesthetics. Color is a powerful conduit for aesthetic joy, so we should strive to be as sophisticated in our use of color as possible. For people with good aesthetic sense (which most all designers are) choosing color intuitively yields good results&#x2014;it&#x2019;s easy enough to play with the color mixing UI until a pleasant combination reveals itself. However, as the complexity of a job increases, a purely intuitive approach will prove more tedious and frustrating. In the case of a deep brand system with a modular color set used in multiple subordinate combinations, an algorithm to help designers safeguard against unaesthetic, system-breaking coincidences is extremely helpful.</p>        
-    <p>
-The project that inspired my in-depth research into color was Delve, a card game with a very complicated color system. I realized that the cards I had designed were beautiful in an isolated context, but could produce ugly combinations with one another.  I decided to return to the drawing board an invent a system that would use aesthetic combinations of color as its foundation, and would control as much as possible against disharmonious coincidence.</p>        
-    <p>
-To design such a system, I started with the basics. I was working in print, so I experimented by mixing colors with different combinations of process hues and catalogued the results. I learned that a full measure of only one process hue yields a primary color. I learned that a full measure of two process hues yields a secondary color, and I learned that a full measure of one process hue and a half measure of another yields a tertiary color that falls exactly between an adjacent primary and secondary in hue. I also discovered that colors created through this method were maximally saturated, and that colors were less saturated when they (1) did not have 100% in a process hue, (2) had more than 0K, or (3) had some of all three process hues. I devised a simple mathematical algorithm to design a color of a hue at a specific darkness value through proportional reduction of its constituents or the addition of K, then devised a regular nomenclature for colors generated through this process.</p>
-    <p>
-I then realized that the extraction of twelve regularly spaced intervals from a spectrum and a theory of their interaction was not new: this is what music theory is. I imagined that my twelve colors were notes, and then began to play chords. 
-    </p>
-    <p>
-A tritone is equivalent to a direct complement. Fourth and fifth intervals are akin to indirect complements, and also have pronounced aethetic resonance in the visual medium. An augmented chord is analogous to a perfect trine, while a diminished chord is analogous to a half-square. Diatonic scales function wonderfully as the kind of rationally-constructed but deeply complex palette system architecture I had originally envisioned.
-    </p>
-    <p>
-While this system helped me create excellent hue architectures, some combinations of colors whose hues were diatonically related still looked awful together. The principles of disharmony are quite different between sound and vision: sounds close in tone or with certain tone relationships are ugly, while colors close in darkness are ugly.
-    <p>
-Finally, I designed a series of &#x201C;palette modes&#x201D; to which any hue structure could be applied, each specifically devised to control against any instances of colors of the same darkness competing. Gay palettes use loud colors and a dynamic darkness range. Dour palettes use quiet colors clustered around medium darkness. Soft palettes are light and unobtrusive, favoring pale colors and making its darkest colors relative to the background the most desaturated. Bold and Accent palettes cluster most of their colors at the extremes of the darkness scale, clearing the floor to one maximally saturated color somewhere in the middle. Bold palettes are dark-dominant, while Accent palettes are light-dominant.
-    </p>
-    <p>
-The adoption of this system has led to vast improvement in the aesthetics and functional coherence of the Delve system. The Chromata Colortuner system is a powerful piece of visual design technology.</p>
-</section>
-<section id="intro">
-    <h2>Introduction</h2>   
-    <p>
-During my sophomore year of college during the Spring of 2016 I became interested in the study of color. At the time, I was in the late planning phases of Delve, a trading card game based on an elaborate color system. Yearning to build into Delve the depth of choice and customization found in other trading card games, I had taken a step back from my previous aesthetic experiments to consider how I might conceive of Delve as a holistic system of color-coded cards with broad visual inter-compatibility.
-The problem was that I had designed a color palette for each of the game's thirty-six class concepts purely by intuition. They independently looked beautiful, and any given two might look compatible together, but the color choices were intuitive, not deeply structured or semantic. My system had not sought to control against unaesthetic combinations, so some pairings that were practical within gameplay might appear ugly. This was unacceptable, so I sought a more sophisticated approach. The new system would need to unify practical and aesthetic compatibility from the ground up.</p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv.png">
-        <figcaption>
-        Early Delve protoypes with a more haphazard palette.</figcaption>
-    </figure>
-    <p>
-To meet the complex needs of the Delve system, I developed a theory of aesthetic color-printing over the course of a year. Through my development process, I created a palette-making algorithm inspired by the systems of harmony in Western music theory. Through understanding and applying this model, a designer can effortlessly achieve sublime beauty in the color palettes they craft and easily plan color systems that scale to a job of any complexity.</p>
-</section>
-<section id="terms">
-    <h2>Terminology</h2>   
-    <p>
-Before getting into my color system itself, I will precisely define the meanings of some of the concepts I reference later on. First I shall cover the three experiential aspects of color before moving on to the aesthetic qualities of color.
-    </p>
-    <h3>hue</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv2.png">
-        <figcaption>
-        Red and Green differ in hue.</figcaption>
-    </figure>
-    <p>
-Hue is the experiential aspect of color that lets us estimate the wavelength of light. &#x201C;Red&#x201D; is distinct from &#x201C;Green&#x201D; by this aspect, even if the two are alike in other aspects (as above, where they are equally saturated and dark). Hue is comparable to pitch in sound (Red:F, Green:C#, etc).
-    </p>
-    <h3>darkness</h3>   
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv3.png">
-        <figcaption>A darkness gradient in the the red hue.</figcaption>
-    </figure>
-    <p>
-Darkness is the experiential aspect of color that lets us estimate the amount of light we receive from a source. The darkness of a color is comparable to the octave of a note in sound&#x2014;the same pitches:hues occur within each darkness-gradation:octave. However, there is a range of darkness gradation within which the hues of colors tend to be most perceptible to us.
-    </p>
-    <h3>vibrancy</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv4.png">
-        <figcaption>
-        Three green colors with full, half, and one-fourth loudness, and 70K grey.</figcaption>
-    </figure>
-    <p>
-Vibrancy (commonly, &#x201C;saturation&#x201D;) is the experiential aspect of color that describes the intensity of a color&#x2019;s hue. In the Chromata system, True colors are the loudest, and Muted colors are the quietest. Vibrancy is comparable to volume in sound.
-    </p>
-    <h3>consonance</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv5.png">
-        <figcaption>
-        Y axis = loudness; X axis = darkness</figcaption>
-    </figure>
-    <aside id="ref1">
-For a visual explanation of these diagrams, see <a href="#a1">Appendix 1</a>.
-    </aside>
-    <p>
-Consonance, concord, and harmony are terms for an aesthetic sensation of satisfaction. This feeling originates from the subconscious recognition of order and balance within something we perceive. We call objects that evoke this sensation &#x201C;beautiful.&#x201D; The figure above provides an example. Logically, consonance can be understood to &#x201C;symbolize&#x201D; order. Better yet, &#x201C;order&#x201D; and &#x201C;beauty&#x201D; can be respectively understood as conscious and unconcious impressions of structure.
-    </p>
-    <h3>dissonance</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv6.png">
-        <figcaption>
-        Y axis = loudness; X axis = darkness</figcaption>
-    </figure>
-    <p>
-Dissonance and discord are terms we use for aesthetic discomfort. This feeling originates from an arrangement of forms from which we perceive &#x22;ugliness&#x22; or &#x22;clash.&#x22; Dissonance arises subconsiously in reaction to forms that are &#x201C;out of order&#x201D; and intense. The above figure provides an example.
-    </p>
-    <p>
-Beautiful forms evoke consonance while ugly forms evoke dissonance. Through careful attention to their aesthetic sense, fine artists, designers, musicians, and other craftsmen assemble consonant configurations intuitively.
-    </p>
-    <p>
-But the structure that underlies aesthetic consonance,can be analyzed and modeled through rational means, or rationalized. The unconscious can be made conscious through analysis and synthesis, which is what I shall do here. A rationalized framework should allow the creation of complex color systems without frustration.
-    </p>
-</section>
+    <section id="abstract">
+        <h1 style="color: #deb900;">Sound &amp; Vision</h1>
+        <p>
+            AS GRAPHIC DESIGNERS, we should strive to make to world around us a better place for people through
+            convenience and aesthetics. Color is a powerful conduit for aesthetic joy, so we should strive to be as
+            sophisticated in our use of color as possible. For people with good aesthetic sense (which most all
+            designers are) choosing color intuitively yields good results&#x2014;it&#x2019;s easy enough to play with
+            the color mixing UI until a pleasant combination reveals itself. However, as the complexity of a job
+            increases, a purely intuitive approach will prove more tedious and frustrating. In the case of a deep brand
+            system with a modular color set used in multiple subordinate combinations, an algorithm to help designers
+            safeguard against unaesthetic, system-breaking coincidences is extremely helpful.</p>
+        <p>
+            The project that inspired my in-depth research into color was Delve, a card game with a very complicated
+            color system. I realized that the cards I had designed were beautiful in an isolated context, but could
+            produce ugly combinations with one another. I decided to return to the drawing board an invent a system
+            that would use aesthetic combinations of color as its foundation, and would control as much as possible
+            against disharmonious coincidence.</p>
+        <p>
+            To design such a system, I started with the basics. I was working in print, so I experimented by mixing
+            colors with different combinations of process hues and catalogued the results. I learned that a full
+            measure of only one process hue yields a primary color. I learned that a full measure of two process hues
+            yields a secondary color, and I learned that a full measure of one process hue and a half measure of
+            another yields a tertiary color that falls exactly between an adjacent primary and secondary in hue. I also
+            discovered that colors created through this method were maximally saturated, and that colors were less
+            saturated when they (1) did not have 100% in a process hue, (2) had more than 0K, or (3) had some of all
+            three process hues. I devised a simple mathematical algorithm to design a color of a hue at a specific
+            darkness value through proportional reduction of its constituents or the addition of K, then devised a
+            regular nomenclature for colors generated through this process.</p>
+        <p>
+            I then realized that the extraction of twelve regularly spaced intervals from a spectrum and a theory of
+            their interaction was not new: this is what music theory is. I imagined that my twelve colors were notes,
+            and then began to play chords.
+        </p>
+        <p>
+            A tritone is equivalent to a direct complement. Fourth and fifth intervals are akin to indirect
+            complements, and also have pronounced aethetic resonance in the visual medium. An augmented chord is
+            analogous to a perfect trine, while a diminished chord is analogous to a half-square. Diatonic scales
+            function wonderfully as the kind of rationally-constructed but deeply complex palette system architecture I
+            had originally envisioned.
+        </p>
+        <p>
+            While this system helped me create excellent hue architectures, some combinations of colors whose hues were
+            diatonically related still looked awful together. The principles of disharmony are quite different between
+            sound and vision: sounds close in tone or with certain tone relationships are ugly, while colors close in
+            darkness are ugly.
+            <p>
+                Finally, I designed a series of &#x201C;palette modes&#x201D; to which any hue structure could be
+                applied, each specifically devised to control against any instances of colors of the same darkness
+                competing. Gay palettes use loud colors and a dynamic darkness range. Dour palettes use quiet colors
+                clustered around medium darkness. Soft palettes are light and unobtrusive, favoring pale colors and
+                making its darkest colors relative to the background the most desaturated. Bold and Accent palettes
+                cluster most of their colors at the extremes of the darkness scale, clearing the floor to one maximally
+                saturated color somewhere in the middle. Bold palettes are dark-dominant, while Accent palettes are
+                light-dominant.
+            </p>
+            <p>
+                The adoption of this system has led to vast improvement in the aesthetics and functional coherence of
+                the Delve system. The Chromata Colortuner system is a powerful piece of visual design technology.</p>
+    </section>
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>
+            During my sophomore year of college during the Spring of 2016 I became interested in the study of color. At
+            the time, I was in the late planning phases of Delve, a trading card game based on an elaborate color
+            system. Yearning to build into Delve the depth of choice and customization found in other trading card
+            games, I had taken a step back from my previous aesthetic experiments to consider how I might conceive of
+            Delve as a holistic system of color-coded cards with broad visual inter-compatibility.
+            The problem was that I had designed a color palette for each of the game's thirty-six class concepts purely
+            by intuition. They independently looked beautiful, and any given two might look compatible together, but
+            the color choices were intuitive, not deeply structured or semantic. My system had not sought to control
+            against unaesthetic combinations, so some pairings that were practical within gameplay might appear ugly.
+            This was unacceptable, so I sought a more sophisticated approach. The new system would need to unify
+            practical and aesthetic compatibility from the ground up.</p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv.png">
+            <figcaption>
+                Early Delve protoypes with a more haphazard palette.</figcaption>
+        </figure>
+        <p>
+            To meet the complex needs of the Delve system, I developed a theory of aesthetic color-printing over the
+            course of a year. Through my development process, I created a palette-making algorithm inspired by the
+            systems of harmony in Western music theory. Through understanding and applying this model, a designer can
+            effortlessly achieve sublime beauty in the color palettes they craft and easily plan color systems that
+            scale to a job of any complexity.</p>
+    </section>
+    <section id="terms">
+        <h2>Terminology</h2>
+        <p>
+            Before getting into my color system itself, I will precisely define the meanings of some of the concepts I
+            reference later on. First I shall cover the three experiential aspects of color before moving on to the
+            aesthetic qualities of color.
+        </p>
+        <h3>hue</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv2.png">
+            <figcaption>
+                Red and Green differ in hue.</figcaption>
+        </figure>
+        <p>
+            Hue is the experiential aspect of color that lets us estimate the wavelength of light. &#x201C;Red&#x201D;
+            is distinct from &#x201C;Green&#x201D; by this aspect, even if the two are alike in other aspects (as
+            above, where they are equally saturated and dark). Hue is comparable to pitch in sound (Red:F, Green:C#,
+            etc).
+        </p>
+        <h3>darkness</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv3.png">
+            <figcaption>A darkness gradient in the the red hue.</figcaption>
+        </figure>
+        <p>
+            Darkness is the experiential aspect of color that lets us estimate the amount of light we receive from a
+            source. The darkness of a color is comparable to the octave of a note in sound&#x2014;the same pitches:hues
+            occur within each darkness-gradation:octave. However, there is a range of darkness gradation within which
+            the hues of colors tend to be most perceptible to us.
+        </p>
+        <h3>vibrancy</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv4.png">
+            <figcaption>
+                Three green colors with full, half, and one-fourth loudness, and 70K grey.</figcaption>
+        </figure>
+        <p>
+            Vibrancy (commonly, &#x201C;saturation&#x201D;) is the experiential aspect of color that describes the
+            intensity of a color&#x2019;s hue. In the Chromata system, True colors are the loudest, and Muted colors
+            are the quietest. Vibrancy is comparable to volume in sound.
+        </p>
+        <h3>consonance</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv5.png">
+            <figcaption>
+                Y axis = loudness; X axis = darkness</figcaption>
+        </figure>
+        <aside id="ref1">
+            For a visual explanation of these diagrams, see <a href="#a1">Appendix 1</a>.
+        </aside>
+        <p>
+            Consonance, concord, and harmony are terms for an aesthetic sensation of satisfaction. This feeling
+            originates from the subconscious recognition of order and balance within something we perceive. We call
+            objects that evoke this sensation &#x201C;beautiful.&#x201D; The figure above provides an example.
+            Logically, consonance can be understood to &#x201C;symbolize&#x201D; order. Better yet,
+            &#x201C;order&#x201D; and &#x201C;beauty&#x201D; can be respectively understood as conscious and unconcious
+            impressions of structure.
+        </p>
+        <h3>dissonance</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv6.png">
+            <figcaption>
+                Y axis = loudness; X axis = darkness</figcaption>
+        </figure>
+        <p>
+            Dissonance and discord are terms we use for aesthetic discomfort. This feeling originates from an
+            arrangement of forms from which we perceive &#x22;ugliness&#x22; or &#x22;clash.&#x22; Dissonance arises
+            subconsiously in reaction to forms that are &#x201C;out of order&#x201D; and intense. The above figure
+            provides an example.
+        </p>
+        <p>
+            Beautiful forms evoke consonance while ugly forms evoke dissonance. Through careful attention to their
+            aesthetic sense, fine artists, designers, musicians, and other craftsmen assemble consonant configurations
+            intuitively.
+        </p>
+        <p>
+            But the structure that underlies aesthetic consonance,can be analyzed and modeled through rational means,
+            or rationalized. The unconscious can be made conscious through analysis and synthesis, which is what I
+            shall do here. A rationalized framework should allow the creation of complex color systems without
+            frustration.
+        </p>
+    </section>
     <section id="mix">
-    <h2>Colormixing</h2>
-        
-    <p>
-In this section, we&#x2019;ll investigate how colors are mixed in the printer process system and colors formed through process can be classified.</p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv7.png">
-    </figure>
-    <p>
-In process print, each color is made from a layered application of four inks: Cyan, Yellow, Magenta, and blacK. A process printer reproportions these four inks in a colormix to produce whatever color necessary. Changing the CYMK quantities in a mix results in a different color.</p>
-        <p>
-K is unlike the other inks. Unlike C, Y, and M, black contributes nothing to the hue of a mixed color, but only adds to its darkness, while reducing its loudness. Thus, K&#x2019;s role in colormixing is unique, and it is excluded from references to the &#x201C;process hues&#x201D; (CMY).</p>
-       
-    <h3>primaries &#x26; secondaries</h3>
-    <figure data-action="zoom">
-    <img src="/images/sound-vision/sv8.png">
-        <figcaption>
-            Colormixes for True Primary and Secondary colors.</figcaption>
-    </figure>
-    <p>
-A Primary color results from a colormix incorporating only one of the process hues. The primary colors are Cyan, Magenta, and Yellow. A secondary color results from a colormix incorporating two hue constituents in 1:1 proportion. The secondary colors are Red (MY), Indigo (CM), and Green (CY). Note that the secondaries are darker than the primaries.
-    </p>   
-    <h3>tertiaries</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv9.png">
-        <figcaption>
-        Colormixes for the True Tertiary Colors</figcaption>
-    </figure>
-    <p>
-A tertiary color is found between each adjacent primary and secondary color. A tertiary is made by combining two process hues in 1:2 proportion&#x2014;a full-measure of one, and a half-measure of the other. Violet, for example, incorporates a full-measure of Magenta (100M) and a half-measure of Cyan (50C).
-    </p>   
-    <h3>colorclock</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv10.png">
-    </figure>
-    <p>
-Together, the three Primaries, three Secondaries and six Tertiaries form a scale spanning the color spectrum in twelve discontinuous, evenly spaced steps, much like the chromatic scale in Western music. Arranged about a wheel&#x2014;like hours on an analog clock&#x2014;the continuous gradient of the color spectrum can be seen. I call this arrangement the &#x201C;Colorclock.&#x201D; It will be used to analyse color palettes in the next section, Chromata.
-    </p>
-       
-    <h3>loud colors: true, pale, and rich</h3>
-    <p>
-A True color the loudest it can possibly be, given its darkness. True colors are made from a colormix that includes 100% of one primary hue, 0&#x2013;100% of another primary hue, and nothing else. In print, most true colors are darker than 60K. Orange and Lime (40K) and Yellow (10K) are the exceptions. The name of a True color is the same as the true color&#x2019;s hue&#x2014;e.g., &#x201C;Red.&#x201D; However, in most contexts, the affix &#x201C;True&#x201D; (&#x201C;True Red&#x201D;) should be used for the sake of clarity.
-    </p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv11.png">
-        <figcaption> 
-        A pale Red as dark as 40K, True Red, True Teal, and a rich Teal as dark as black.</figcaption>
-    </figure>
-    <p>
-A &#x201C;Pale&#x201D; color incorporates less than 100% of up to two process hues and nothing else. A &#x201C;Rich&#x201D; color incorporates 100% of one hue constituent, 0&#x2013;100% of another hue constituent, and 1&#x2013;100K. Refer to Pale and Rich colors with a letter&#x2013;number format. The letter, placed first, is the initial of the color&#x2019;s hue. The number following the letter should equal the color&#x2019;s grayscale equivalent. For example, a Red as dark as 40K would be named &#x201C;R40.&#x201D; If the color in question is as dark as 100K, &#x201C;K&#x201D; can be used in place of the number.
-    </p>
-    <p>
-Collectively,True, Pale and Rich colors are called &#x201C;Loud&#x201D; colors. Loud colors are derived as directly as possible from True colors, and thus display their hues as close as possible to maximal loudness at the darkness level they were designed for.
-    </p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv12.png">
-        <figcaption>
-        In print, 100Y ('flava') is the brightest true color.</figcaption>
-    </figure>
-    <aside id="ref2">
-    For a full chart showing all Loud colors arranged by inherent darkness, see <a href="#a2">Appendix 2</a>.
-    </aside>
-    <p>
-The inherent darkness (K-value) of a true color is a function of the inherent darkness of the hue constituents that form it and their proportions. The chart below plots the inherent darkness of every True color.  Note that The darkness of a color is not always equivalent to the summed K-values its constituents. For example, True Indigo results from a colormix of 100C (=60K) and 100M (=60K). However, Indigo is  equivalent to ~90K.
-    </p>
+        <h2>Colormixing</h2>
 
-    <h3>quiet colors: drab and muted</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv15.png">
-        <figcaption>
-        Muted colors in twelve hues and seven darkness intervals.</figcaption>
-    </figure>
-    <p>
-Quiet colors are less loud than loud colors. A drab color has roughly half the loudness of a loud color, while a muted color has roughly one quarter the loudness of a loud color. The colormix of a quiet color should be derived directly from the mix of the corresponding loud color. Quiet colors are named after their loud equivalent, but add a prefix signifying their relative loudness&#x2014;e.g., &#x201C;Half-&#x201D; or &#x201C;Quarter.&#x201D; </p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv13.png">
-        <figcaption>
-        True Cyan, Drab Cyan as dark as 60% black, Pale Lime as dark as 30% black, <br>Muted Lime as dark as 30% black.</figcaption>
-    </figure>
-    <p>
-To derive a drab or muted color from a pale or true color, first multiply the values of all the process hues in its colormix by the loudness ratio (.5 for a drab color, .25 for a muted color), then add K equal to the darkness value lost in the reduction. Were I to derive a drab equivalent to True Cyan, I would change the C component from 100 to 50, then add 30K to make up the darkness lost.
-    </p>
-    <p>
-To derive a muted or drab color from a rich color, derive the appropriate quiet version of its true color by the above process, then add K until you reach the desired darkness value. By adding 20K to the Drab Cyan formula above, I would make Half-C80.
-    </p>   
-    <h3>mix with two process hues</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv14.png">
-        <figcaption>
-        A quantity of all three primary hues is much like the same amount of black.</figcaption>
-    </figure>
-    <p>
-Adding the third primary hue to a colormix that includes two primary hues results in a darker, less loud color. In the example below, a third of Yellow is added to a mix of two-thirds Cyan and a full measure of Magenta. A third of each of the primary hues roughly equates to a third of K (33%).
-    </p>
+        <p>
+            In this section, we&#x2019;ll investigate how colors are mixed in the printer process system and colors
+            formed through process can be classified.</p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv7.png">
+        </figure>
+        <p>
+            In process print, each color is made from a layered application of four inks: Cyan, Yellow, Magenta, and
+            blacK. A process printer reproportions these four inks in a colormix to produce whatever color necessary.
+            Changing the CYMK quantities in a mix results in a different color.</p>
+        <p>
+            K is unlike the other inks. Unlike C, Y, and M, black contributes nothing to the hue of a mixed color, but
+            only adds to its darkness, while reducing its loudness. Thus, K&#x2019;s role in colormixing is unique, and
+            it is excluded from references to the &#x201C;process hues&#x201D; (CMY).</p>
+
+        <h3>primaries &#x26; secondaries</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv8.png">
+            <figcaption>
+                Colormixes for True Primary and Secondary colors.</figcaption>
+        </figure>
+        <p>
+            A Primary color results from a colormix incorporating only one of the process hues. The primary colors are
+            Cyan, Magenta, and Yellow. A secondary color results from a colormix incorporating two hue constituents in
+            1:1 proportion. The secondary colors are Red (MY), Indigo (CM), and Green (CY). Note that the secondaries
+            are darker than the primaries.
+        </p>
+        <h3>tertiaries</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv9.png">
+            <figcaption>
+                Colormixes for the True Tertiary Colors</figcaption>
+        </figure>
+        <p>
+            A tertiary color is found between each adjacent primary and secondary color. A tertiary is made by
+            combining two process hues in 1:2 proportion&#x2014;a full-measure of one, and a half-measure of the other.
+            Violet, for example, incorporates a full-measure of Magenta (100M) and a half-measure of Cyan (50C).
+        </p>
+        <h3>colorclock</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv10.png">
+        </figure>
+        <p>
+            Together, the three Primaries, three Secondaries and six Tertiaries form a scale spanning the color
+            spectrum in twelve discontinuous, evenly spaced steps, much like the chromatic scale in Western music.
+            Arranged about a wheel&#x2014;like hours on an analog clock&#x2014;the continuous gradient of the color
+            spectrum can be seen. I call this arrangement the &#x201C;Colorclock.&#x201D; It will be used to analyse
+            color palettes in the next section, Chromata.
+        </p>
+
+        <h3>loud colors: true, pale, and rich</h3>
+        <p>
+            A True color the loudest it can possibly be, given its darkness. True colors are made from a colormix that
+            includes 100% of one primary hue, 0&#x2013;100% of another primary hue, and nothing else. In print, most
+            true colors are darker than 60K. Orange and Lime (40K) and Yellow (10K) are the exceptions. The name of a
+            True color is the same as the true color&#x2019;s hue&#x2014;e.g., &#x201C;Red.&#x201D; However, in most
+            contexts, the affix &#x201C;True&#x201D; (&#x201C;True Red&#x201D;) should be used for the sake of clarity.
+        </p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv11.png">
+            <figcaption>
+                A pale Red as dark as 40K, True Red, True Teal, and a rich Teal as dark as black.</figcaption>
+        </figure>
+        <p>
+            A &#x201C;Pale&#x201D; color incorporates less than 100% of up to two process hues and nothing else. A
+            &#x201C;Rich&#x201D; color incorporates 100% of one hue constituent, 0&#x2013;100% of another hue
+            constituent, and 1&#x2013;100K. Refer to Pale and Rich colors with a letter&#x2013;number format. The
+            letter, placed first, is the initial of the color&#x2019;s hue. The number following the letter should
+            equal the color&#x2019;s grayscale equivalent. For example, a Red as dark as 40K would be named
+            &#x201C;R40.&#x201D; If the color in question is as dark as 100K, &#x201C;K&#x201D; can be used in place of
+            the number.
+        </p>
+        <p>
+            Collectively,True, Pale and Rich colors are called &#x201C;Loud&#x201D; colors. Loud colors are derived as
+            directly as possible from True colors, and thus display their hues as close as possible to maximal loudness
+            at the darkness level they were designed for.
+        </p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv12.png">
+            <figcaption>
+                In print, 100Y ('flava') is the brightest true color.</figcaption>
+        </figure>
+        <aside id="ref2">
+            For a full chart showing all Loud colors arranged by inherent darkness, see <a href="#a2">Appendix 2</a>.
+        </aside>
+        <p>
+            The inherent darkness (K-value) of a true color is a function of the inherent darkness of the hue
+            constituents that form it and their proportions. The chart below plots the inherent darkness of every True
+            color. Note that The darkness of a color is not always equivalent to the summed K-values its constituents.
+            For example, True Indigo results from a colormix of 100C (=60K) and 100M (=60K). However, Indigo is
+            equivalent to ~90K.
+        </p>
+
+        <h3>quiet colors: drab and muted</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv15.png">
+            <figcaption>
+                Muted colors in twelve hues and seven darkness intervals.</figcaption>
+        </figure>
+        <p>
+            Quiet colors are less loud than loud colors. A drab color has roughly half the loudness of a loud color,
+            while a muted color has roughly one quarter the loudness of a loud color. The colormix of a quiet color
+            should be derived directly from the mix of the corresponding loud color. Quiet colors are named after their
+            loud equivalent, but add a prefix signifying their relative loudness&#x2014;e.g., &#x201C;Half-&#x201D; or
+            &#x201C;Quarter.&#x201D; </p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv13.png">
+            <figcaption>
+                True Cyan, Drab Cyan as dark as 60% black, Pale Lime as dark as 30% black, <br>Muted Lime as dark as
+                30% black.</figcaption>
+        </figure>
+        <p>
+            To derive a drab or muted color from a pale or true color, first multiply the values of all the process
+            hues in its colormix by the loudness ratio (.5 for a drab color, .25 for a muted color), then add K equal
+            to the darkness value lost in the reduction. Were I to derive a drab equivalent to True Cyan, I would
+            change the C component from 100 to 50, then add 30K to make up the darkness lost.
+        </p>
+        <p>
+            To derive a muted or drab color from a rich color, derive the appropriate quiet version of its true color
+            by the above process, then add K until you reach the desired darkness value. By adding 20K to the Drab Cyan
+            formula above, I would make Half-C80.
+        </p>
+        <h3>mix with two process hues</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv14.png">
+            <figcaption>
+                A quantity of all three primary hues is much like the same amount of black.</figcaption>
+        </figure>
+        <p>
+            Adding the third primary hue to a colormix that includes two primary hues results in a darker, less loud
+            color. In the example below, a third of Yellow is added to a mix of two-thirds Cyan and a full measure of
+            Magenta. A third of each of the primary hues roughly equates to a third of K (33%).
+        </p>
     </section>
-        
-        
+
+
     <section id="chromata">
-    <h2>Chromata</h2>
-    <p>
-During the summer of 2016, I realized that the intervals I had put into practice were twelve evenly distributed points along a spectrum of continuous variation&#x2014;the direct visual equivalent of the musical chromatic scale. When my friend <a href="http://mishko.co/about">Nevan</a> showed me how his guitar worked, I noticed that the fourth and fifth intervals he played had an equivalent chromatic structure to a split complement in color. Then, it occurred to me: could the principles of music theory be translated to my chromatic color system?
-    </p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv16.png">
-        <figcaption>
-        F minor chord in sound and an equivalent set of colors.</figcaption>
-    </figure>
-    <p>
-I assembled my twelve &#x22;color-notes&#x22; into a radial configuration much like a clock, and began to draw shapes much like pitch constellations&#x2014;a way of visually mapping chords in music. The results of this experiment were spectacular&#x2014;by using geometric forms to model the structure and balance of palettes, I discovered that tone and hue share much of their aesthetic logic.</p>
+        <h2>Chromata</h2>
+        <p>
+            During the summer of 2016, I realized that the intervals I had put into practice were twelve evenly
+            distributed points along a spectrum of continuous variation&#x2014;the direct visual equivalent of the
+            musical chromatic scale. When my friend <a href="http://mishko.co/about">Nevan</a> showed me how his guitar
+            worked, I noticed that the fourth and fifth intervals he played had an equivalent chromatic structure to a
+            split complement in color. Then, it occurred to me: could the principles of music theory be translated to
+            my chromatic color system?
+        </p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv16.png">
+            <figcaption>
+                F minor chord in sound and an equivalent set of colors.</figcaption>
+        </figure>
+        <p>
+            I assembled my twelve &#x22;color-notes&#x22; into a radial configuration much like a clock, and began to
+            draw shapes much like pitch constellations&#x2014;a way of visually mapping chords in music. The results of
+            this experiment were spectacular&#x2014;by using geometric forms to model the structure and balance of
+            palettes, I discovered that tone and hue share much of their aesthetic logic.</p>
         <h3>oppositions and tetranes</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv17.png">
-        <figcaption>
-        Divinity (Yellow + Indigo) and Elements (Lime + Red + Violet + Cyan)</figcaption>
-    </figure>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv17.png">
+            <figcaption>
+                Divinity (Yellow + Indigo) and Elements (Lime + Red + Violet + Cyan)</figcaption>
+        </figure>
         <p>
-The opposition relationship is the visual equivalent of the musically discordant diminished fifth or tritone. Such colors strike a potent, dynamic balance, but do not necessarily clash as in sound. Because Opposition is a super-symmetrical relationship between two notes, it occurs six times in a twelve-note spectrum. Colors in tetrane would be adjacent corners on a perfect square inscribed upon the colorclock. Four colors in tetrane are called a Square.
-    </p>
-    <h3>complements: the fourth and fifth intervals</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv18.png">
-        <figcaption>
-        Glory (Yellow + Violet + Blue) and Steel &#x26; Magnum (Blue + Red + Teal + Magenta)</figcaption>
-    </figure>
-    <p>
-A Complement is a pair of notes a half step away from Opposition. A Split Complement is the hue equivalent of the musical perfect fifth interval. A group of three or more hues interconnected by split complement relationships is called a Quintal Stack, or simply, &#x201C;Quintal.&#x201D; These palettes are extremely consonant, but express a sensibility more &#x201C;narrow,&#x201D; or &#x201C;specific&#x201D; than most other sets of three. This is because the hues within a  Quintal stack tend to cluster together on either side of the spectrum.
-    </p>
-    <h3>trines: augmented chords</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv19.png">
-        <figcaption>
-        The four complete Trines: Winter, Spring, Summer, and Autumn</figcaption>
-    </figure>
-    <p>
-Colors in trine together would be the corners of an equilateral triangle overlaid on the colorclock. Three colors in a completed trine are called a Season, a structure equivalent to a musical augmented chord. There are four different seasons on the colorclock.
-    </p>
-    <h3>trios: major and minor chords</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv20.png">
-        <figcaption>
-        E&#x266D; Major (Yellow + Magenta + Blue) and F Minor (Red + Violet + Teal)</figcaption>
-    </figure>
-    <p>
-A trio is a trine in which one of the hues has been shifted a half-step. The result is a set of three hues related by trine, tetrane, and split. These palettes are equivalent to a major or minor chord in music, however, they do not carry the same connotations in terms of feeling. That is, a &#x201C;minor&#x201D; palette does not feel more &#x201C;sad&#x201D; on average than a &#x201C;major&#x201D; palette in the this scheme.
-    </p>
-    <h3>inverse trine</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv21.png">
-    </figure>
-    <p>
-An Inverse Trine is a Trine hue structure with one of its hues swapped for its opposition. This structure is stable, but narrow in scope, spanning only five hue steps. The inverse trine is a densely clustered analogous palette&#x2014;it tends to lack a sense of movement and dynamicism that comes with a jump across the spectrum.
-    </p>
-    <h3>inverse trio</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv22.png">
-    </figure>
-    <p>
-An Inverse Trio is a trio hue structure in which the hue replaced by its opposition, leaving the complement of the original structure intact. Like the Inverse Trine, the Inverse Trio is an analogous palette, however the inclusion of the complement adds a sense of energy that the inverse trine lacks.
-    </p>
-    <h3>trifecta: diminished chord</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv23.png">
-        <figcaption>
-        Apollo (Yellow + Pink + Indigo) and Typhoon (Cyan + Lime + Red)</figcaption>
-    </figure>
+            The opposition relationship is the visual equivalent of the musically discordant diminished fifth or
+            tritone. Such colors strike a potent, dynamic balance, but do not necessarily clash as in sound. Because
+            Opposition is a super-symmetrical relationship between two notes, it occurs six times in a twelve-note
+            spectrum. Colors in tetrane would be adjacent corners on a perfect square inscribed upon the colorclock.
+            Four colors in tetrane are called a Square.
+        </p>
+        <h3>complements: the fourth and fifth intervals</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv18.png">
+            <figcaption>
+                Glory (Yellow + Violet + Blue) and Steel &#x26; Magnum (Blue + Red + Teal + Magenta)</figcaption>
+        </figure>
         <p>
-A trifecta is a group of three hues related by opposition and tetrane (see above). It is equivalent to a diminished chord in music.
-    </p>
-    <h3>diatonic scales</h3>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv24.png">
-        <figcaption>
-        Dignity and Diversity, Yellow-based diatonic scales</figcaption>
-    </figure>
+            A Complement is a pair of notes a half step away from Opposition. A Split Complement is the hue equivalent
+            of the musical perfect fifth interval. A group of three or more hues interconnected by split complement
+            relationships is called a Quintal Stack, or simply, &#x201C;Quintal.&#x201D; These palettes are extremely
+            consonant, but express a sensibility more &#x201C;narrow,&#x201D; or &#x201C;specific&#x201D; than most
+            other sets of three. This is because the hues within a Quintal stack tend to cluster together on either
+            side of the spectrum.
+        </p>
+        <h3>trines: augmented chords</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv19.png">
+            <figcaption>
+                The four complete Trines: Winter, Spring, Summer, and Autumn</figcaption>
+        </figure>
         <p>
-When designing a system of colors to be used in modular combination through a series of applications, a diatonic scale structure is an ideal tool. Diatonic scales are sets of notes&#x2014;generally five (pentatonic) or seven (heptatonic)&#x2014;spread as far apart as possible from each other among the scale of 12. Less complex arrays are better served by a pentatonic scale, which contains two trios. A heptatonic scale contains six trios and one trifecta, yielding lots of well balanced palettes and pairings that could be used throughout a massive style system. In both a pentatonic and a heptatonic scale, all hues are contained in a single quintal stack.</p>
-</section>
-<section id="dnd">
-    
-    <h2>Darkness and Dissonance</h2>
-    <figure data-action="zoom">
-    <img src="/images/sound-vision/sv25.png">
-        <figcaption>
-    Left: Darkness of colors far too similar. / Right: Darkness of colors distinct.</figcaption>
-    </figure>    
-    <p>
-While these hue-structuring models helped me rethink the way color was used in Delve, I observed as I worked with the system that some combinations whose hue were related through the scheme still looked awful together. The princples of disharmony are quite different between sound and vision: sounds close in tone or with certain specials tone relationships sound ugly, while colors too close in overall darkness look ugly.
-    </p>
-    <p>
-When two touching colors are too similar in brightness and different in hue or saturation, a clash occurs. Clashing colors appear to vibrate on the page, an effect that intensifies with greater hue difference. Colors should be at least 10K away from each other in order sit comfortably side-by-side.</p>
-    <figure data-action="zoom">
-        <img src="/images/sound-vision/sv26.png">
-    </figure>
-    <p>
-This quality represents a major difference between color and sound aesthetics: sonic discord comes from notes of analogous pitch (compare to hue); visual discord comes from colors of analogous darkness (compare to octave).</p>
+            Colors in trine together would be the corners of an equilateral triangle overlaid on the colorclock. Three
+            colors in a completed trine are called a Season, a structure equivalent to a musical augmented chord. There
+            are four different seasons on the colorclock.
+        </p>
+        <h3>trios: major and minor chords</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv20.png">
+            <figcaption>
+                E&#x266D; Major (Yellow + Magenta + Blue) and F Minor (Red + Violet + Teal)</figcaption>
+        </figure>
+        <p>
+            A trio is a trine in which one of the hues has been shifted a half-step. The result is a set of three hues
+            related by trine, tetrane, and split. These palettes are equivalent to a major or minor chord in music,
+            however, they do not carry the same connotations in terms of feeling. That is, a &#x201C;minor&#x201D;
+            palette does not feel more &#x201C;sad&#x201D; on average than a &#x201C;major&#x201D; palette in the this
+            scheme.
+        </p>
+        <h3>inverse trine</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv21.png">
+        </figure>
+        <p>
+            An Inverse Trine is a Trine hue structure with one of its hues swapped for its opposition. This structure
+            is stable, but narrow in scope, spanning only five hue steps. The inverse trine is a densely clustered
+            analogous palette&#x2014;it tends to lack a sense of movement and dynamicism that comes with a jump across
+            the spectrum.
+        </p>
+        <h3>inverse trio</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv22.png">
+        </figure>
+        <p>
+            An Inverse Trio is a trio hue structure in which the hue replaced by its opposition, leaving the complement
+            of the original structure intact. Like the Inverse Trine, the Inverse Trio is an analogous palette, however
+            the inclusion of the complement adds a sense of energy that the inverse trine lacks.
+        </p>
+        <h3>trifecta: diminished chord</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv23.png">
+            <figcaption>
+                Apollo (Yellow + Pink + Indigo) and Typhoon (Cyan + Lime + Red)</figcaption>
+        </figure>
+        <p>
+            A trifecta is a group of three hues related by opposition and tetrane (see above). It is equivalent to a
+            diminished chord in music.
+        </p>
+        <h3>diatonic scales</h3>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv24.png">
+            <figcaption>
+                Dignity and Diversity, Yellow-based diatonic scales</figcaption>
+        </figure>
+        <p>
+            When designing a system of colors to be used in modular combination through a series of applications, a
+            diatonic scale structure is an ideal tool. Diatonic scales are sets of notes&#x2014;generally five
+            (pentatonic) or seven (heptatonic)&#x2014;spread as far apart as possible from each other among the scale
+            of 12. Less complex arrays are better served by a pentatonic scale, which contains two trios. A heptatonic
+            scale contains six trios and one trifecta, yielding lots of well balanced palettes and pairings that could
+            be used throughout a massive style system. In both a pentatonic and a heptatonic scale, all hues are
+            contained in a single quintal stack.</p>
     </section>
-    
+    <section id="dnd">
+
+        <h2>Darkness and Dissonance</h2>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv25.png">
+            <figcaption>
+                Left: Darkness of colors far too similar. / Right: Darkness of colors distinct.</figcaption>
+        </figure>
+        <p>
+            While these hue-structuring models helped me rethink the way color was used in Delve, I observed as I
+            worked with the system that some combinations whose hue were related through the scheme still looked awful
+            together. The princples of disharmony are quite different between sound and vision: sounds close in tone or
+            with certain specials tone relationships sound ugly, while colors too close in overall darkness look ugly.
+        </p>
+        <p>
+            When two touching colors are too similar in brightness and different in hue or saturation, a clash occurs.
+            Clashing colors appear to vibrate on the page, an effect that intensifies with greater hue difference.
+            Colors should be at least 10K away from each other in order sit comfortably side-by-side.</p>
+        <figure data-action="zoom">
+            <img src="/images/sound-vision/sv26.png">
+        </figure>
+        <p>
+            This quality represents a major difference between color and sound aesthetics: sonic discord comes from
+            notes of analogous pitch (compare to hue); visual discord comes from colors of analogous darkness (compare
+            to octave).</p>
+    </section>
+
     <section id="modes">
-    <h2>Palette Modes</h2>
-    <p>
-For the final leg of my research,I attempted to build a typology of darkness and saturation arrangements (which I termed &#x22;palette modes&#x22;) to which a hue structure of up to five colors could be applied. I identified five types which demonstrated the range of the system well.
-    </p>
-    <h3>gay</h3>
-    <figure>
-        <img src="/images/sound-vision/sv27.png">    
-    </figure>
-    <p>
-Uses loud colors across the full darkness range to convey a sense of vivacious joy.
-    </p>
-    <h3>dour</h3>
-    <figure>
-        <img src="/images/sound-vision/sv28.png">    
-    </figure>
-    <p>
-Uses muted and drab color in the 20&#x2013;80K range for a distinguished or mature appearance.
-    </p>
-    <h3>soft</h3>
-    <figure>
-        <img src="/images/sound-vision/sv29.png">    
-    </figure>
-    <p>
-Uses Muted and Pale color in the 10&#x2013;60K range to make a gentle impression on the eyes.
-    </p>
-    <h3>bold</h3>
-    <figure>
-        <img src="/images/sound-vision/sv30.png">    
-    </figure>
-    <p>
-Uses a dark, drab background dressed with muted colors, a medium-darkness loud color and black to assert confidence and power.
-    </p>
-    <h3>accent</h3>
-    <figure>
-        <img src="/images/sound-vision/sv31.png">    
-    </figure>
-    <p>
-Uses a light, muted background supported by a slight shade and white, while a loud and dark-drab pair dominate the foreground.</p>
-    <figure>
-        <img src="/images/sound-vision/sv32.png">    
-    </figure>
-    <p>
-This system has been tremendously successful since its implementation in the design of Delve. The Colortuners I employ in my design process are laid out below. For each color, process values are give in descending CMYK order. I highly recommend using this system for complex palette design jobs.
-    </p>
-</section>
-<section>
-    <h1>Appendices</h1>
-    <br id="a1">
-    <h3 style="text-align: center">1. palette explainer detail 
-    <br><a href="#ref1" style="font-weight: 600"> &nwarr;</a></h3>
-    <figure>
-        <img src="/images/sound-vision/sv33.png"></figure>
-    
-    <br id="a2">
-    <h3 style="text-align: center">2. loud colormixes
-    <br><a href="#ref2" style="font-weight: 600">&nwarr;</a></h3>
-    <figure>
-        <img src="/images/sound-vision/sv34.png"></figure>
-    
-    <br id="a3">
-    <h3 style="text-align: center">3. quiet colormixes</h3>
-    <figure>
-        <img src="/images/sound-vision/sv35.png"></figure>
-    
-    <br id="a4">
-    <h3 style="text-align: center">4. triple interval</h3>
-    <figure>
-        <img src="/images/sound-vision/sv36.png"></figure>
-    
-    <br id="a5">
-    <h3 style="text-align: center">5. alternative alignments &amp; hue names</h3>
-    <figure>
-        <img src="/images/sound-vision/sv37.png"></figure>
-        
-</section>
+        <h2>Palette Modes</h2>
+        <p>
+            For the final leg of my research,I attempted to build a typology of darkness and saturation arrangements
+            (which I termed &#x22;palette modes&#x22;) to which a hue structure of up to five colors could be applied.
+            I identified five types which demonstrated the range of the system well.
+        </p>
+        <h3>gay</h3>
+        <figure>
+            <img src="/images/sound-vision/sv27.png">
+        </figure>
+        <p>
+            Uses loud colors across the full darkness range to convey a sense of vivacious joy.
+        </p>
+        <h3>dour</h3>
+        <figure>
+            <img src="/images/sound-vision/sv28.png">
+        </figure>
+        <p>
+            Uses muted and drab color in the 20&#x2013;80K range for a distinguished or mature appearance.
+        </p>
+        <h3>soft</h3>
+        <figure>
+            <img src="/images/sound-vision/sv29.png">
+        </figure>
+        <p>
+            Uses Muted and Pale color in the 10&#x2013;60K range to make a gentle impression on the eyes.
+        </p>
+        <h3>bold</h3>
+        <figure>
+            <img src="/images/sound-vision/sv30.png">
+        </figure>
+        <p>
+            Uses a dark, drab background dressed with muted colors, a medium-darkness loud color and black to assert
+            confidence and power.
+        </p>
+        <h3>accent</h3>
+        <figure>
+            <img src="/images/sound-vision/sv31.png">
+        </figure>
+        <p>
+            Uses a light, muted background supported by a slight shade and white, while a loud and dark-drab pair
+            dominate the foreground.</p>
+        <figure>
+            <img src="/images/sound-vision/sv32.png">
+        </figure>
+        <p>
+            This system has been tremendously successful since its implementation in the design of Delve. The
+            Colortuners I employ in my design process are laid out below. For each color, process values are give in
+            descending CMYK order. I highly recommend using this system for complex palette design jobs.
+        </p>
+    </section>
+    <section>
+        <h1>Appendices</h1>
+        <br id="a1">
+        <h3 style="text-align: center">1. palette explainer detail
+            <br><a href="#ref1" style="font-weight: 600"> &nwarr;</a></h3>
+        <figure>
+            <img src="/images/sound-vision/sv33.png"></figure>
+
+        <br id="a2">
+        <h3 style="text-align: center">2. loud colormixes
+            <br><a href="#ref2" style="font-weight: 600">&nwarr;</a></h3>
+        <figure>
+            <img src="/images/sound-vision/sv34.png"></figure>
+
+        <br id="a3">
+        <h3 style="text-align: center">3. quiet colormixes</h3>
+        <figure>
+            <img src="/images/sound-vision/sv35.png"></figure>
+
+        <br id="a4">
+        <h3 style="text-align: center">4. triple interval</h3>
+        <figure>
+            <img src="/images/sound-vision/sv36.png"></figure>
+
+        <br id="a5">
+        <h3 style="text-align: center">5. alternative alignments &amp; hue names</h3>
+        <figure>
+            <img src="/images/sound-vision/sv37.png"></figure>
+
+    </section>
 </main>

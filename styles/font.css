@@ -1,0 +1,293 @@
+sub {
+  font-variant-position: sub;
+  font-feature-settings: "kern", "liga", "clig", "calt", "subs";
+  font-size: inherit;
+  vertical-align: baseline;
+}
+.cap {
+  font-feature-settings: "c2sc";
+}
+/* Logo */
+@font-face {
+  font-family: Logo;
+  src: url("/fonts/JEM-Regular.woff") format("woff");
+  font-weight: normal;
+}
+/* Canticle */
+@font-face {
+  font-family: Canticle;
+  src: url("/fonts/Ergata-Canticle3.woff") format("woff");
+  font-weight: normal;
+}
+/* Candor */
+@font-face {
+  font-family: Canticle;
+  src: url("/fonts/Ergata-Candor7.woff") format("woff");
+  font-weight: bold;
+}
+
+/* Directive */
+@font-face {
+  font-family: Directive;
+  src: url("/fonts/Directive-Regular.woff") format("woff");
+  font-weight: normal;
+} /* regular */
+
+/* Hans */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Razor.woff") format("woff");
+  font-weight: 100;
+} /* 100 (razor) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Thin.woff") format("woff");
+  font-weight: 200;
+} /* 200 (thin) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Light.woff") format("woff");
+  font-weight: 300;
+} /* 300 (light) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Regular.woff") format("woff");
+  font-weight: 400;
+} /* 400 (regular) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Medium.woff") format("woff");
+  font-weight: 500;
+} /* 500 (medium) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Bold.woff") format("woff");
+  font-weight: 600;
+} /* 600 (bold) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Heavy.woff") format("woff");
+  font-weight: 700;
+} /* 700 (heavy) */
+@font-face {
+  font-family: Hans;
+  src: url("/fonts/Hans-Super.woff") format("woff");
+  font-weight: 800;
+} /* 800 (super) */
+
+/* Ymirsson */
+@font-face {
+  font-family: Uruz;
+  src: url("/fonts/Ergata-Ymirsson4.woff") format("woff");
+  font-weight: medium;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Uruz;
+  src: url("/fonts/Ergata-Ymirsson5.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+} /* medium */
+@font-face {
+  font-family: Uruz;
+  src: url("/fonts/Ergata-Ymirsson6.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+} /* semibold */
+@font-face {
+  font-family: Uruz;
+  src: url("/fonts/Ergata-Ymirsson7.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+} /* bold */
+@font-face {
+  font-family: UruzC;
+  src: url("/fonts/Ergata-Ymirsson4C.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+} /* reg-condensed */
+@font-face {
+  font-family: UruzC;
+  src: url("/fonts/Ergata-Ymirsson5C.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+} /* med-condensed */
+@font-face {
+  font-family: UruzC;
+  src: url("/fonts/Ergata-Ymirsson6C.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+} /* smb-condensed */
+
+/* Antoinette */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette0.woff") format("woff");
+  font-weight: 50;
+  font-style: normal;
+} /* razor */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette1.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+} /* thin */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette2.woff") format("woff");
+  font-weight: thin;
+  font-style: normal;
+} /* light */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette3.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette4.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Interloper;
+  src: url("/fonts/Ergata-Antoinette5.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+} /* regular */
+
+/* Talhertz */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz1.woff") format("woff");
+  font-weight: thin;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz1.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz2.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz3.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz4.woff") format("woff");
+  font-weight: medium;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz5.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+} /* medium */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz6.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+} /* semibold */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz7.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+} /* bold */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Fokuso-Antoinette5.woff") format("woff");
+  font-weight: medium;
+  font-style: italic;
+} /* "italic" */
+
+/* Runa */
+@font-face {
+  font-family: Runa;
+  src: url("/fonts/Runa-Regular.woff") format("woff");
+  font-weight: normal;
+} /* regular */
+@font-face {
+  font-family: Runa;
+  src: url("/fonts/Runa-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+} /* italic */
+
+/* Subject Sans */
+@font-face {
+  font-family: SubjectSans;
+  src: url("/fonts/SubjectSans-Regular.woff") format("woff");
+  font-weight: normal;
+} /* regular */
+@font-face {
+  font-family: SubjectSans;
+  src: url("/fonts/SubjectSans-Bold.woff") format("woff");
+  font-weight: bold;
+} /* bold */
+
+/* Willamette */
+@font-face {
+  font-family: Willamette;
+  src: url("/fonts/Willamette-Regular.woff") format("woff");
+  font-weight: normal;
+} /* regular */
+
+/* Kapitali */
+@font-face {
+  font-family: Mage;
+  src: url("/fonts/Kapitali-Magescule6.woff") format("woff");
+  font-weight: normal;
+}
+
+/* Aktivo */
+@font-face {
+  font-family: Aktivo;
+  src: url("/fonts/AktivoPoster-01Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+} /* light */
+@font-face {
+  font-family: Aktivo;
+  src: url("/fonts/AktivoPoster-02Book.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+} /* book */
+@font-face {
+  font-family: Aktivo;
+  src: url("/fonts/AktivoPoster-03Regular.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+} /* regular */
+@font-face {
+  font-family: Aktivo;
+  src: url("/fonts/AktivoPoster-04Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+} /* medium */
+@font-face {
+  font-family: Aktivo;
+  src: url("/fonts/AktivoPoster-05Bold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+} /* bold */
+
+/* Aktivo */
+@font-face {
+  font-family: Icon;
+  src: url("/fonts/DelveSystem-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}

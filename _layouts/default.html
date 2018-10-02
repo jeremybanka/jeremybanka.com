@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	    {% seo %}
-	    {% include head.html %}
-	</head>
-	<body>
-		<nav id="nav">
-			<div class="nav-left">
-				<div>JEREMY BANKA DESIGN</div>
-			</div>
-			<a href="/" class="logo">
-			<span>B</span>
-			</a>
-			<div class="nav-right">
-				<ul>
-					<li><a href="/" class="view-work"> WORK</a></li>
-					<li><a href="/blog.html" class="view-blog"> BLOG</a></li>
-					<li><a href="/about.html" class="view-about"> ABOUT</a></li>
-				</ul>
-			</div>
-		</nav>
-{{ content }}
-        <br style="clear:both;">
-		<footer>
-			<p>&copy; 2018 Jeremy Banka</p>
-		</footer>
-	</body>
+
+<head>
+  {% seo %}
+  {% include head.html %}
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="nav-l">
+      JEREMY BANKA DESIGN
+    </div>
+    <a href="/" class="logo">
+      B
+    </a>
+    <ul class="nav-r">
+      <li><a href="/" class="view-work"> WORK</a></li>
+      <li><a href="/blog.html" class="view-blog"> BLOG</a></li>
+      <li><a href="/about.html" class="view-about"> ABOUT</a></li>
+    </ul>
+  </nav>
+
+  <div id="left"></div>
+  <div id="right"></div>
+  <div id="top"></div>
+  <div id="bottom"></div>
+
+  {{ content }}
+  <br style="clear:both;">
+  <footer>
+    <p>&copy; 2018 Jeremy Banka</p>
+  </footer>
+</body>
+
 </html>

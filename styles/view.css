@@ -1,0 +1,193 @@
+/* MULTICOLUMN—————————————————————————————————————————————
+Activate .spreads! 
+———————————————————————————————————————————————————————————
+*/
+@media (min-width: 600px) {
+  .spread {
+    margin: auto;
+    display: grid;
+  }
+
+  .double {
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  .quad {
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  }
+
+  .column {
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .column.panel {
+    display: block;
+  }
+
+  .column p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  figure.smol {
+    padding-top: 30px;
+  }
+
+  .vcenter {
+    justify-content: center;
+  }
+}
+@media (min-width: 650px) and (max-width: 920px) {
+  .right > * {
+    margin: auto;
+    width: calc(100% - 20px);
+    position: relative;
+  }
+}
+@media screen and (max-width: 700px) {
+  section ul,
+  section ol {
+    padding-left: 30px;
+  }
+}
+
+/* 
+NARROW SCREEN——————————————————————————————————————————————
+Not enough room for the sidebar! 
+———————————————————————————————————————————————————————————
+*/
+
+@media screen and (max-width: 920px) {
+  .toc-wrap {
+    width: calc(100% + 30px);
+    height: auto;
+  }
+
+  .tocbar {
+    padding: 0;
+    border-top: solid 3px #ddd;
+    background-color: white;
+    width: 100%;
+  }
+
+  .tocbar a {
+    display: none;
+  }
+
+  .tocbar a.icon {
+    display: block;
+    background-color: white;
+  }
+
+  .responsive a.icon {
+    position: relative;
+    bottom: 0;
+  }
+
+  .responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .sub {
+    background: #bbb;
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+
+/* 
+WIDE SCREEN————————————————————————————————————————————————
+Expand sidebar 
+———————————————————————————————————————————————————————————
+*/
+
+@media screen and (min-width: 920px) {
+  /* Style ID links on hover */
+  .jump:hover {
+    color: white;
+  }
+  .active:hover {
+    color: black;
+  }
+  .tocbar a:before {
+    background: #4d4d4d;
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  /* Call out the TOC when browsing */
+  .tocbar:hover {
+    background: white;
+    color: black;
+  }
+  .tocbar.blog {
+    position: absolute;
+  }
+}
+
+/* 
+EXTRAWIDE SCREEN———————————————————————————————————————————
+enough room for side panel 
+———————————————————————————————————————————————————————————
+*/
+
+@media (min-width: 1260px) {
+  main,
+  footer,
+  header h2,
+  header h3,
+  header p {
+    padding-left: 400px;
+    padding-right: 20px;
+  }
+  main,
+  footer {
+    max-width: calc(90%);
+  }
+  header {
+    padding-top: 30px;
+  }
+  .toc-wrap {
+    width: 360px;
+  }
+  .tocbar {
+    width: 390px;
+  }
+  .tocbar a {
+    transition: 0.2s;
+  }
+  .jump:hover {
+    background: #666;
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+  .tocbar:hover {
+    background: none;
+  }
+
+  main > figure > img {
+    min-height: calc(100vw - 420px);
+  }
+  nav {
+    position: fixed;
+    z-index: 100;
+    padding-right: 0px;
+    width: 380px;
+  }
+  .nav-l {
+    display: none;
+  }
+  .nav-r {
+    width: 290px;
+    padding-left: 24px;
+  }
+  #left {
+    position: fixed;
+    bottom: 0;
+    height: calc(100vh + 60px);
+    width: 380px;
+    z-index: 0;
+  }
+}

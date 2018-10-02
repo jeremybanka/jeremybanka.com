@@ -4,37 +4,28 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+<script>
+    window.onload = function () {
+        if (screen.width > 420) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content', 'width=device-width, initial-scale=1');
+        }
+    }
+</script>
+
 <!-- General Styles -->
-<link rel="stylesheet" href="/styles/webfonts.css">
-<link rel="stylesheet" href="/styles/links.css">
-<link rel="stylesheet" href="/styles/structure.css" >
+<link rel="stylesheet" href="/styles/font.css">
+<link rel="stylesheet" href="/styles/core.css">
+<link rel="stylesheet" href="/styles/view.css">
+<link rel="stylesheet" href="/styles/link.css">
 <link rel="stylesheet" href="/styles/zoom.css">
 <script src="/scripts/zoom.js"></script>
 <script src="/scripts/transition.js"></script>
 
-
-<!-- Phone Compatible 
-<meta name="viewport" content="width=420">-->
-<meta id="vp" name="viewport" content="width=420">
-
-<script>
-window.onload = function() {
-    if (screen.width > 420) {
-        var mvp = document.getElementById('vp');
-        mvp.setAttribute('content','width=device-width, initial-scale=1');
-    }
-}
-</script>
-<!-- Tablet Compatible 
-<script type="text/javascript">
-    var vpw = (screen.width>=768)?'980':'device-width';
-    document.write('<meta name="viewport" content="width='+vpw+'" >');
-</script>-->
-
 <!-- Twitter cards -->
-<meta name="twitter:site"    content="@{{ site.twitter_username }}">
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
 <meta name="twitter:creator" content="@{{ site.author }}">
-<meta name="twitter:title"   content="{{ page.title }}">
+<meta name="twitter:title" content="{{ page.title }}">
 
 {% if page.description %}
 <meta name="twitter:description" content="{{ page.description }}">
@@ -43,17 +34,16 @@ window.onload = function() {
 {% endif %}
 
 {% if page.image %}
-<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
 {% else %}
-<meta name="twitter:card"  content="summary">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="{{ site.url }}{{ site.title_image }}">
 {% endif %}
-<!-- end of Twitter cards -->
 
 <!-- OpenGraph cards -->
-	<meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ page.url }}" />
-    <meta property="og:image" content="{{ page.image }}" />
-    <meta property="og:description" content="{{ page.description }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:image" content="{{ page.image }}" />
+<meta property="og:description" content="{{ page.description }}" />

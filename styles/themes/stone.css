@@ -1,0 +1,215 @@
+/* PAPER IS A LIGHT SUBTLE BLUE—ORANGE THEME */
+
+:root {
+  --y: #0088cc;
+  --y0: #00a5f0;
+  --y1: #e4e8ea;
+  --y10: #f0f2f3;
+  --y110: #d2dce1;
+  --y11: #c9d3d8;
+  --y111: #c3cdd2;
+  --y120: #b9c9d1;
+  --y12: #b4c4cc;
+  --y121: #a4b4bc;
+  --y13: #96aab4;
+  --y2: #788c96;
+  --y3: #3c505a;
+  --y4: #00324b;
+
+  --x: #782800;
+  --x0: #aa5a32;
+  --x1: #ebe5e2;
+  --x10: #f5efec;
+  --x110: #e1dbd8;
+  --x11: #d7d1ce;
+  --x111: #d2ccc9;
+  --x120: #cdc7c4;
+  --x12: #c3bdba;
+  --x121: #b9b3b0;
+  --x13: #afa9a6;
+  --x2: #966e5a;
+  --x3: #643c28;
+  --x4: #3c1e0f;
+
+  --z: #d28c00;
+}
+
+/* #ff5a27
+BEHIND————————————————————————————————
+*/
+html {
+  background: var(--y11);
+}
+.zoom-overlay {
+  background: var(--y110);
+}
+section {
+  background: var(--y10);
+}
+@media (min-width: 1260px) {
+  #left {
+    background: var(--y1);
+  }
+  /*    nav { background: #ebe5e2} */
+}
+@media (min-width: 920px) {
+  .logo:hover span,
+  .logo:focus span {
+    color: var(--y10);
+  }
+}
+/* 
+TEXT—————————————————————————————
+*/
+nav *,
+.logo *,
+h1,
+h2,
+h3,
+p,
+li,
+.tocbar a {
+  color: var(--x3);
+}
+h2 {
+  color: var(--x4);
+}
+/*
+FLARE———————————————————————————————————
+*/
+/* link color sweep */
+a:before {
+  background: var(--x);
+}
+
+/* link underline */
+p > a {
+  box-shadow: inset 0 -2px 0 var(--x);
+}
+
+/* left padding for links */
+@media (min-width: 920px) {
+  p > a:hover,
+  p > a:focus {
+    box-shadow: -3px 0 0 var(--x);
+  }
+}
+@media (min-width: 1260px) {
+  .jump:hover {
+    color: black;
+    background: var(--y110);
+  }
+}
+/*
+SUBTLE—————————————————————————————————
+*/
+hr {
+  background: var(--z);
+}
+
+aside,
+figcaption {
+  color: var(--y0);
+}
+aside {
+  border-left: solid 3px var(--y0);
+}
+
+/*
+TOC—————————————————————————————————————
+*/
+.active {
+  background-color: var(--y11);
+}
+.close {
+  background-color: var(--y110);
+}
+
+@media screen and (min-width: 920px) {
+  .accordion:hover {
+    background-color: var(--y11);
+  } /* !!!!!!!!!!!!!!!!!!!!! */
+  .tocbar:hover .sub {
+    background: var(--y120);
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+  .sub .jump:hover,
+  .close:hover {
+    background: var(--y121);
+  }
+  .tocbar a:before {
+    background: var(--y121);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .sub {
+    background: var(--y120);
+  }
+}
+
+/* 
+PANEL———————————————————————————————————
+*/
+
+.panel {
+  background: var(--y111);
+}
+.panel * {
+  color: var(--x3);
+}
+
+.pure {
+  background: var(--y10);
+}
+
+.blue,
+.aqua,
+.canary,
+.red {
+  background: var(--y12);
+}
+.blue .icon,
+.aqua .icon,
+.canary .icon,
+.red .icon {
+  color: var(--y110);
+}
+
+.orange,
+.indigo {
+  background: var(--y120);
+}
+.orange .icon,
+.indigo .icon {
+  color: var(--y121);
+}
+
+.violet,
+.amber {
+  background: var(--y121);
+}
+.violet .icon,
+.amber .icon {
+  color: var(--y111);
+}
+
+.dark {
+  background: var(--y110);
+}
+.dark .icon {
+  color: var(--y12);
+}
+
+.pink {
+  background: #d0d0d0;
+}
+.pink .icon {
+  color: #bbb;
+}
+
+.green {
+  background: #c0c0c0;
+}
+.green .icon {
+  color: #aaa;
+}

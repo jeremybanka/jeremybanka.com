@@ -1,0 +1,253 @@
+---
+---
+
+/* BASICS————————————————————————————————————————————————————————————————
+common link properties */
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.2s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+}
+@media (min-width: 920px) {
+  /* turn white and extend sweep */
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      color: white;
+    }
+    &:hover:before,
+    &:focus:before {
+      transform: scaleX(1);
+    }
+  } /* in the main, overshoot the reach */
+  section a {
+    &:hover:before,
+    &:focus:before,
+    &:active:before {
+      transform: scaleX(1.05);
+    }
+  }
+} /* PANELS———————————————————————————————————————————————————————————————
+big fancy links have a different treatment */
+.panel {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+a {
+  &.panel {
+    &:before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(0);
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transform-origin: center;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.02);
+      z-index: 2;
+    }
+    &:hover:before,
+    &:focus:before {
+      transform: scale(2);
+    }
+  }
+  &.brick:hover .properties {
+    opacity: 1;
+  }
+} /* themed panels */
+.neutral {
+  &:before {
+    background: #444;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0px 0px 4px #08c;
+    * {
+      color: white;
+    }
+  }
+}
+/* themed panels */
+.pure {
+  &:before {
+    background: white;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0px 0px 4px #08c;
+    * {
+      color: black;
+    }
+  }
+} /* themed panels */
+.paper.panel {
+  &:before {
+    background: #d7d1ce;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0px 0px 4px #788c96;
+    * {
+      color: black;
+    }
+  }
+}
+$red: #a50f28;
+$dark-red: #960019;
+a.red {
+  &:before {
+    background: $red;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-red;
+    background: $dark-red;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-red;
+    }
+  }
+}
+$blue: #08c;
+$dark-blue: #0079b9;
+a.blue {
+  &:before {
+    background: $blue;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-blue;
+    background: $dark-blue;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-blue;
+    }
+  }
+}
+$canary: #deb900;
+$dark-canary: #d2af00;
+a.canary {
+  &:before {
+    background: $canary;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-canary;
+    background: $dark-canary;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-canary;
+    }
+  }
+}
+$orange: #aa5a32;
+$dark-orange: #9b4b23;
+a.orange {
+  &:before {
+    background: $orange;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-orange;
+    background: $dark-orange;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-orange;
+    }
+  }
+}
+$indigo: #4628dc;
+$dark-indigo: #3214c8;
+a.indigo {
+  &:before {
+    background: $indigo;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-indigo;
+    background: $dark-indigo;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-indigo;
+    }
+  }
+}
+$violet: #9600b4;
+$dark-violet: #820096;
+a.indigo {
+  &:before {
+    background: $violet;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-violet;
+    background: $dark-violet;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-violet;
+    }
+  }
+}
+$aqua: #00d2af;
+$dark-aqua: #00c0a0;
+a.indigo {
+  &:before {
+    background: $aqua;
+  }
+  &.panel:hover,
+  &.panel:focus {
+    box-shadow: 0 0px 0px 4px $dark-aqua;
+    background: $dark-aqua;
+    * {
+      color: white;
+    }
+    .icon {
+      color: $dark-aqua;
+    }
+  }
+}

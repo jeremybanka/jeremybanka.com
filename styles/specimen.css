@@ -1,116 +1,166 @@
-@media (min-width:1260px) { 
-
-    #top {
-        position: absolute;
-        width: 380px;
-        bottom: 0;
-        height: 100%;
-        background: #0096e1;
-        z-index: 0;
-    }
-    #bottom {
-        position: sticky;
-        float: left;
-        top: 0;
-        width: 380px;
-        margin-top: calc(100vh);
-        height: 108px;
-        background: #ebe5e2;
-        z-index: 0;
-    }
+@media (min-width: 1260px) {
+  #top {
+    position: absolute;
+    width: 380px;
+    bottom: 0;
+    height: 100%;
+    background: var(--x0);
+    z-index: 0;
+  }
+  #bottom {
+    position: sticky;
+    float: left;
+    top: 0;
+    width: 380px;
+    margin-top: calc(100vh);
+    height: 108px;
+    background: var(--y1);
+    z-index: 50;
+  }
 }
-
 .sample {
-    margin-top: 0px;
-    text-align: center;
+  margin-top: 0px;
+  text-align: center;
 }
 
-.uruz { font-family: Uruz; }
+.uruz {
+  font-family: Uruz;
+}
 h2.uruz {
-    font-weight:600; 
-    color: #d28c00; 
-    font-size: 40px; 
-    text-align: center; 
-    padding-right: 30px;
+  font-weight: 600;
+  color: #d28c00;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
 }
 h3.uruz {
-    font-weight:400; 
-    text-align: center; 
-    padding-right: 10px;
-    padding-top: 0;
-    margin-bottom: -10px;
-    margin-top: 10px;
-    text-transform: uppercase;
+  font-family: UruzC;
+  font-weight: 600;
+  color: #d28c00;
+  padding-left: 20px;
+  max-width: 620px;
+  padding-top: 0;
+  margin-bottom: -10px;
+  margin-top: 10px;
 }
-.cant { font-family: Canticle; }
+.cant {
+  font-family: Canticle;
+}
 h2.cant {
-    font-weight:700; 
-    color: #820096; 
-    font-size: 40px; 
-    text-align: center; 
-    padding-right: 30px;
+  font-weight: 700;
+  color: #820096;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
 }
 h3.cant {
-    font-weight:700; 
-    letter-spacing: 1px;
-    font-variant-ligatures: none;
-    color: #4600d2;
-    text-align: center; 
-    padding-right: 10px;
-    padding-top: 0;
-    margin-bottom: -10px;
-    margin-top: 10px;
-    text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-variant-ligatures: none;
+  color: #4600d2;
+  text-align: center;
+  padding-right: 10px;
+  padding-top: 0;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
-.xeno { font-family: Interloper; }
-.brah { font-family: Brahmin; }
+.xeno {
+  font-family: Interloper;
+}
+.brah {
+  font-family: Brahmin;
+}
 h2.brah {
-    font-weight:200; 
-    color: #08c; 
-    font-size: 40px; 
-    text-align: center; 
-    padding-right: 30px;
+  font-weight: 200;
+  color: #08c;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
 }
 h3.brah {
-    font-weight:600; 
-    color: #3c505a; 
-    text-align: center; 
-    padding-right: 10px;
-    padding-top: 0;
-    margin-top: 10px;
-    margin-bottom: -10px;
+  font-weight: 600;
+  color: #3c505a;
+  text-align: left;
+  padding-right: 10px;
+  max-width: 620px;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
-
-.razr { font-weight: 050 }
-.shrp { font-weight: 100 }
-.thin { font-weight: 200 }
-.lite { font-weight: 300 }
-.book { font-weight: 400 }
-.rglr { font-weight: 500 }
-.medi { font-weight: 600 }
-.bold { font-weight: 700 }
-.hevy { font-weight: 800 }
-.supr { font-weight: 900 }
+h2.xeno {
+  font-weight: 500;
+  color: #f00050;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
+}
+h3.xeno {
+  font-weight: 400;
+  padding-right: 10px;
+  max-width: 620px;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.razr {
+  font-weight: 050;
+}
+.shrp {
+  font-weight: 100;
+}
+.thin {
+  font-weight: 200;
+}
+.lite {
+  font-weight: 300;
+}
+.book {
+  font-weight: 400;
+}
+.rglr {
+  font-weight: 500;
+}
+.medi {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.hevy {
+  font-weight: 800;
+}
+.supr {
+  font-weight: 900;
+}
 
 .fifty {
-    font-size: calc(888px * .048);
-    line-height: calc(888px * .070);
+  font-size: calc(888px * 0.048);
+  line-height: calc(888px * 0.07);
 }
 .hundred {
-    font-size: calc(888px * .100);
-    line-height: calc(888px * .070);
+  font-size: calc(888px * 0.1);
+  line-height: calc(888px * 0.07);
 }
 .one-ten {
-    font-size: calc(888px * .110);
-    line-height: calc(888px * .110);
+  font-size: calc(888px * 0.11);
+  line-height: calc(888px * 0.11);
 }
 .one-twenty {
-    font-size: calc(888px * .120);
-    line-height: calc(888px * .060);
+  font-size: calc(888px * 0.12);
+  line-height: calc(888px * 0.06);
 }
 
-.x {padding-left: 10px}
-.xx {padding-left: 20px}
+.x {
+  padding-left: 10px;
+}
+.xx {
+  padding-left: 20px;
+}
 
 /****************************
 ************LEGACY***********

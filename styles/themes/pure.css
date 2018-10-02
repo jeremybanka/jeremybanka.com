@@ -1,51 +1,82 @@
 :root {
-    --main-color:#555
+  --x3: #444;
 }
 /*
 BEHIND————————————————————————————————
 */
-html { background: #fff }
-@media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #fff; }
+html {
+  background: #fff;
 }
-@media (min-width:1260px) {
-    #left {
-        background: #e4e4e4;
-        /*border-right: solid 3px #ddd; */
-    }
+@media (min-width: 920px) {
+  .logo:hover span,
+  .logo:focus span {
+    color: #fff;
+  }
+}
+@media (min-width: 1260px) {
+  #left {
+    background: #e4e4e4;
+    /*border-right: solid 3px #ddd; */
+  }
 }
 /* 
 TEXT—————————————————————————————
 */
-nav *, .logo *, h1, h2, h3, p, li { color: #555 } 
+nav *,
+.logo *,
+h1,
+h2,
+h3,
+p,
+li {
+  color: #555;
+}
 /*
 FLARE———————————————————————————————————
 */
 /* link color sweep */
-a:before { background: #08C }
+a:before {
+  background: #08c;
+}
 
 /* link underline */
-p > a { box-shadow: inset 0 -2px 0 #08C }
+p > a {
+  box-shadow: inset 0 -2px 0 #08c;
+}
 
 /* left padding for links */
-@media (min-width:920px) {
-p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
+@media (min-width: 920px) {
+  p > a:hover,
+  p > a:focus {
+    box-shadow: -3px 0 0 #08c;
+  }
 }
 /*
 SUBTLE—————————————————————————————————
 */
-hr { background: #aaa; }
+hr {
+  background: #aaa;
+}
 
-aside, figcaption, footer p { color: #aaa }
-aside { border-left: solid 2px #ccc }
-
+aside,
+figcaption,
+footer p {
+  color: #aaa;
+}
+aside {
+  border-left: solid 2px #ccc;
+}
 
 /* 
 PANEL———————————————————————————————————
 */
-.panel {background:#f8f8f8;}
+.panel {
+  background: #f8f8f8;
+}
 
-.pure { background: #f8f8f8 }
+.pure {
+  background: #f8f8f8;
+}
 
 /*
 .panel {background:#f9f9f9;}

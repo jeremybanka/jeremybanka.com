@@ -1,0 +1,456 @@
+/*
+BASICS————————————————————————————————————————————————————————————————
+common link properties */
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+/* sweep (collapsed) */
+a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+@media (min-width: 920px) {
+  /* turn white and extend sweep */
+  a:hover,
+  a:focus,
+  a:active {
+    color: white;
+  }
+  a:hover:before,
+  a:focus:before {
+    transform: scaleX(1);
+  }
+  /* in the main, overshoot the reach */
+  section a:hover:before,
+  section a:focus:before,
+  section a:active:before {
+    transform: scaleX(1.05);
+  }
+}
+/*
+PANELS———————————————————————————————————————————————————————————————
+big fancy links have a different treatment */
+
+.panel {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+a.panel:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform-origin: center;
+}
+a.panel:hover,
+a.panel:focus,
+a.panel:active {
+  transform: scale(1.02);
+  z-index: 2;
+}
+a.panel:hover:before,
+a.panel:focus:before {
+  transform: scale(2);
+}
+
+a.brick:hover .properties {
+  opacity: 1;
+}
+
+/* themed panels */
+.neutral:hover,
+.neutral:focus {
+  box-shadow: 0 0px 0px 4px #08c;
+}
+.neutral:hover *,
+.neutral:focus * {
+  color: white;
+}
+.neutral:before {
+  background: #444;
+}
+
+.pure:hover,
+.pure:focus {
+  box-shadow: 0 0px 0px 4px #08c;
+}
+.pure:hover *,
+.pure:focus * {
+  color: black;
+}
+.pure:before {
+  background: white;
+}
+
+.paper:hover,
+.paper:focus {
+  box-shadow: 0 0px 0px 4px #788c96;
+}
+.paper:hover *,
+.paper:focus * {
+  color: black;
+}
+.paper:before {
+  background: #d7d1ce;
+}
+
+a.red:hover,
+a.red:focus {
+  box-shadow: 0 0px 0px 4px #960019;
+  background: #960019;
+}
+a.red:hover *,
+a.red:focus * {
+  color: white;
+}
+a.red:hover .icon,
+.red:focus .icon {
+  color: #960019;
+}
+a.red:before {
+  background: #a50f28;
+}
+
+a.blue:hover,
+a.blue:focus {
+  box-shadow: 0 0px 0px 4px #07b;
+  background: #07b;
+}
+a.blue:hover *,
+a.blue:focus * {
+  color: white;
+}
+a.blue:hover .icon,
+a.blue:focus .icon {
+  color: #0079b9;
+}
+a.blue:before {
+  background: #08c;
+}
+
+.canary:hover,
+.canary:focus {
+  box-shadow: 0 0px 0px 4px #d2af00;
+  background: #d2af00;
+}
+a.canary:hover *,
+a.canary:focus * {
+  color: white;
+}
+a.canary:hover .icon,
+a.canary:focus .icon {
+  color: #d2af00;
+}
+a.canary:before {
+  background: #deb900;
+}
+
+a.amber:hover,
+a.amber:focus {
+  box-shadow: 0 0px 0px 4px #a70;
+  background: #a70;
+}
+a.amber:hover *,
+a.amber:focus * {
+  color: white;
+}
+a.amber:hover .icon,
+a.amber:focus .icon {
+  color: #b80;
+}
+a.amber:before {
+  background: #c90;
+}
+
+a.orange:hover,
+a.orange:focus {
+  box-shadow: 0 0px 0px 4px #9b4b23;
+  background: #9b4b23;
+}
+a.orange:hover *,
+a.orange:focus * {
+  color: white;
+}
+a.orange:hover .icon,
+a.orange:focus .icon {
+  color: #9b4b23;
+}
+a.orange:before {
+  background: #aa5a32;
+}
+
+a.indigo:hover,
+a.indigo:focus {
+  box-shadow: 0 0px 0px 4px #3214c8;
+  background: #3214c8;
+}
+a.indigo:hover *,
+a.indigo:focus * {
+  color: white;
+}
+a.indigo:hover .icon,
+a.indigo:focus .icon {
+  color: #3214c8;
+}
+a.indigo:before {
+  background: #4628dc;
+}
+
+a.violet:hover,
+a.violet:focus {
+  box-shadow: 0 0px 0px 4px #820096;
+  background: #820096;
+}
+a.violet:hover *,
+a.violet:focus * {
+  color: white;
+}
+a.violet:hover .icon,
+a.violet:focus .icon {
+  color: #820096;
+}
+a.violet:before {
+  background: #9600b4;
+}
+
+a.aqua:hover,
+a.aqua:focus {
+  box-shadow: 0 0px 0px 4px #00c0a0;
+  background: #00c0a0;
+}
+a.aqua:hover *,
+a.aqua:focus * {
+  color: white;
+}
+a.aqua:hover .icon,
+a.aqua:focus .icon {
+  color: #00c0a0;
+}
+a.aqua:before {
+  background: #00d2af;
+}
+
+a.pink:hover *,
+a.pink:focus * {
+  color: white;
+}
+a.pink:hover .icon,
+a.pink:focus .icon {
+  color: #e59;
+}
+a.pink:before {
+  background: #f6a;
+}
+a.pink:hover,
+a.pink:focus {
+  box-shadow: 0 0px 0px 4px #e59;
+  background: #e59;
+}
+
+a.green:hover *,
+a.green:focus * {
+  color: white;
+}
+a.green:hover .icon,
+a.green:focus .icon {
+  color: #0c0;
+}
+a.green:before {
+  background: #0d0;
+}
+a.green:hover,
+a.green:focus {
+  box-shadow: 0 0px 0px 4px #0b0;
+  background: #0b0;
+}
+
+a.dark:hover,
+a.dark:focus {
+  box-shadow: 0 0px 0px 4px #3c505a;
+  background: #3c505a;
+}
+a.dark:hover *,
+a.dark:focus * {
+  color: white;
+}
+a.dark:hover .icon,
+a.dark:focus .icon {
+  color: #3c505a;
+}
+a.dark:before {
+  background: #00324b;
+}
+
+.noir:hover,
+.noir:focus {
+  box-shadow: 0 0px 0px 4px #fff;
+  background: #fff;
+}
+.noir:hover *,
+.noir:focus * {
+  color: white;
+}
+.noir:hover .icon,
+.noir:focus .icon {
+  color: #222;
+}
+.noir:before {
+  background: #000;
+}
+
+/****************************
+ ***********LEGACY***********
+ ****************************/
+
+.teal {
+  background: #9a9a9a;
+}
+.teal:before {
+  background: #1da;
+}
+
+.brown {
+  background: #a7a7a7;
+}
+.brown:before {
+  background: #da0;
+}
+
+.old-pink {
+  background: #b8b8b8;
+}
+.old-pink:before {
+  background: #f69;
+}
+
+.navy {
+  background: #c9c9c9;
+}
+.navy:before {
+  background: #2255ff;
+}
+
+.cyan {
+  background: #dbdbdb;
+}
+.cyan:before {
+  background: #11ddff;
+}
+
+.brick:hover > .thumb-1,
+.brick:focus > .thumb-1 {
+  opacity: 0;
+}
+.block:hover > .thumb-1,
+.block:focus > .thumb-1 {
+  opacity: 0;
+}
+
+.brick:hover > .thumb-2,
+.brick:focus > .thumb-2 {
+  opacity: 1;
+}
+.block:hover > .thumb-2,
+.block:focus > .thumb-2 {
+  opacity: 1;
+}
+
+.hvr-radial-out {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  background: #e1e1e1;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transform-origin: center;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-radial-out:hover,
+.hvr-radial-out:focus,
+.hvr-radial-out:active {
+  color: white;
+}
+.hvr-radial-out:hover:before,
+.hvr-radial-out:focus:before,
+.hvr-radial-out:active:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/* links in text 
+p > a:after { /* adds red deg !!! REPLACED BY UNDERLINE !!!
+	content: "\b0";
+	padding-right: 1px; /* cuts off otherwise
+	color: #ff5a27;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.hvr-grow-shadow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform, color;
+  transition-property: box-shadow, transform, color;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+*/

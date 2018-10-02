@@ -2,25 +2,33 @@
 layout: default
 ---
 <link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-<link rel="stylesheet" href="/styles/themes/flare.css" type="text/css" media="all">
+<link rel="stylesheet" href="/styles/themes/paper.css" type="text/css" media="all">
+
+<style>
+    html,
+    section {
+        background: white;
+    }
+</style>
 
 <script src="/scripts/table-of-contents.js"></script>
 
 <div id="left"></div>
-   
+
 <header>
     <p>{{ page.date | date: '%B %d, %Y' }}</p>
     <h2>{{ page.title }}</h2>
-    <hr>
 </header>
 
 <main>
-{{ content }}
+    <hr>
 
-        {% if page.previous.url %}
-        <a class="slim panel block pure"  href="{{page.previous.url}}">
-            <p>previous post</p>
-            <h3>{{ page.previous.title }}</h3>
-        </a>
-        {% endif %}
+    {{ content }}
+
+    {% if page.previous.url %}
+    <a class="slim panel block pure" href="{{page.previous.url}}">
+        <p>previous post</p>
+        <h3>{{ page.previous.title }}</h3>
+    </a>
+    {% endif %}
 </main>

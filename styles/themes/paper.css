@@ -1,69 +1,151 @@
+/* PAPER IS A LIGHT SUBTLE BLUE—ORANGE THEME */
+
 :root {
-    --main-color:#3c505a
+  --x: #0088cc;
+  --x0: #0096e1;
+  --x00: #00a5f0;
+  --x1: #e4e8ea;
+  --x10: #f0f2f3;
+  --x110: #d2dce1;
+  --x11: #c9d3d8;
+  --x111: #c3cdd2;
+  --x120: #b9c9d1;
+  --x12: #b4c4cc;
+  --x121: #a4b4bc;
+  --x13: #96aab4;
+  --x2: #788c96;
+  --x3: #3c505a;
+  --x4: #00324b;
+
+  --y: #782800;
+  --y0: #aa5a32;
+  --y1: #ebe5e2;
+  --y10: #f5efec;
+  --y110: #e1dbd8;
+  --y11: #d7d1ce;
+  --y111: #d2ccc9;
+  --y120: #cdc7c4;
+  --y12: #c3bdba;
+  --y121: #b9b3b0;
+  --y13: #afa9a6;
+  --y2: #5f5956;
+  --y3: #4b4542;
+  --y4: #37312e;
+
+  --z: #d28c00;
 }
 
-/* ff5a27
+/* #ff5a27
 BEHIND————————————————————————————————
 */
-html { background: #dcd6d3 }
-.zoom-overlay { background: #dcd6d3 }
-section {background: #f5efec}
-@media (min-width:1260px) { 
-    #left {
-        background: #ebe5e2;
-    }
-/*    nav { background: #ebe5e2} */
+html {
+  background: var(--y11);
 }
-@media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #f8e6e9; }
+.zoom-overlay {
+  background: var(--y110);
+}
+section {
+  background: var(--y10);
+}
+@media (min-width: 1260px) {
+  #left {
+    background: var(--y1);
+  }
+  /*    nav { background: #ebe5e2} */
+}
+@media (min-width: 920px) {
+  .logo:hover span,
+  .logo:focus span {
+    color: var(--y10);
+  }
 }
 /* 
 TEXT—————————————————————————————
 */
-nav *, .logo *, h1, h2, h3, p, li, .tocbar a { color: #3c505a } 
-h2 {color: #00324b}
+nav *,
+.logo *,
+h1,
+h2,
+h3,
+p,
+li,
+.tocbar a {
+  color: var(--x3);
+}
+h2 {
+  color: var(--x4);
+}
 /*
 FLARE———————————————————————————————————
 */
 /* link color sweep */
-a:before { background: #08C }
+a:before {
+  background: var(--x);
+}
 
 /* link underline */
-p > a { box-shadow: inset 0 -2px 0 #08C }
+p > a {
+  box-shadow: inset 0 -2px 0 var(--x);
+}
 
 /* left padding for links */
-@media (min-width:920px) {
-p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
+@media (min-width: 920px) {
+  p > a:hover,
+  p > a:focus {
+    box-shadow: -3px 0 0 var(--x);
+  }
 }
-@media (min-width:1260px) { 
-    .jump:hover {
-        color: black;
-        background: #dcd6d3
-    }
+@media (min-width: 1260px) {
+  .jump:hover {
+    color: black;
+    background: var(--y110);
+  }
 }
 /*
 SUBTLE—————————————————————————————————
 */
-hr { background: #d28c00; }
+hr {
+  background: var(--z);
+}
 
-aside, figcaption { color: #aa5a32 }
-aside { border-left: solid 3px #aa5a32 }
+aside,
+figcaption {
+  color: var(--y0);
+}
+aside {
+  border-left: solid 3px var(--y0);
+}
 
 /*
 TOC—————————————————————————————————————
 */
-.active { background-color: #d7d1ce; }
-.close { background-color: #e1dbd8;}
+.active {
+  background-color: var(--y11);
+}
+.close {
+  background-color: var(--y110);
+}
 
 @media screen and (min-width: 920px) {
-    .accordion:hover { background-color: #d7d1ce; } /* !!!!!!!!!!!!!!!!!!!!! */
-    .tocbar:hover .sub {background:#c8c2bf} /* !!!!!!!!!!!!!!!!!!!!!!!!! */
-    .sub .jump:hover, .close:hover {background: #b9b3b0}
-    .tocbar a:before {background: #b9b3b0;}
+  .accordion:hover {
+    background-color: var(--y11);
+  } /* !!!!!!!!!!!!!!!!!!!!! */
+  .tocbar:hover .sub {
+    background: var(--y120);
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+  .sub .jump:hover,
+  .close:hover {
+    background: var(--y121);
+  }
+  .tocbar a:before {
+    background: var(--y121);
+  }
 }
 
 @media screen and (max-width: 920px) {
-    .sub {background:#cdc7c4}
+  .sub {
+    background: var(--y120);
+  }
 }
 
 /* 
@@ -71,42 +153,94 @@ PANEL—————————————————————————
 */
 
 .panel {
-    background:#d2ccc9;
+  background: var(--y111);
 }
-.panel * {    color: #3c505a;}
+.panel * {
+  color: var(--x3);
+}
 
-.pure { background: #f5efec }
+.pure {
+  background: var(--y10);
+}
 
-.orange { background: #cdc7c4}
-.orange .icon { color: #b9b3b0 }
+.blue,
+.aqua,
+.canary,
+.red {
+  background: var(--y12);
+}
+.blue.inactive,
+.aqua.inactive,
+.canary.inactive,
+.red.inactive {
+  background: var(--x12);
+}
+.blue .icon,
+.aqua .icon,
+.canary .icon,
+.red .icon {
+  color: var(--y110);
+}
+.blue.inactive .icon,
+.aqua.inactive .icon,
+.canary.inactive .icon,
+.red.inactive .icon {
+  color: var(--x121);
+}
+.orange,
+.indigo {
+  background: var(--y120);
+}
+.orange.inactive,
+.indigo.inactive {
+  background: var(--x120);
+}
+.orange .icon,
+.indigo .icon {
+  color: var(--y121);
+}
+.orange.inactive .icon,
+.indigo.inactive .icon {
+  color: var(--x121);
+}
+.violet,
+.amber {
+  background: var(--y121);
+}
+.violet.inactive,
+.amber.inactive {
+  background: var(--x121);
+}
+.violet .icon,
+.amber .icon {
+  color: var(--y111);
+}
+.violet.inactive .icon,
+.amber.inactive .icon {
+  color: var(--x111);
+}
+.dark {
+  background: var(--y110);
+}
+.dark.inactive {
+  background: var(--x110);
+}
+.dark .icon {
+  color: var(--y12);
+}
+.dark.inactive .icon {
+  color: var(--x12);
+}
+.pink {
+  background: #d0d0d0;
+}
+.pink .icon {
+  color: #bbb;
+}
 
-.canary { background: #c3bdba }
-.canary .icon { color: #dcd6d3 }
-
-.indigo { background: #cdc7c4 }
-.indigo .icon { color: #b9b3b0 }
-
-.blue { background: #c3bdba }
-.blue .icon { color: #dcd6d3 }
-
-.dark { background: #dcd6d3 }
-.dark .icon { color: #c3bdba }
-
-.aqua { background: #c3bdba }
-.aqua .icon { color: #dcd6d3 }
-
-.violet { background: #b9b3b0 }
-.violet .icon { color: #cdc7c4 }
-
-.red { background: #c3bdba }
-.red .icon { color: #dcd6d3 }
-
-.amber { background: #b9b3b0 }
-.amber .icon { color: #cdc7c4 }
-
-.pink { background: #d0d0d0 }
-.pink .icon { color: #bbb }
-
-.green { background: #c0c0c0 }
-.green .icon { color: #aaa }
-*/
+.green {
+  background: #c0c0c0;
+}
+.green .icon {
+  color: #aaa;
+}
