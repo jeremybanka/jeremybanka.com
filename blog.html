@@ -2,19 +2,19 @@
 layout: default
 title: Blog
 ---
-	<link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-	<link rel="stylesheet" href="/styles/themes/paper.css" type="text/css" media="all">
-	
-<div id="left"></div>
+<link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
+<link rel="stylesheet" href="/styles/themes/paper.css" type="text/css" media="all">
+<style>
 
+</style>
 <header></header>
 
 <main>
     {% for post in site.posts %}
-        <a href="{{ post.url }}" class="block panel pure">
-            <p>{{ post.date | date: '%B %d, %Y' }}</p>
-            <h2>{{ post.title }}</h2>
-            <figure><img src="{{ post.image }}"></figure>
-        </a>
+    <a href="{{ post.url }}" class="post slim panel light">
+        <h2>{{ post.title }}<span class=" date">{{ post.date |
+                date_to_string }}</span></h2>
+        <img src="{{ post.image }}" style="">
+    </a>
     {% endfor %}
 </main>

@@ -1,0 +1,36 @@
+/* NEUTRAL IS A LIGHT BOLD BLACK AND WHITE THEME */
+:root {
+  --x: black; /* link */
+  --x0: #111;
+  --x00: #222;
+  --x1: #eee;
+  --x10: #f7f7f7;
+  --x110: #e6e6e6;
+  --x11: #ddd;
+  --x111: #d7d7d7;
+  --x120: #d3d3d3;
+  --x12: #ccc;
+  --x121: #c4c4c4;
+  --x13: #bbb;
+  --x2: #aaa;
+  --x3: #666; /* text */
+  --x4: #333; /* header */
+
+  --y: black;
+  --y0: #111;
+  --y1: #eee; /* #left */
+  --y10: #f7f7f7; /* section */
+  --y110: #e6e6e6;
+  --y11: #ddd; /* html */
+  --y111: #d7d7d7;
+  --y120: #d3d3d3;
+  --y12: #ccc;
+  --y121: #c4c4c4;
+  --y13: #bbb;
+  --y2: #aaa;
+  --y3: #666;
+  --y4: #333;
+
+  --z: #666; /* hr */
+  --z0: #ff5a27;
+}

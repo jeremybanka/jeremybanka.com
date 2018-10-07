@@ -1,18 +1,22 @@
 ---
 ---
 
-/* GENERAL———————————————————————————————————————————————————— */
+/* GENERAL————————————————————————————————————————————————— */
 * {
   font-family: Brahmin; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   font-size: 21px;
   line-height: 1.5em;
   padding: 0;
   margin: 0;
+  color: var(--x3);
+}
+html {
+  background: var(--y11);
 }
 #top {
   position: absolute;
   top: 0px;
-} /* NAVIGATION–––––––——————————————————————————————————————————
+} /* NAVIGATION–––––––————————————————————————————————————————
 na
 ——————————————————————————————————————————————————————————— */
 nav {
@@ -67,6 +71,15 @@ a > span: "B"
   float: left;
   transition-property: color;
   transition-duration: 0.2s;
+  &:hover {
+    color: var(--y1);
+  }
+  @media (min-width: 920px) {
+    .logo:hover span,
+    .logo:focus span {
+      color: var(--y10);
+    }
+  }
 } /* HEADER––––————————————————————————————————————————————————–
 Quick classes for different max-widths.
 ——————————————————————————————————————————————————————————— */
@@ -102,6 +115,7 @@ header {
 Quick classes for different max-widths.
 ——————————————————————————————————————————————————————————— */
 section {
+  background: var(--y10);
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 20px;
@@ -128,6 +142,10 @@ section {
     padding-top: 40px;
     margin-top: 20px;
   }
+  .panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 header {
   h2,
@@ -136,26 +154,6 @@ header {
     margin: auto;
     width: calc(100% - 20px);
     position: relative;
-  }
-}
-.indent {
-  padding-left: 45px;
-  width: calc(100% - 65px);
-}
-aside {
-  float: right;
-  width: calc(100vw / 4);
-  max-width: 240px;
-  margin-top: 20px;
-  margin-left: 10px;
-  padding: 10px;
-  font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-  font-size: 15px;
-  line-height: 20px;
-  a {
-    font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-    font-size: 15px;
-    line-height: 20px;
   }
 }
 main > figure {
@@ -170,10 +168,14 @@ main > figure {
 section figure {
   max-width: 720px;
 }
+section figure {
+  max-width: 720px;
+}
 figure img {
   width: 100%;
 }
 figcaption {
+  color: var(--y2);
   font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   padding-top: 10px;
   font-size: 17.5px;
@@ -194,80 +196,14 @@ footer {
     font-size: 17.5px;
     text-align: center;
   }
-} /* PANELS–––––————————————————————————————————————————————————
-enough room for sidebar 
-——————————————————————————————————————————————————————————— */ /* bricks are square elements that come in threes. */
-.brick {
-  flex: 0 1 auto;
-  float: left;
-  width: calc(100% / 3);
-  height: calc((100vw - 20px) / 3);
-  max-height: 240px;
-  position: relative;
-  color: white;
-} /* blocks fill the horizontal space */
-.block {
-  display: block;
-  width: 100%;
-  max-width: 720px;
-  min-height: 100px;
-  max-height: 300px;
-  overflow: hidden;
-  margin: auto;
-  margin-bottom: 20px;
-  > {
-    img {
-      width: 100%;
-    }
-    p {
-      padding: 15px 30px 0px 30px;
-      margin: auto;
-    }
-    h2,
-    h3 {
-      padding: 0px 30px 15px 30px;
-    }
-  }
-  figure {
-    padding: 0px 30px 15px 30px;
-  }
-} /* some panels house icons and reveal information on hover.
- the icons are typographic, and use a query to shrink */
-.panel > {
-  .icon {
-    font-family: Logo;
-    position: inline;
-    font-size: 180px;
-    line-height: 1.13em;
-    width: 100%;
-    text-align: center;
-    transition-property: color;
-    transition-duration: 0.3s;
-    z-index: 1;
-  }
-  .properties {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    opacity: 0;
-    z-index: 2;
-    transition-property: opacity;
-    transition-duration: 0.2s;
-  }
-}
-@media (max-width: 740px) {
-  .panel > .icon {
-    font-size: calc((100vw - 20px) / 4);
-  }
-} /* SIZING–––––————————————————————————————————————————————————
+} /* Widths–––––————————————————————————————————————————————————
 Quick classes for different max-widths.
 ——————————————————————————————————————————————————————————— */
 .wide {
   max-width: 810px;
 }
 .slim {
-  max-width: 680px;
+  max-width: 670px;
 }
 .plus {
   max-width: 500px;
@@ -280,11 +216,12 @@ Quick classes for different max-widths.
 }
 .tiny {
   max-width: 180px;
-} /* HEADINGS–––––————————————————————————————————————————————————
+} /* Text Classes–––––————————————————————————————————————————
 take up room
 ——————————————————————————————————————————————————————————— */
 h1 {
-  /* for major works */
+  /* finished works */
+  color: var(--x4);
   text-align: center;
   font-size: 60px;
   padding-top: 50px;
@@ -292,7 +229,8 @@ h1 {
   font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
 h2 {
-  /* for blog posts and section titles */
+  /* blog posts and section titles */
+  color: var(--x4);
   max-width: 630px;
   font-size: 30px;
   line-height: 50px;
@@ -305,12 +243,68 @@ h3 {
   padding-top: 20px;
 }
 h4 {
+  color: var(--x4);
   font-weight: 700;
   font-size: 21px;
 }
 hr {
+  background: var(--z);
   height: 3px;
   width: 60px;
   margin: 45px calc(50% - 315px) 45px;
   border-width: 0px;
+}
+aside {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 20px;
+  font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  color: var(--y2);
+  float: right;
+  width: calc(100vw / 4);
+  max-width: 240px;
+  border-left: solid 3px var(--y2);
+  padding: 10px;
+  margin-left: 10px;
+  a {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  }
+}
+.date {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 0;
+  line-height: 33px;
+  font-weight: 500;
+  float: right;
+  width: 160px;
+  h2 & {
+    padding-top: 8px;
+    font-weight: 600;
+  }
+} /* CORNERS–––––————————————————————————————————————————————————
+can be applied one-at-a-time or all at once
+——————————————————————————————————————————————————————————— */
+.rad1,
+.rad13,
+.rad {
+  border-top-right-radius: 10px;
+}
+.rad2,
+.rad24,
+.rad {
+  border-top-left-radius: 10px;
+}
+.rad3,
+.rad13,
+.rad {
+  border-bottom-left-radius: 10px;
+}
+.rad4,
+.rad24,
+.rad {
+  border-bottom-right-radius: 10px;
 }

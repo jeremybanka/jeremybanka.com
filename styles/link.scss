@@ -1,21 +1,24 @@
 ---
 ---
 
-/* BASICS————————————————————————————————————————————————————————————————
-common link properties */
+/* BASICS —————————————————————————————————————————————–––––
+links  
+——————————————————————————————————————————————————————————— */
 a {
-  color: black;
   text-decoration: none;
   display: inline-block;
   vertical-align: bottom;
   transform: translateZ(0);
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
   transition-property: color;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
+  main & {
+    color: black;
+  }
   &:before {
     content: "";
+    background: var(--x);
     position: absolute;
     z-index: -1;
     top: 0;
@@ -29,225 +32,223 @@ a {
     transition-timing-function: ease-out;
   }
 }
+p a {
+  box-shadow: inset 0 -2px 0 var(--x);
+}
 @media (min-width: 920px) {
-  /* turn white and extend sweep */
   a {
     &:hover,
     &:focus,
     &:active {
       color: white;
-    }
-    &:hover:before,
-    &:focus:before {
-      transform: scaleX(1);
-    }
-  } /* in the main, overshoot the reach */
-  section a {
-    &:hover:before,
-    &:focus:before,
-    &:active:before {
-      transform: scaleX(1.05);
+      &:before {
+        transform: scaleX(1);
+      }
     }
   }
-} /* PANELS———————————————————————————————————————————————————————————————
-big fancy links have a different treatment */
+  section a {
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: -3px 0 0 var(--x);
+      &:before {
+        transform: scaleX(1.05);
+      }
+    }
+  }
+} /* PANELS ––––––————————————————————————————————————————————
+large, rectangular links that house a central image or typographic 
+icon and reveal information on hover.
+the icons are typographic, and use a query to shrink
+——————————————————————————————————————————————————————————— */
 .panel {
+  background: var(--x111);
+  margin: auto 20px;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-property: box-shadow, transform;
   position: relative;
   overflow: hidden;
   transition-duration: 0.3s;
-}
-a {
-  &.panel {
-    &:before {
+  * {
+    color: var(--x13);
+  }
+  .icon {
+    font-family: Logo;
+    font-size: 180px;
+    line-height: 1.13em;
+    width: 100%;
+    text-align: center;
+    transition-property: color;
+    transition-duration: 0.3s;
+    z-index: 1;
+  }
+  &.brick {
+    float: left;
+    flex: 0 1 auto;
+    width: calc(100% / 3);
+    height: calc((100vw - 20px) / 3);
+    max-height: 240px;
+    position: relative;
+    margin: 0;
+    .properties {
       position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transform: scale(0);
-      transition-property: transform;
-      transition-duration: 0.3s;
-      transform-origin: center;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      transform: scale(1.02);
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      opacity: 0;
       z-index: 2;
+      transition-property: opacity;
+      transition-duration: 0.2s;
     }
-    &:hover:before,
-    &:focus:before {
+  }
+  &.post {
+    display: block;
+    padding: 20px;
+    margin: 20px auto;
+    position: relative;
+    max-height: 300px;
+    > * {
+      width: 100%;
+      max-width: none;
+    }
+    img {
+      margin-top: 20px;
+    }
+  }
+  &.block {
+    display: flex;
+    margin: 20px auto;
+    min-height: 120px;
+    max-height: 400px;
+    img {
+      width: 100%;
+      margin-top: auto;
+    }
+    p,
+    h2,
+    h3 {
+      position: absolute;
+      z-index: 1;
+      left: 20px;
+    }
+    p {
+      top: 20px;
+      margin: auto 0;
+    }
+    h2,
+    h3 {
+      top: 60px;
+      margin: 0px;
+      padding: 0px;
+      line-height: 30px;
+    }
+    figure {
+      padding: 0px 30px 15px 30px;
+    }
+  }
+  &.light {
+    background: var(--x10);
+    .icon {
+      color: var(--x12);
+    }
+  }
+}
+@media (max-width: 740px) {
+  .brick .icon {
+    font-size: calc((100vw - 20px) / 4);
+  }
+} /* CLICKABLE PANELS —————————————————————————————————————————
+they will use color y
+——————————————————————————————————————————————————————————— */
+a.panel {
+  background: var(--y110);
+  * {
+    color: var(--x3);
+  }
+  &:before {
+    background: var(--y1);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transform-origin: center;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0px 0px 4px var(--x);
+    transform: scale(1.02);
+    z-index: 2;
+    * {
+      color: black;
+    }
+    &:before {
       transform: scale(2);
     }
   }
   &.brick:hover .properties {
     opacity: 1;
   }
-} /* themed panels */
-.neutral {
-  &:before {
-    background: #444;
+  &.light {
+    background: var(--y10);
+    &:before {
+      background: white;
+    }
   }
-  &:hover,
-  &:focus {
-    box-shadow: 0 0px 0px 4px #08c;
-    * {
-      color: white;
+} /* COLOR CLUSTERS–—————————–—————————————————————————————––––––
+This list of tuples anchors the bright palette of link colors to 
+soft colors chosen by the the theme. A color tuple:
+ 1.name / 2.main-hover / 3.icon-hover / 4.main / 5.icon
+—————————————————————————————————————————————————————————––––––—— */
+$colors: ("blue" #08c #0079b9 "12" "121") ("aqua" #00d2af #00c0a0 "12" "121")
+  ("orange" #aa5a32 #9b4b23 "120" "12") ("red" #960019 #a50f28 "12" "120")
+  ("amber" #c90 #b80 "121" "12") ("canary" #d2af00 #deb900 "12" "120")
+  ("indigo" #4628dc #3214c8 "120" "121") ("dark" black var(--x4) "120" "121")
+  ("violet" #820096 #9600b4 "121" "12");
+@each $tuple in $colors {
+  /* LINKED SPECIAL PANELS–—————————–—————————————————————————————
+  a > span: "B"
+  ——————————————————————————————————————————————————————————— */
+  a.#{nth($tuple, 1)} {
+    &:before {
+      background: nth($tuple, 2);
+    }
+    &.panel {
+      background: var(--y#{nth($tuple, 4)});
+      .icon {
+        color: var(--y#{nth($tuple, 5)});
+      }
+      &:focus,
+      &:hover,
+      &:active {
+        box-shadow: 0 0px 0px 4px nth($tuple, 3);
+        background: nth($tuple, 3);
+        * {
+          color: white;
+        }
+        .icon {
+          color: nth($tuple, 3);
+        }
+      }
     }
   }
 }
-/* themed panels */
-.pure {
-  &:before {
-    background: white;
-  }
-  &:hover,
-  &:focus {
-    box-shadow: 0 0px 0px 4px #08c;
-    * {
-      color: black;
-    }
-  }
-} /* themed panels */
-.paper.panel {
-  &:before {
-    background: #d7d1ce;
-  }
-  &:hover,
-  &:focus {
-    box-shadow: 0 0px 0px 4px #788c96;
-    * {
-      color: black;
-    }
-  }
-}
-$red: #a50f28;
-$dark-red: #960019;
-a.red {
-  &:before {
-    background: $red;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-red;
-    background: $dark-red;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-red;
-    }
-  }
-}
-$blue: #08c;
-$dark-blue: #0079b9;
-a.blue {
-  &:before {
-    background: $blue;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-blue;
-    background: $dark-blue;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-blue;
-    }
-  }
-}
-$canary: #deb900;
-$dark-canary: #d2af00;
-a.canary {
-  &:before {
-    background: $canary;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-canary;
-    background: $dark-canary;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-canary;
-    }
-  }
-}
-$orange: #aa5a32;
-$dark-orange: #9b4b23;
-a.orange {
-  &:before {
-    background: $orange;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-orange;
-    background: $dark-orange;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-orange;
-    }
-  }
-}
-$indigo: #4628dc;
-$dark-indigo: #3214c8;
-a.indigo {
-  &:before {
-    background: $indigo;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-indigo;
-    background: $dark-indigo;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-indigo;
-    }
-  }
-}
-$violet: #9600b4;
-$dark-violet: #820096;
-a.indigo {
-  &:before {
-    background: $violet;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-violet;
-    background: $dark-violet;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-violet;
-    }
-  }
-}
-$aqua: #00d2af;
-$dark-aqua: #00c0a0;
-a.indigo {
-  &:before {
-    background: $aqua;
-  }
-  &.panel:hover,
-  &.panel:focus {
-    box-shadow: 0 0px 0px 4px $dark-aqua;
-    background: $dark-aqua;
-    * {
-      color: white;
-    }
-    .icon {
-      color: $dark-aqua;
+@each $tuple in $colors {
+  /* UNLINKED SPECIAL PANELS–—————————–—————————————————————————————
+  a > span: "B"
+  ——————————————————————————————————————————————————————————— */
+  .panel {
+    &.#{nth($tuple, 1)} {
+      background: var(--x#{nth($tuple, 4)});
+      .icon {
+        color: var(--x#{nth($tuple, 5)});
+      }
     }
   }
 }

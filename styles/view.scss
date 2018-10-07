@@ -1,0 +1,131 @@
+---
+---
+
+/* MULTICOLUMN—————————————————————————————————————————————
+Activate .spreads! 
+——————————————————————————————————————————————————————————— */
+@media (min-width: 600px) {
+  .spread {
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .panel {
+      margin: 0 auto;
+    }
+    &.double {
+      grid-template-columns: auto auto;
+    }
+    &.twin {
+      grid-template-columns: 1fr 1fr;
+    }
+    &.quad {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: 10vw;
+      grid-gap: 10px;
+    }
+  }
+  .column {
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    &.panel {
+      display: block;
+    }
+    h3 {
+      padding-top: 0px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  figure.smol {
+    padding-top: 30px;
+  }
+  .vcenter {
+    justify-content: center;
+  }
+}
+@media (min-width: 630px) and (max-width: 920px) {
+  .indent {
+    padding-left: 45px;
+    width: calc(100% - 65px);
+  }
+}
+@media screen and (max-width: 700px) {
+  section {
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+  }
+} /* EXTRAWIDE SCREEN———————————————————————————————————————————
+enough room for side panel 
+——————————————————————————————————————————————————————————— */
+@media (min-width: 1260px) {
+  main,
+  footer {
+    padding-left: 400px;
+    padding-right: 20px;
+  }
+  header {
+    h2,
+    h3,
+    p {
+      padding-left: 400px;
+      padding-right: 20px;
+    }
+  }
+  main,
+  footer {
+    max-width: calc(90%);
+  }
+  header {
+    padding-top: 30px;
+  }
+  .toc-wrap {
+    width: 360px;
+  }
+  .tocbar {
+    width: 390px;
+    a {
+      transition: 0.2s;
+    }
+  }
+  .jump:hover {
+    background: #666;
+  } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+  .tocbar:hover {
+    background: none;
+  }
+  main > figure > img {
+    min-height: calc(100vw - 420px);
+  }
+  nav {
+    position: fixed;
+    z-index: 100;
+    padding-right: 0px;
+    width: 380px;
+  }
+  .nav-l {
+    display: none;
+  }
+  .nav-r {
+    width: 290px;
+    padding-left: 24px;
+  }
+  #left {
+    background: var(--y1);
+    position: fixed;
+    bottom: 0;
+    height: calc(100vh + 60px);
+    width: 380px;
+    z-index: 0;
+  }
+}

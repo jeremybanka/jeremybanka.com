@@ -1,0 +1,204 @@
+@media (min-width: 1260px) {
+  #top {
+    position: absolute;
+    width: 380px;
+    bottom: 0;
+    height: 100%;
+    background: var(--x0);
+    z-index: 0;
+  }
+  #bottom {
+    position: sticky;
+    float: left;
+    top: 0;
+    width: 380px;
+    margin-top: calc(100vh);
+    height: 108px;
+    background: var(--y1);
+    z-index: 50;
+  }
+}
+.sample {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.uruz {
+  font-family: Uruz;
+}
+h2.uruz {
+  font-weight: 600;
+  color: #d28c00;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
+}
+h3.uruz {
+  font-family: UruzC;
+  font-weight: 600;
+  color: #d28c00;
+  max-width: 620px;
+  padding-top: 0;
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+.cant {
+  font-family: Canticle;
+}
+h2.cant {
+  font-weight: 700;
+  color: #820096;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
+}
+h3.cant {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-variant-ligatures: none;
+  color: #4600d2;
+  text-align: center;
+  padding-right: 10px;
+  padding-top: 0;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.xeno {
+  font-family: Interloper;
+}
+.brahmin {
+  font-family: Brahmin;
+}
+h2.brahmin {
+  font-weight: 200;
+  color: #08c;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
+}
+h3.brahmin {
+  font-weight: 600;
+  color: #3c505a;
+  text-align: left;
+  padding-right: 10px;
+  max-width: 620px;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+h2.xeno {
+  font-weight: 500;
+  color: #f00050;
+  font-size: 40px;
+  text-align: center;
+  padding-right: 30px;
+  max-width: 600px;
+}
+h3.xeno {
+  font-weight: 400;
+  padding-right: 10px;
+  max-width: 620px;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.razr {
+  font-weight: 050;
+}
+.shrp {
+  font-weight: 100;
+}
+.thin {
+  font-weight: 200;
+}
+.lite {
+  font-weight: 300;
+}
+.book {
+  font-weight: 400;
+}
+.rglr {
+  font-weight: 500;
+}
+.medi {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.hevy {
+  font-weight: 800;
+}
+.supr {
+  font-weight: 900;
+}
+
+.x {
+  padding-left: 10px;
+}
+.xx {
+  padding-left: 20px;
+}
+
+/****************************
+************LEGACY***********
+****************************/
+
+/* used for type specimens 
+h1 { 
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h2 { 
+    font-size: 30px;
+    font-weight: 700;
+}*/
+
+/* used for main blog heading
+h2, h3 {
+	text-align: left;
+	font-weight: bold;
+	color: #4d4d4d;
+}
+
+h3 {font-size: 25px; margin-bottom: -15px;}
+
+.entry {padding-right: 15px;} */
+
+/* .container > ol > li, .container > ul > li {
+	margin-top: 30px;
+    margin-left: 1em; 
+}
+
+.rule {
+	height: 3px;
+	width: 60px;
+	background: #a0a0a0;
+	position: relative;
+	margin: 42px auto;
+}
+
+.container > .rule { position: relative }
+
+
+footer p, .caption { 
+	font-size: 17.5px; 
+	text-align: center;
+	color: #999;
+}
+
+/* quickly apply a different typeface 
+.ymirsson { font-family: Ymirsson; font-weight: 600 }
+
+.runa { font-family: Runa; }
+
+.will { font-family: Willamette }
+
+.subj_sans { font-family: SubjectSans }
+*/
