@@ -12,3 +12,7 @@ new home for table of contents and all @media. taken from specimen, structure, t
 []
 
 [ ] make a loop for the specimen page ??
+
+[ ] Clean up image directory
+
+[] ?? Link to forestry.io
