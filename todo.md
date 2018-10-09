@@ -7,7 +7,7 @@ new home for table of contents and all @media. taken from specimen, structure, t
 
 [X] add h2 > span.date {float:right z-index:0}
 
-[] Why is my head so small on the page? Is the img the only thing with ant width setting?
+[X] Why is my head so small on the page? Is the img the only thing with ant width setting?
 
 []
 
