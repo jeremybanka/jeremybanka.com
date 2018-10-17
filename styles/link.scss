@@ -1,9 +1,9 @@
 ---
 ---
 
-/* BASICS —————————————————————————————————————————————–––––
+/* BASICS ------------------------------------------------
 links  
-——————————————————————————————————————————————————————————— */
+--------------------------------------------------------- */
 a {
   text-decoration: none;
   display: inline-block;
@@ -56,11 +56,11 @@ p a {
       }
     }
   }
-} /* PANELS ––––––————————————————————————————————————————————
+} /* PANELS ------------------------------------------------
 large, rectangular links that house a central image or typographic 
 icon and reveal information on hover.
 the icons are typographic, and use a query to shrink
-——————————————————————————————————————————————————————————— */
+------------------------------------------------------------ */
 .panel {
   background: var(--x111);
   margin: auto 20px;
@@ -158,9 +158,9 @@ the icons are typographic, and use a query to shrink
   .brick .icon {
     font-size: calc((100vw - 20px) / 4);
   }
-} /* CLICKABLE PANELS —————————————————————————————————————————
+} /* CLICKABLE PANELS ---------------------------------------
 they will use color y
-——————————————————————————————————————————————————————————— */
+------------------------------------------------------------ */
 a.panel {
   background: var(--y110);
   * {

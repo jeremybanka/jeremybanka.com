@@ -1,0 +1,94 @@
+# contextual code documentation
+    a class is named after the motifs its members
+    interact with and the nature of their interaction.
+
+    motifs:
+
+    EQ = equal      HY - hyphen     GR > greater
+    
+    TL ~ tilde      BR | bar        LS < less
+
+    the class '@EQAL' holds all (-AL) glyphs that can
+    be interact with or contain the equal motif (EQ).
+
+    the class '@INEQ' holds only glyphs with an 
+    IN- (initial) EQ (equal motif).
+
+    REFERENCES
+
+.in- "intro" 
+    begins a motif. For example "exclam.ineq" is an 
+    exclamation point that negates an equality (!=) 
+
+.md- "middle" 
+    maintains a motif. For example "slash.mdeq" is 
+    a slash (/) that internally negates an equality 
+    which underflows it (==/==)
+
+.ut- "out" 
+    ends a motif. Such as braceright.uthy (-----})
+    
+transition
+    when a glyph's suffix names two motifs, that glyph
+    illustrates a transition between those motifs, in
+    that order. For example, "exclam.lshy" is used in
+    HTML comment openers <!--, where the exclam (!) 
+    sits between a less (< ls) and a hyphen (- hy).
+
+
+@EQEQ
+    equal
+    equal.ineq
+    equal.mdeq
+    equal.uteq
+@EQAL
+    equal colon exclam less greater question
+    numbersign slash bar asciitilde asciicircum
+
+    equal.ineq exclam.ineq less.ineq greater.ineq
+    question.ineq numbersign.ineq slash.ineq 
+    bar.ineq asciicircum.ineqasciitilde.ineq
+
+    equal.mdeq colon.mdeq exclam.mdeq less.mdeq
+    greater.mdeq slash.mdeq
+
+    equal.uteq less.uteq greater.uteq bar.uteq
+    asciitilde.uteq
+
+    greater.greq greater.eqgr
+
+    less.lseq less.eqls
+@INEQ
+    equal.ineq exclam.ineq less.ineq
+    greater.ineq question.ineq numbersign.ineq
+    slash.ineq bar.ineq asciicircum.ineq
+    asciitilde.ineq
+
+    equal.mdeq
+    colon.mdeq
+    exclam.mdeq
+    less.mdeq
+    greater.mdeq
+    slash.mdeq
+
+    less.lseq
+    greater.greq
+@MDEQ
+
+@UTEQ
+
+@HYHY
+
+@HYAL
+
+@INHY
+
+@MDHY
+
+@UTHY
+
+@LSLS
+
+@GRGR
+
+@TLTL
