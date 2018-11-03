@@ -14,7 +14,7 @@ a {
   transition-property: color;
   transition-duration: 0.3s;
   main & {
-    color: black;
+    color: var(--b);
   }
   &:before {
     content: "";
@@ -40,7 +40,7 @@ p a {
     &:hover,
     &:focus,
     &:active {
-      color: white;
+      color: var(--a);
       &:before {
         transform: scaleX(1);
       }
@@ -186,7 +186,7 @@ a.panel {
     transform: scale(1.02);
     z-index: 2;
     * {
-      color: black;
+      color: var(--b);
     }
     &:before {
       transform: scale(2);
@@ -198,21 +198,21 @@ a.panel {
   &.light {
     background: var(--y10);
     &:before {
-      background: white;
+      background: var(--a);
     }
   }
-} /* COLOR CLUSTERS–—————————–—————————————————————————————––––––
+} /* COLOR CLUSTERS -------------------------------------------
 This list of tuples anchors the bright palette of link colors to 
 soft colors chosen by the the theme. A color tuple:
  1.name / 2.main-hover / 3.icon-hover / 4.main / 5.icon
-—————————————————————————————————————————————————————————––––––—— */
+-------------------------------------------------------------- */
 $colors: ("blue" #08c #0079b9 "12" "121") ("aqua" #00d2af #00c0a0 "12" "121")
   ("orange" #aa5a32 #9b4b23 "120" "12") ("red" #960019 #a50f28 "12" "120")
   ("amber" #c90 #b80 "121" "12") ("canary" #d2af00 #deb900 "12" "120")
   ("indigo" #4628dc #3214c8 "120" "121") ("dark" black var(--x4) "120" "121")
   ("violet" #820096 #9600b4 "121" "12");
 @each $tuple in $colors {
-  /* LINKED SPECIAL PANELS–—————————–—————————————————————————————
+  /* LINKED SPECIAL PANELS -----------------------------------
   a > span: "B"
   ——————————————————————————————————————————————————————————— */
   a.#{nth($tuple, 1)} {
@@ -240,9 +240,9 @@ $colors: ("blue" #08c #0079b9 "12" "121") ("aqua" #00d2af #00c0a0 "12" "121")
   }
 }
 @each $tuple in $colors {
-  /* UNLINKED SPECIAL PANELS–—————————–—————————————————————————————
+  /* UNLINKED SPECIAL PANELS----------------------------------
   a > span: "B"
-  ——————————————————————————————————————————————————————————— */
+  ------------------------------------------------------------ */
   .panel {
     &.#{nth($tuple, 1)} {
       background: var(--x#{nth($tuple, 4)});

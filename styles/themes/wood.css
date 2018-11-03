@@ -1,5 +1,5 @@
 /* ff5a27
-BEHIND————————————————————————————————
+BEHIND--------------------------------
 */
 html { background: #eedcdf }
 section {background: #fceaed}
@@ -14,12 +14,12 @@ nav { background: #f8e6e9}
 .logo:hover span, .logo:focus span { color: #f8e6e9; }
 }
 /* 
-TEXT—————————————————————————————
+TEXT-----------------------------
 */
 nav *, .logo *, h1, h2, h3, p, li { color: #3c505a } 
 h2 {color: #00324b}
 /*
-FLARE———————————————————————————————————
+FLARE-----------------------------------
 */
 /* link color sweep */
 a:before { background: #08C }
@@ -38,7 +38,7 @@ p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
     }
 }
 /*
-SUBTLE—————————————————————————————————
+SUBTLE---------------------------------
 */
 hr { background: #aaa; }
 
@@ -46,7 +46,7 @@ aside, figcaption { color: #aaa }
 aside { border-left: solid 3px #aaa }
 
 /* 
-PANEL———————————————————————————————————
+PANEL-----------------------------------
 */
 
 .panel {

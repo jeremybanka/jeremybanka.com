@@ -1,89 +1,35 @@
-@eqal
-equal
-colon
-exclam
-less
-greater
-question
-numbersign
-slash
-bar
-asciitilde
-asciicircum
+# psuedokern
+sub @fr @m' @fl by @w;
+sub @m' @fl by @r;
+sub @fr @m' by @l;
 
-equal.ineq
-exclam.ineq
-less.ineq
-less.lseq
-greater.ineq
-question.ineq
-numbersign.ineq
-slash.ineq
-bar.ineq
-asciicircum.ineq
-asciitilde.ineq
-
-equal.mdeq
-colon.mdeq
-exclam.mdeq
-less.mdeq
-greater.mdeq
-slash.mdeq
-
-equal.uteq
-less.uteq
-less.eqls
-greater.uteq
-bar.uteq
-asciitilde.uteq
-
-@ineq 
-equal.ineq
-exclam.ineq
-less.ineq
-greater.ineq
-question.ineq
-numbersign.ineq
-slash.ineq
-bar.ineq
-asciicircum.ineq
-asciitilde.ineq
-less.lseq
-
-@mdeq 
-equal.mdeq
-colon.mdeq
-exclam.mdeq
-less.mdeq
-greater.mdeq
-slash.mdeq
-
-@uteq
-equal.uteq
-less.uteq
-greater.uteq
-bar.uteq
-asciitilde.uteq
-less.eqls
-
-@lsal
-less
-less.inls
-less.mdls
-less.utls
-less.lseq
-less.eqls
-
-
----
----
+# diamond
 sub less' @grgr by less.lsgr;
 sub @lsls greater' by greater.lsgr;
+#square
+sub bracketleft' bracketright by bracketleft.blbr;
+sub bracketleft.blbr bracketright' by bracketright.blbr;
+#circle
+sub parenleft' parenright by parenleft.plpr;
+sub parenleft.plpr parenright' by parenright.plpr;
+#triangles
+sub less' @brbr by less.lsbr;
+sub @brbr greater' by greater.brgr;
+
+# html comment
+sub less' exclam hyphen by less.inls;
+sub less.inls exclam' hyphen by exclam.lshy;
+# html box
+sub less slash' greater by slash.lsgr;
+sub less slash' by slash.utls;
+sub slash' greater by slash.ingr;
 
 # less
 sub @lsls less' @lsls by less.mdls;
 sub @eqeq less' @lsls by less.eqls;
 sub @lsls less' @eqeq by less.lseq;
+sub @hyhy less' @lsls by less.hyls;
+sub @lsls less' @hyhy by less.lshy;
 sub less' @lsls by less.inls;
 sub @lsls less' by less.utls;
 
@@ -91,15 +37,36 @@ sub @lsls less' by less.utls;
 sub @grgr greater' @grgr by greater.mdgr;
 sub @eqeq greater' @grgr by greater.eqgr;
 sub @grgr greater' @eqeq by greater.greq;
+sub @hyhy greater' @grgr by greater.hygr;
+sub @grgr greater' @hyhy by greater.grhy;
 sub greater' @grgr by greater.ingr;
 sub @grgr greater' by greater.utgr;
 
+# middle tilde
+sub @tltl asciitilde' @tltl by asciitilde.mdtl;
+# middle hyphen
+sub @hyal hyphen' @hyal by hyphen.mdhy;
 # middle equal
 sub @eqal equal' @eqal by equal.mdeq;
 sub @eqeq colon' @eqeq by colon.mdeq;
 sub @eqeq exclam' @eqeq by exclam.mdeq;
 sub @eqeq slash' @eqeq by slash.mdeq;
 
+# js threquel (placement BETWEEN the middle-equal and initial-equal triggers yields triples in mass)
+sub [equal.intq exclam.intq] equal' by equal.mdtq;
+sub equal.mdtq equal' by equal.uttq;
+sub equal' equal equal by equal.intq;
+sub exclam' equal equal by exclam.intq;
+
+# initial tilde
+sub asciitilde' @tltl by asciitilde.intl;
+# initial hyphen
+sub hyphen' @hyal by hyphen.inhy;
+sub asciitilde' @hyhy by asciitilde.inhy;
+sub bar' @hyhy by bar.inhy;
+sub braceleft' @hyhy by braceleft.inhy;
+sub greater' @hyhy by greater.inhy;
+sub less' @hyhy by less.inhy;
 # initial equal
 sub equal' @eqal by equal.ineq;
 sub exclam' @eqeq by exclam.ineq;
@@ -109,327 +76,26 @@ sub question' @eqeq by question.ineq;
 sub numbersign' @eqeq by numbersign.ineq;
 sub slash' @eqeq by slash.ineq;
 sub bar' @eqeq by bar.ineq;
+sub brokenbar' @eqeq by brokenbar.ineq;
 sub asciicircum' @eqeq by asciicircum.ineq;
 sub asciitilde' @eqeq by asciitilde.ineq;
 
+# out hyphen
+sub [asciitilde.intl asciitilde.mdtl] asciitilde' by asciitilde.uttl;
+# out hyphen
+sub @inhy hyphen' by hyphen.uthy;
+sub @inhy bar' by bar.uthy;
+sub @inhy braceright' by braceright.uthy;
+sub @inhy greater' by greater.uthy;
+sub @inhy less' by less.uthy;
 # out equal
 sub @ineq equal' by equal.uteq;
 sub @ineq less' by less.uteq;
 sub @ineq greater' by greater.uteq;
 sub @ineq bar' by bar.uteq;
+sub @ineq brokenbar' by brokenbar.uteq;
 sub @ineq asciitilde' by asciitilde.uteq;
----
 
-
-
-
-eq.liga
-sub less' @eqal by less.ineq;
-sub @ineq equal' by equal.utal;
-sub equal.utal' @eqal by equal.mdal;
-
-sub 
-sub equal' @out-eq by equal.in
-
-
-sub equal' @mid-eq by equal.in
-
-sub @in-eq equal' 
-sub @in-eq equal' @out-eq by equal.mid
-
-
-equal.threqual
-exclam.in-tq
-
-sub less equal equal greater by less_equal_equal_greater.liga;
-sub less exclam hyphen hyphen by less_exclam_hyphen_hyphen.liga;
-sub numbersign numbersign numbersign numbersign by numbersign_numbersign_numbersign_numbersign.liga;
-sub ampersand ampersand ampersand by ampersand_ampersand_ampersand.liga;
-sub asciitilde asciitilde asciitilde by asciitilde_asciitilde_asciitilde.liga;
-sub asciitilde asciitilde greater by asciitilde_asciitilde_greater.liga;
-sub asterisk asterisk asterisk by asterisk_asterisk_asterisk.liga;
-sub asterisk asterisk slash by asterisk_asterisk_slash.liga;
-sub backslash backslash backslash by backslash_backslash_backslash.liga;
-sub bar bar bar by bar_bar_bar.liga;
-sub bar bar equal by bar_bar_equal.liga;
-sub bar bar greater by bar_bar_greater.liga;
-sub colon colon colon by colon_colon_colon.liga;
-sub colon colon equal by colon_colon_equal.liga;
-sub equal colon equal by equal_colon_equal.liga;
-sub equal equal equal by equal_equal_equal.liga;
-sub equal equal greater by equal_equal_greater.liga;
-sub equal exclam equal by equal_exclam_equal.liga;
-sub equal greater greater by equal_greater_greater.liga;
-sub equal less less by equal_less_less.liga;
-sub equal slash equal by equal_slash_equal.liga;
-sub exclam equal equal by exclam_equal_equal.liga;
-sub exclam exclam exclam by exclam_exclam_exclam.liga;
-sub exclam exclam period by exclam_exclam_period.liga;
-sub greater equal greater by greater_equal_greater.liga;
-sub greater greater equal by greater_greater_equal.liga;
-sub greater greater greater by greater_greater_greater.liga;
-sub greater greater hyphen by greater_greater_hyphen.liga;
-sub greater hyphen greater by greater_hyphen_greater.liga;
-sub hyphen greater greater by hyphen_greater_greater.liga;
-sub hyphen hyphen greater by hyphen_hyphen_greater.liga;
-sub hyphen hyphen hyphen by hyphen_hyphen_hyphen.liga;
-sub hyphen less less by hyphen_less_less.liga;
-sub less asciitilde asciitilde by less_asciitilde_asciitilde.liga;
-sub less asciitilde greater by less_asciitilde_greater.liga;
-sub less asterisk greater by less_asterisk_greater.liga;
-sub less bar bar by less_bar_bar.liga;
-sub less bar greater by less_bar_greater.liga;
-sub less dollar greater by less_dollar_greater.liga;
-sub less equal equal by less_equal_equal.liga;
-sub less equal greater by less_equal_greater.liga;
-sub less equal less by less_equal_less.liga;
-sub less hyphen greater by less_hyphen_greater.liga;
-sub less hyphen hyphen by less_hyphen_hyphen.liga;
-sub less hyphen less by less_hyphen_less.liga;
-sub less less equal by less_less_equal.liga;
-sub less less hyphen by less_less_hyphen.liga;
-sub less less less by less_less_less.liga;
-sub less plus greater by less_plus_greater.liga;
-sub less slash greater by less_slash_greater.liga;
-sub numbersign numbersign numbersign by numbersign_numbersign_numbersign.liga;
-sub numbersign underscore parenleft by numbersign_underscore_parenleft.liga;
-sub percent percent percent by percent_percent_percent.liga;
-sub period period equal by period_period_equal.liga;
-sub period period less by period_period_less.liga;
-sub period period period by period_period_period.liga;
-sub plus plus plus by plus_plus_plus.liga;
-sub question question question by question_question_question.liga;
-sub semicolon semicolon semicolon by semicolon_semicolon_semicolon.liga;
-sub slash asterisk asterisk by slash_asterisk_asterisk.liga;
-sub slash equal equal by slash_equal_equal.liga;
-sub slash slash slash by slash_slash_slash.liga;
-sub underscore bar underscore by underscore_bar_underscore.liga;
-sub ampersand ampersand by ampersand_ampersand.liga;
-sub asciicircum equal by asciicircum_equal.liga;
-sub asciitilde asciitilde by asciitilde_asciitilde.liga;
-sub asciitilde at by asciitilde_at.liga;
-sub asciitilde equal by asciitilde_equal.liga;
-sub asciitilde greater by asciitilde_greater.liga;
-sub asciitilde hyphen by asciitilde_hyphen.liga;
-sub asterisk asterisk by asterisk_asterisk.liga;
-sub asterisk greater by asterisk_greater.liga;
-sub asterisk slash by asterisk_slash.liga;
-sub backslash backslash by backslash_backslash.liga;
-sub bar bar by bar_bar.liga;
-sub bar braceright by bar_braceright.liga;
-sub bar bracketright by bar_bracketright.liga;
-sub bar equal by bar_equal.liga;
-sub bar greater by bar_greater.liga;
-sub bar hyphen by bar_hyphen.liga;
-sub braceleft bar by braceleft_bar.liga;
-sub braceleft hyphen by braceleft_hyphen.liga;
-sub bracketleft bar by bracketleft_bar.liga;
-sub bracketleft bracketright by bracketleft_bracketright.liga;
-sub bracketright numbersign by bracketright_numbersign.liga;
-sub colon colon by colon_colon.liga;
-sub colon equal by colon_equal.liga;
-sub colon greater by colon_greater.liga;
-sub colon less by colon_less.liga;
-sub dollar greater by dollar_greater.liga;
-sub equal asciitilde by equal_asciitilde.liga;
-sub equal equal by equal_equal.liga;
-sub equal greater by equal_greater.liga;
-sub equal less by equal_less.liga;
-sub exclam equal by exclam_equal.liga;
-sub exclam exclam by exclam_exclam.liga;
-sub greater colon by greater_colon.liga;
-sub greater equal by greater_equal.liga;
-sub greater greater by greater_greater.liga;
-sub greater hyphen by greater_hyphen.liga;
-sub hyphen asciitilde by hyphen_asciitilde.liga;
-sub hyphen bar by hyphen_bar.liga;
-sub hyphen braceright by hyphen_braceright.liga;
-sub hyphen greater by hyphen_greater.liga;
-sub hyphen hyphen by hyphen_hyphen.liga;
-sub hyphen less by hyphen_less.liga;
-sub less asciitilde by less_asciitilde.liga;
-sub less asterisk by less_asterisk.liga;
-sub less bar by less_bar.liga;
-sub less colon by less_colon.liga;
-sub less dollar by less_dollar.liga;
-sub less equal by less_equal.liga;
-sub less greater by less_greater.liga;
-sub less hyphen by less_hyphen.liga;
-sub less less by less_less.liga;
-sub less plus by less_plus.liga;
-sub less slash by less_slash.liga;
-sub numbersign braceleft by numbersign_braceleft.liga;
-sub numbersign bracketleft by numbersign_bracketleft.liga;
-sub numbersign colon by numbersign_colon.liga;
-sub numbersign equal by numbersign_equal.liga;
-sub numbersign exclam by numbersign_exclam.liga;
-sub numbersign numbersign by numbersign_numbersign.liga;
-sub numbersign parenleft by numbersign_parenleft.liga;
-sub numbersign question by numbersign_question.liga;
-sub numbersign underscore by numbersign_underscore.liga;
-sub percent percent by percent_percent.liga;
-sub period equal by period_equal.liga;
-sub period hyphen by period_hyphen.liga;
-sub period period by period_period.liga;
-sub period question by period_question.liga;
-sub plus greater by plus_greater.liga;
-sub plus plus by plus_plus.liga;
-sub question colon by question_colon.liga;
-sub question equal by question_equal.liga;
-sub question period by question_period.liga;
-sub question question by question_question.liga;
-sub semicolon semicolon by semicolon_semicolon.liga;
-sub slash asterisk by slash_asterisk.liga;
-sub slash equal by slash_equal.liga;
-sub slash greater by slash_greater.liga;
-sub slash slash by slash_slash.liga;
-sub underscore underscore by underscore_underscore.liga;
-
-
-
-COMPLETE ORIGINAL LIGA SET
-sub bar bar bar greater by bar_bar_bar_greater.liga;
-sub less bar bar bar by less_bar_bar_bar.liga;
-sub less equal equal greater by less_equal_equal_greater.liga;
-sub less exclam hyphen hyphen by less_exclam_hyphen_hyphen.liga;
-sub numbersign numbersign numbersign numbersign by numbersign_numbersign_numbersign_numbersign.liga;
-sub ampersand ampersand ampersand by ampersand_ampersand_ampersand.liga;
-sub asciitilde asciitilde asciitilde by asciitilde_asciitilde_asciitilde.liga;
-sub asciitilde asciitilde greater by asciitilde_asciitilde_greater.liga;
-sub asterisk asterisk asterisk by asterisk_asterisk_asterisk.liga;
-sub asterisk asterisk slash by asterisk_asterisk_slash.liga;
-sub backslash backslash backslash by backslash_backslash_backslash.liga;
-sub bar bar bar by bar_bar_bar.liga;
-sub bar bar equal by bar_bar_equal.liga;
-sub bar bar greater by bar_bar_greater.liga;
-sub colon colon colon by colon_colon_colon.liga;
-sub colon colon equal by colon_colon_equal.liga;
-sub equal colon equal by equal_colon_equal.liga;
-sub equal equal equal by equal_equal_equal.liga;
-sub equal equal greater by equal_equal_greater.liga;
-sub equal exclam equal by equal_exclam_equal.liga;
-sub equal greater greater by equal_greater_greater.liga;
-sub equal less less by equal_less_less.liga;
-sub equal slash equal by equal_slash_equal.liga;
-sub exclam equal equal by exclam_equal_equal.liga;
-sub exclam exclam exclam by exclam_exclam_exclam.liga;
-sub exclam exclam period by exclam_exclam_period.liga;
-sub greater equal greater by greater_equal_greater.liga;
-sub greater greater equal by greater_greater_equal.liga;
-sub greater greater greater by greater_greater_greater.liga;
-sub greater greater hyphen by greater_greater_hyphen.liga;
-sub greater hyphen greater by greater_hyphen_greater.liga;
-sub hyphen greater greater by hyphen_greater_greater.liga;
-sub hyphen hyphen greater by hyphen_hyphen_greater.liga;
-sub hyphen hyphen hyphen by hyphen_hyphen_hyphen.liga;
-sub hyphen less less by hyphen_less_less.liga;
-sub less asciitilde asciitilde by less_asciitilde_asciitilde.liga;
-sub less asciitilde greater by less_asciitilde_greater.liga;
-sub less asterisk greater by less_asterisk_greater.liga;
-sub less bar bar by less_bar_bar.liga;
-sub less bar greater by less_bar_greater.liga;
-sub less dollar greater by less_dollar_greater.liga;
-sub less equal equal by less_equal_equal.liga;
-sub less equal greater by less_equal_greater.liga;
-sub less equal less by less_equal_less.liga;
-sub less hyphen greater by less_hyphen_greater.liga;
-sub less hyphen hyphen by less_hyphen_hyphen.liga;
-sub less hyphen less by less_hyphen_less.liga;
-sub less less equal by less_less_equal.liga;
-sub less less hyphen by less_less_hyphen.liga;
-sub less less less by less_less_less.liga;
-sub less plus greater by less_plus_greater.liga;
-sub less slash greater by less_slash_greater.liga;
-sub numbersign numbersign numbersign by numbersign_numbersign_numbersign.liga;
-sub numbersign underscore parenleft by numbersign_underscore_parenleft.liga;
-sub percent percent percent by percent_percent_percent.liga;
-sub period period equal by period_period_equal.liga;
-sub period period less by period_period_less.liga;
-sub period period period by period_period_period.liga;
-sub plus plus plus by plus_plus_plus.liga;
-sub question question question by question_question_question.liga;
-sub semicolon semicolon semicolon by semicolon_semicolon_semicolon.liga;
-sub slash asterisk asterisk by slash_asterisk_asterisk.liga;
-sub slash equal equal by slash_equal_equal.liga;
-sub slash slash slash by slash_slash_slash.liga;
-sub underscore bar underscore by underscore_bar_underscore.liga;
-sub ampersand ampersand by ampersand_ampersand.liga;
-sub asciicircum equal by asciicircum_equal.liga;
-sub asciitilde asciitilde by asciitilde_asciitilde.liga;
-sub asciitilde at by asciitilde_at.liga;
-sub asciitilde equal by asciitilde_equal.liga;
-sub asciitilde greater by asciitilde_greater.liga;
-sub asciitilde hyphen by asciitilde_hyphen.liga;
-sub asterisk asterisk by asterisk_asterisk.liga;
-sub asterisk greater by asterisk_greater.liga;
-sub asterisk slash by asterisk_slash.liga;
-sub backslash backslash by backslash_backslash.liga;
-sub bar bar by bar_bar.liga;
-sub bar braceright by bar_braceright.liga;
-sub bar bracketright by bar_bracketright.liga;
-sub bar equal by bar_equal.liga;
-sub bar greater by bar_greater.liga;
-sub bar hyphen by bar_hyphen.liga;
-sub braceleft bar by braceleft_bar.liga;
-sub braceleft hyphen by braceleft_hyphen.liga;
-sub bracketleft bar by bracketleft_bar.liga;
-sub bracketleft bracketright by bracketleft_bracketright.liga;
-sub bracketright numbersign by bracketright_numbersign.liga;
-sub colon colon by colon_colon.liga;
-sub colon equal by colon_equal.liga;
-sub colon greater by colon_greater.liga;
-sub colon less by colon_less.liga;
-sub dollar greater by dollar_greater.liga;
-sub equal asciitilde by equal_asciitilde.liga;
-sub equal equal by equal_equal.liga;
-sub equal greater by equal_greater.liga;
-sub equal less by equal_less.liga;
-sub exclam equal by exclam_equal.liga;
-sub exclam exclam by exclam_exclam.liga;
-sub greater colon by greater_colon.liga;
-sub greater equal by greater_equal.liga;
-sub greater greater by greater_greater.liga;
-sub greater hyphen by greater_hyphen.liga;
-sub hyphen asciitilde by hyphen_asciitilde.liga;
-sub hyphen bar by hyphen_bar.liga;
-sub hyphen braceright by hyphen_braceright.liga;
-sub hyphen greater by hyphen_greater.liga;
-sub hyphen hyphen by hyphen_hyphen.liga;
-sub hyphen less by hyphen_less.liga;
-sub less asciitilde by less_asciitilde.liga;
-sub less asterisk by less_asterisk.liga;
-sub less bar by less_bar.liga;
-sub less colon by less_colon.liga;
-sub less dollar by less_dollar.liga;
-sub less equal by less_equal.liga;
-sub less greater by less_greater.liga;
-sub less hyphen by less_hyphen.liga;
-sub less less by less_less.liga;
-sub less plus by less_plus.liga;
-sub less slash by less_slash.liga;
-sub numbersign braceleft by numbersign_braceleft.liga;
-sub numbersign bracketleft by numbersign_bracketleft.liga;
-sub numbersign colon by numbersign_colon.liga;
-sub numbersign equal by numbersign_equal.liga;
-sub numbersign exclam by numbersign_exclam.liga;
-sub numbersign numbersign by numbersign_numbersign.liga;
-sub numbersign parenleft by numbersign_parenleft.liga;
-sub numbersign question by numbersign_question.liga;
-sub numbersign underscore by numbersign_underscore.liga;
-sub percent percent by percent_percent.liga;
-sub period equal by period_equal.liga;
-sub period hyphen by period_hyphen.liga;
-sub period period by period_period.liga;
-sub period question by period_question.liga;
-sub plus greater by plus_greater.liga;
-sub plus plus by plus_plus.liga;
-sub question colon by question_colon.liga;
-sub question equal by question_equal.liga;
-sub question period by question_period.liga;
-sub question question by question_question.liga;
-sub semicolon semicolon by semicolon_semicolon.liga;
-sub slash asterisk by slash_asterisk.liga;
-sub slash equal by slash_equal.liga;
-sub slash greater by slash_greater.liga;
-sub slash slash by slash_slash.liga;
-sub underscore underscore by underscore_underscore.liga;
+# float colon
+sub @logi colon' by colon.case;
+sub colon' @logi by colon.case;

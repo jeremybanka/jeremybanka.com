@@ -1,55 +1,86 @@
 :root {
-    --main-color:#3c505a
+  --main-color: #3c505a;
 }
 /*
-BEHIND————————————————————————————————
+BEHIND--------------------------------
 */
-html { background: #fff }
-@media (min-width:920px) {
-.logo:hover span, .logo:focus span { color: #fff; }
+html {
+  background: #fff;
 }
-@media (min-width:1260px) { 
-    #left {
-        background: #ebe5e2;
-        border-right: solid 3px #dcd6d3;
-    }
-    nav { background: #ebe5e2}
+@media (min-width: 920px) {
+  .logo:hover span,
+  .logo:focus span {
+    color: #fff;
+  }
+}
+@media (min-width: 1260px) {
+  #left {
+    background: #ebe5e2;
+    border-right: solid 3px #dcd6d3;
+  }
+  nav {
+    background: #ebe5e2;
+  }
 }
 /* 
-TEXT—————————————————————————————
+TEXT-----------------------------
 */
-nav *, .logo *, h1, h2, h3, p, li { color: #3c505a } 
+nav *,
+.logo *,
+h1,
+h2,
+h3,
+p,
+li {
+  color: #3c505a;
+}
 /*
-FLARE———————————————————————————————————
+FLARE-----------------------------------
 */
 /* link color sweep */
-a:before { background: #08C }
-
-/* link underline */
-p > a { box-shadow: inset 0 -2px 0 #08C }
-
-/* left padding for links */
-@media (min-width:920px) {
-p > a:hover, p > a:focus { box-shadow: -3px 0 0 #08C }
+a:before {
+  background: #08c;
 }
 
+/* link underline */
+p > a {
+  box-shadow: inset 0 -2px 0 #08c;
+}
 
+/* left padding for links */
+@media (min-width: 920px) {
+  p > a:hover,
+  p > a:focus {
+    box-shadow: -3px 0 0 #08c;
+  }
+}
 
 /*
-SUBTLE—————————————————————————————————
+SUBTLE---------------------------------
 */
-hr { background: #d28c00; }
+hr {
+  background: #d28c00;
+}
 
-aside, figcaption, footer p { color: #aa5a32 }
-aside { border-left: solid 2px #aa5a32 }
-
+aside,
+figcaption,
+footer p {
+  color: #aa5a32;
+}
+aside {
+  border-left: solid 2px #aa5a32;
+}
 
 /* 
-PANEL———————————————————————————————————
+PANEL-----------------------------------
 */
-.panel {background:#f8f8f8;}
+.panel {
+  background: #f8f8f8;
+}
 
-.pure { background: #f5efec }
+.pure {
+  background: #f5efec;
+}
 
 /*
 .panel {background:#f9f9f9;}

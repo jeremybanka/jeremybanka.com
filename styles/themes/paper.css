@@ -1,6 +1,9 @@
-/* PAPER IS A LIGHT SUBTLE BLUE—ORANGE THEME */
+/* PAPER IS A LIGHT SUBTLE BLUE-ORANGE THEME */
 
 :root {
+  --a: white;
+  --b: black;
+
   --x: #0088cc; /* link */
   --x0: #0096e1;
   --x00: #00a5f0;

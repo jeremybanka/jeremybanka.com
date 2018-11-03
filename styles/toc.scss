@@ -49,7 +49,7 @@ Used in documents with subdirectories.
 }
 .sub {
   /* Subdirectory panels */
-  background-color: white;
+  background-color: var(--a);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-out;
@@ -74,7 +74,7 @@ Used in documents with subdirectories.
   } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
   .close:hover {
     background: var(--y121);
-    color: white;
+    color: var(--a);
     transition: 0.2s;
   }
 } /* NARROW SCREEN——————————————————————————————————————————————
@@ -88,13 +88,13 @@ Not enough room for the sidebar!
   .tocbar {
     padding: 0;
     border-top: solid 3px #ddd;
-    background-color: white;
+    background-color: var(--a);
     width: 100%;
     a {
       display: none;
       &.icon {
         display: block;
-        background-color: white;
+        background-color: var(--a);
       }
     }
   }
@@ -119,19 +119,25 @@ enough room for sidebar
   footer {
     padding-left: 20vw;
   } /* Style ID links on hover */
-  .jump:hover {
-    color: white;
+  .jump {
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--a);
+    }
   }
   .active:hover {
-    color: black;
+    color: var(--b);
   }
   .tocbar {
     a:before {
       background: var(--y121);
     }
-    &:hover {
-      background: white;
-      color: black;
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--a);
+      color: var(--b);
       .sub {
         background: var(--y120);
       }
@@ -158,7 +164,7 @@ enough room for side panel
     }
   }
   .jump:hover {
-    color: black;
+    color: var(--b);
     background: var(--y121);
   }
   .tocbar:hover {

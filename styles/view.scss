@@ -1,7 +1,7 @@
 ---
 ---
 
-/* MULTICOLUMN—————————————————————————————————————————————
+/* MULTICOLUMN-————————————————————————————————————————————
 Activate .spreads! 
 ——————————————————————————————————————————————————————————— */
 @media (min-width: 600px) {
@@ -20,11 +20,23 @@ Activate .spreads!
     &.twin {
       grid-template-columns: 1fr 1fr;
     }
+    &.trip {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      height: 7vw;
+    }
     &.quad {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      height: 10vw;
+      height: 9vw;
       grid-gap: 10px;
     }
+    &.graphic {
+      height: 25vw;
+      max-height: 180px;
+    }
+  }
+  .inset {
+    margin-bottom: -15px;
   }
   .column {
     display: flex;

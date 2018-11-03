@@ -3,9 +3,15 @@ layout: book
 title: Display Type
 ---
 <link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all">
-<link rel="stylesheet" href="/styles/specimen.css">
+<link rel="stylesheet" href="/styles/ergata.css">
 <link rel="stylesheet" href="/styles/themes/stone.css" type="text/css" media="all">
 <style>
+    html,
+    #bottom,
+    #left {
+        background: #2d0f00
+    }
+
     @media (max-width: 1259px) {
         nav {
             background: var(--x0)
@@ -17,12 +23,15 @@ title: Display Type
 <div class="toc-wrap">
     <div class="tocbar" id="contents">
 
-        <a href="#nav" id="return" style="font-size: 21px" class="jump">&uarr;</a>
-        <a href="#skills" class="jump">Skills &amp; Tools</a>
-        <a href="#experience" class="jump">Experience</a>
-        <a href="#education" class="jump">Education</a>
-        <a href="#awards" class="jump">Awards</a>
-        <a href="#background" class="jump">Background</a>
+        <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
+        <a href="#aktivo" class="jump">
+            Aktivo</a>
+        <a href="#hans" class="jump">
+            Hans</a>
+        <a href="#magescule" class="jump">
+            Magescule</a>
+        <a href="#neurune" class="jump">
+            Neurune</a>
         <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
 
     </div>
@@ -33,27 +42,50 @@ title: Display Type
     height: calc(100vh - 30px); 
     display: flex;
 ">
-    <img src="images/display-type/head.png">
+    <img src="/images/disp-head.png">
 </header>
+<br>
 <main>
-    <figure>
-        <img src="/images/display-type/aktivo.png">
+    <figure id="aktivo">
+        <img src="/images/disp-aktivo.png">
     </figure>
-    <section>
-        <p>Lorem ipsum</p>
+    <section style="background:#788c96">
+        <h2 class="brahmin" style="color:#00324b">An Energetic Poster Font</h2>
+        <img src="/images/disp-aktivo-heavy.png" alt="">
+        <img src="/images/disp-aktivo-light.png" alt="">
+        <figure>
+            <img src="/images/disp-aktivo-full.png" alt="">
+        </figure>
     </section>
 
-    <figure>
-        <img src="/images/display-type/neurune.png">
+    <figure id="hans">
+        <img src="/images/disp-hans.png">
     </figure>
-    <section>
-        <p>Lorem ipsum</p>
+    <section style="background:#0096e1">
+        <h2 class="brahmin" style="color:white">A Smooth Geometric Script</h2>
+
+        <img src="/images/disp-hans-full.png" alt="">
     </section>
 
-    <figure>
-        <img src="/images/display-type/magescule.png">
+    <figure id="magescule">
+        <img src="/images/disp-magescule.png">
     </figure>
-    <section>
-        <p>Lorem ipsum</p>
+    <section style="background:#5f5956">
+        <h2 class="uruz" style="color:#d28c00">An Otherworldly Capital Set</h2>
+        <img src="/images/disp-magescule-full.png" alt="">
     </section>
+
+    <figure id="neurune">
+        <img src="/images/disp-neurune.png">
+    </figure>
+    <section style="background:#ebebeb">
+        <h2 class="xeno" style="color:#afa9a6">An Ultraminimalist Geometric</h2>
+        <img src="/images/disp-neurune-wide.png" alt="">
+        <figure>
+            <img src="/images/disp-neurune-animation.gif" alt="">
+        </figure>
+    </section>
+
+
+
 </main>

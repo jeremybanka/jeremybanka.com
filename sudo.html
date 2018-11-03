@@ -1,0 +1,238 @@
+---
+layout: book
+title: Sudo
+---
+<link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all">
+<link rel="stylesheet" href="/styles/themes/twilight.css" type="text/css" media="all">
+<style>
+  main *,
+  footer *,
+  .tocbar * {
+    font-family: Sudo
+  }
+
+  h3,
+  h2 {
+    color: #0096e1
+  }
+
+  section>h2 {
+    text-align: center;
+  }
+
+  nav {
+    --x3: #ff8269;
+  }
+
+  #left {
+    background: #2800f0;
+    opacity: 0.12;
+  }
+
+  .tocbar a {
+    color: var(--y121);
+  }
+
+  @media (max-width: 1259px) {
+    nav {
+      background: black;
+    }
+  }
+</style>
+<script src="/scripts/table-of-contents.js"></script>
+
+<div class="toc-wrap">
+  <div class="tocbar" id="contents">
+
+    <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
+    <a href="#features" class="jump">Features</a>
+    <a href="#design" class="jump">Design</a>
+    <a href="#download" class="jump">Download</a>
+    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
+
+  </div>
+</div>
+
+<header style="
+    background: #080030; 
+    height: calc(100vh - 30px); 
+    display: flex;
+">
+  <img src="/images/sudo-sudo.png">
+</header>
+<br>
+<main>
+  <section>
+    <figure>
+      <br><br>
+      <img src="/images/sudo-summary.png" alt="thanks, @fat">
+    </figure>
+    <p>
+      Sudo is the ideal modern coding typeface. Its robust, rugged
+      cut renders well at the smallest sizes, and its proportions
+      are optimized for readability in an editor environment. Sudo
+      supports code ligatures of unlimited length both to clarify
+      expressions (-->) and create structure (~~~~~~~).
+    </p>
+    <div class="quad spread">
+      <figure class="column plus">
+        <img src="/images/sudo-s1.png" data-action="zoom">
+      </figure>
+      <figure class="column plus">
+        <img src="/images/sudo-s2.png" data-action="zoom">
+      </figure>
+      <figure class="column plus">
+        <img src="/images/sudo-s3.png" data-action="zoom">
+      </figure>
+      <figure class="column plus">
+        <img src="/images/sudo-s4.png" data-action="zoom">
+      </figure>
+    </div>
+    <!------------------------------------------------- FEATURES
+-------------------------------------------------------
+------------------------------------------------------->
+    <section id="features">
+      <h2>Features</h2>
+      <figure>
+        <img src="images/sudo-alphabet.png" alt="sudo alphannumeric set">
+      </figure>
+      <h3 style="color:#ff8269">Code Proportion</h3>
+
+      <p>
+        Sudo is drawn on a monospaced skeleton uniquely adapted to the editor environment.
+        Punctuation and symbols are enlarged and in some cases redesigned to disambiguate them and reflect their
+        essential role in the code environment.
+        Fine details have been scoured from Sudo's robust, chunky alphabet.
+        What remains underneath are stoic, square-built letters, irreducible in form.
+      </p><br><br>
+      <figure>
+        <img src="images/sudo-extended.png" alt="sudo extended keyboard">
+      </figure>
+      <h3 style="color:#f03c78">Extended Keyboard</h3>
+
+      <p>
+        Sudo supports the entire Mac ⌥ alt and ✒ alt-shift sets.
+        Most of these will never be used, but they're all there in case
+        you need them.
+      </p>
+      <br><br>
+      <figure>
+        <img src="images/sudo-loji.png" alt="all keyboard glyphs">
+      </figure>
+      <h3>Code Ligatures</h3>
+      <p>
+        When you enable font ligatures in your editor, logical expressions
+        are transformed to express themselves more clearly.
+        "<span style="font-feature-settings: 'calt' 0;">--></span>"
+        becomes "-->".
+
+      </p>
+      <br><br>
+      <figure>
+        <img src="images/sudo-console.png" alt="all keyboard glyphs">
+      </figure>
+      <h3 style="color:#ebe5e2">Console Typography</h3>
+      <p>
+        Set your your favorite terminal to Sudo. It's got the
+        glyphs to handle progress bars and vim airline.
+      </p>
+      <br><br>
+      <div class="wide twin spread">
+        <div class="column">
+          <figure>
+            <img src="/images/sudo-pseudokern.png" alt="">
+          </figure>
+          <h3 style="color:#ff8269">Pseudokerning</h3>
+          <p>With ligatures enabled, some glyphs automatically optimize
+            their own internal structures to better fit in.
+          </p>
+        </div>
+        <div class="column">
+          <figure>
+            <img src="/images/sudo-international.png" alt="">
+          </figure>
+          <h3 style="color:#00a0f0">International</h3>
+          <p>In addition to English, Sudo is fluent in more than 150 languages including Spanish,
+            German, Portuguese, Turkish, and Romanian.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!------------------------------------------------- DESIGN
+-------------------------------------------------------
+------------------------------------------------------->
+    <section id="design">
+      <h2>Design</h2>
+    </section>
+    <h3>1. |Input| = |Output|</h3>
+    <p>
+      Before I made Sudo I ran some tests in Visual Studio Code to learn how its text environment applied font
+      features.
+      The first thing I noticed was how terribly it handled substitutions like ligatures. Unlike a rich text editor, it
+      did not put cursor stops inside the ligature glyph to subdivide it, but always placed your cursor after the
+      extrawide glyph if you were anywhere within. This made for a terrible user experience: it was a matter of memory
+      to ever know where your cursor was placed in a ligature such as ===.
+      <figure>
+        <img src="/images/sudo-dumb.png" alt="">
+      </figure>
+    </p>
+    <p>The feature would need to be creatively rewritten before it could be shipped.
+    </p>
+    <p>The standard form of a ligature is,
+      <code><em>sub</em> equal equal equal <em>by</em> equal_equal_equal.liga;</code>
+      A ligature rule like
+      this does take effect in VS Code—the problem is that the software literally replaces three glyphs with one.
+    </p>
+    <p>This means that the only way to preserve cursor stops is to use a ligature feature with a 1:1 ratio
+      between input glyphs and output glyphs. This feature would need to change each compatible glyph individually to a
+      contextual form, like a script font does.</p>
+    <p>And just like a script font, glyphs would exist in four major varieties for five use cases:</p>
+    <figure>
+      <img src="/images/sudo-forms.png" alt="">
+    </figure>
+    <p>So I wrote a new series of rules to accomplish the same thing
+      while keeping the glyphs separate.
+    </p>
+    <code>
+      <em>sub</em> equal equal' equal <em>by</em> equal.md;<br>
+      <em>sub</em> equal' equal <em>by</em> equal.in;<br>
+      <em>sub</em> equal equal' <em>by</em> equal.ut;
+    </code>
+    <p>It is important that the rules are written in this order, because a text editor will change each glyph in the
+      reading order only once with the first suitable substitute it finds in the rules. This means
+      that rules must be written for the most specific cases (such as the medial case, which has two stipulations)
+      listed first, and the more
+      general cases (like initial/final) listed last. This is the opposite of CSS-logic, in which you can amend earlier
+      statements with later ones. The above font rule-order ensures that a medial glyph becomes medial rather than
+      initial
+      or final, since it would meet the initial and final criteria as well. Think of it as "filtering out" the specific
+      cases before general rules are applied.
+    </p>
+    <p>Unlike a script font, though, there would need to be several different &ldquo;Motifs&rdquo; for certain
+      glyphs, such as > [greater], which has to form different arrows with -> hyphens and equals =>.
+    </p>
+    <h3>2. Motifs</h3>
+    <p>
+      <img src="/images/wait.gif" style="height:21px;width:60px" alt="">
+    </p>
+    <section id="download">
+
+      <h2 class="brahmin">Download</h2>
+      <br>
+
+      <figure class="column half vcenter">
+        <img src="/images/sudo-g.png"></figure>
+
+      <div class="wide spread">
+        <a href="/packages/jeremybanka~sudo-code.zip" class="paper panel column block" style="height:210px; margin-bottom: -40px;">
+          <p>
+            FREE (FOR NOW)</p>
+          <h2>Sudo Code<br>
+            +VSCode Theme</h2>
+          <img src="images/sudo-evolved.png">
+        </a>
+      </div>
+    </section>
+  </section>
+</main>

@@ -1,6 +1,9 @@
 /* NEUTRAL IS A LIGHT BOLD BLACK AND WHITE THEME */
 :root {
-  --x: black; /* link */
+  --a: white;
+  --b: black;
+
+  --x: black; /* link the quick brown fox jumps over the lazy dog*/
   --x0: #111;
   --x00: #222;
   --x1: #eee;
