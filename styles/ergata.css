@@ -55,10 +55,21 @@ h2.cant {
   max-width: 600px;
 }
 h3.cant {
+  font-weight: 300;
+  color: #32003c;
+  text-align: center;
+  padding-right: 10px;
+  padding-top: 0;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+h3.cand {
+  font-family: Canticle;
   font-weight: 700;
   letter-spacing: 1px;
   font-variant-ligatures: none;
-  color: #4600d2;
+  color: #553c5a;
   text-align: center;
   padding-right: 10px;
   padding-top: 0;

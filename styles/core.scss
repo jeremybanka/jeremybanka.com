@@ -180,9 +180,6 @@ main > figure {
 section figure {
   max-width: 720px;
 }
-section figure {
-  max-width: 720px;
-}
 figure img {
   width: 100%;
 }
@@ -239,8 +236,9 @@ h1 {
   color: var(--x4);
   text-align: center;
   font-size: 60px;
-  padding-top: 50px;
-  line-height: 200px;
+  padding-top: 180px;
+  padding-bottom: 120px;
+  line-height: 60px;
   font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
 h2 {
