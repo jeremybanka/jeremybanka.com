@@ -7,7 +7,7 @@ the content sits on the bottom.
 .toc-wrap {
   /* background-color: white;  for testing */
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   height: 100%;
   max-height: 100%;
   display: flex;
@@ -87,26 +87,33 @@ Not enough room for the sidebar!
   }
   .tocbar {
     padding: 0;
-    border-top: solid 3px #ddd;
+    border-top: solid 3px var(--y1);
     background-color: var(--a);
     width: 100%;
+    opacity: 0.92;
+    * {
+      opacity: 1;
+    }
+    a,
+    .close {
+      padding-right: 45px;
+    }
     a {
       display: none;
       &.icon {
         display: block;
-        background-color: var(--a);
-        padding-right: 30px;
+        font-family: Sudo;
       }
     }
   }
   .responsive a {
+    float: none;
+    display: block; /* significant! Overwrites flex, thus, flex-direction. */
+    text-align: center;
     &.icon {
       position: relative;
-      bottom: 0;
+      bottom: -1px;
     }
-    float: none;
-    display: block;
-    text-align: center;
   }
   .sub {
     background: var(--y120);
