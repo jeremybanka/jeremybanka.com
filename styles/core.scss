@@ -211,6 +211,9 @@ footer {
 } /* Widths ---------------------------------------------
 Quick classes for different max-widths.
 --------------------------------------------- */
+.max {
+  max-width: none;
+}
 .wide {
   max-width: 810px;
 }

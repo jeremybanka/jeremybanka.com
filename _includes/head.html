@@ -1,48 +1,44 @@
-<title>{{ page.title }}</title>
-<link rel="icon" href="/images/jem_favicon.png">
-<link rel="apple-touch-icon" href="/images/jem_touch-icon.png">
+<title>{{ page.title }}</title> <link rel="icon" href="/images/favicon.png" />
+<link rel="mask-icon" href="/images/mask-icon.svg" color="#3c505a" />
+<link rel="apple-touch-icon" href="/images/touch.png" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-
-<meta id="vp" name="viewport" content="width=420"> <!-- if touch, set to 420 -->
+<meta id="vp" name="viewport" content="width=420" />
+<!-- if touch, set to 420 -->
 
 <script>
-    window.onload = function () {
-        if (screen.width > 420) {
-            var mvp = document.getElementById('vp');
-            mvp.setAttribute('content', 'width=device-width');
-        }
+  window.onload = function() {
+    if (screen.width > 420) {
+      var mvp = document.getElementById("vp");
+      mvp.setAttribute("content", "width=device-width");
     }
-</script> <!-- if you're bigger than 420, use that -->
+  };
+</script>
+<!-- if you're bigger than 420, use that -->
 
 <!-- General Styles -->
-<link rel="stylesheet" href="/styles/font.css">
-<link rel="stylesheet" href="/styles/core.css">
-<link rel="stylesheet" href="/styles/view.css">
-<link rel="stylesheet" href="/styles/link.css">
-<link rel="stylesheet" href="/styles/zoom.css">
+<link rel="stylesheet" href="/styles/font.css" />
+<link rel="stylesheet" href="/styles/core.css" />
+<link rel="stylesheet" href="/styles/view.css" />
+<link rel="stylesheet" href="/styles/link.css" />
+<link rel="stylesheet" href="/styles/zoom.css" />
 <script src="/scripts/zoom.js"></script>
 <script src="/scripts/transition.js"></script>
 
 <!-- Twitter cards -->
-<meta name="twitter:site" content="@{{ site.twitter_username }}">
-<meta name="twitter:creator" content="@{{ site.author }}">
-<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:site" content="@{{ site.twitter_username }}" />
+<meta name="twitter:creator" content="@{{ site.author }}" />
+<meta name="twitter:title" content="{{ page.title }}" />
 
 {% if page.description %}
-<meta name="twitter:description" content="{{ page.description }}">
-{% else %}
-<meta name="twitter:description" content="{{ site.description }}">
-{% endif %}
-
-{% if page.image %}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
-{% else %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ site.url }}{{ site.title_image }}">
-{% endif %}
+<meta name="twitter:description" content="{{ page.description }}" /> {% else %}
+<meta name="twitter:description" content="{{ site.description }}" /> {% endif %}
+{% if page.image %} <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" /> {% else
+%} <meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="{{ site.url }}{{ site.title_image }}" /> {%
+endif %}
 
 <!-- OpenGraph cards -->
 <meta property="og:title" content="{{ page.title }}" />
