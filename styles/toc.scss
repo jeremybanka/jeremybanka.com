@@ -94,9 +94,11 @@ Not enough room for the sidebar!
     * {
       opacity: 1;
     }
-    a,
-    .close {
+    a {
       padding-right: 45px;
+    }
+    .close {
+      padding-right: 36px;
     }
     a {
       display: none;

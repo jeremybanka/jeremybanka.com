@@ -4,15 +4,16 @@ title: Ergata
 image: /images/ergata.png
 description: A text typography system.
 ---
-<link rel="stylesheet" href="/styles/nav/work.css">
-<link rel="stylesheet" href="/styles/ergata.css">
-<link rel="stylesheet" href="/styles/themes/paper.css">
+
+<link rel="stylesheet" href="/styles/nav/work.css" />
+<link rel="stylesheet" href="/styles/ergata.css" />
+<link rel="stylesheet" href="/styles/themes/paper.css" />
 <script src="/scripts/table-of-contents.js"></script>
 <script src="/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
 <style>
   @media (max-width: 1259px) {
     nav {
-      background: var(--x0)
+      background: var(--x0);
     }
   }
 </style>
@@ -21,739 +22,727 @@ description: A text typography system.
   <div class="tocbar" data-mcs-theme="dark" id="contents">
     <a href="#top" class="jump" style="font-size: 21px">&uarr;</a>
 
-    <a href="#brahmin" class="accordion jump">
-      Brahmin</a>
+    <a href="#brahmin" class="accordion jump"> Brahmin</a>
     <div class="sub">
-      <a href="#brahmin" class="jump">
-        Overview</a>
-      <a href="#brahmin-d" class="jump">
-        Design</a>
-      <a href="#brahmin-f" class="jump">
-        Features</a>
-      <a href="#brahmin-g" class="jump">
-        Downloads</a>
+      <a href="#brahmin" class="jump"> Overview</a>
+      <a href="#brahmin-d" class="jump"> Design</a>
+      <a href="#brahmin-f" class="jump"> Features</a>
+      <a href="#brahmin-g" class="jump"> Downloads</a>
       <div class="close">&times;</div>
     </div>
 
-    <a href="#xeno" class="accordion jump">
-      Interloper</a>
+    <a href="#xeno" class="accordion jump"> Interloper</a>
     <div class="sub">
-      <a href="#xeno" class="jump">
-        Overview</a>
-      <a href="#xeno-d" class="jump">
-        Design</a>
-      <a href="#xeno-f" class="jump">
-        Features</a>
-      <a href="#xeno-g" class="jump">
-        Purchase</a>
+      <a href="#xeno" class="jump"> Overview</a>
+      <a href="#xeno-d" class="jump"> Design</a>
+      <a href="#xeno-f" class="jump"> Features</a>
+      <a href="#xeno-g" class="jump"> Purchase</a>
       <div class="close">&times;</div>
     </div>
 
-    <a href="#uruz" class="accordion jump">
-      Uruz</a>
+    <a href="#uruz" class="accordion jump"> Uruz</a>
     <div class="sub">
-      <a href="#uruz" class="jump">
-        Overview</a>
-      <a href="#uruz-d" class="jump">
-        Design</a>
-      <a href="#uruz-f" class="jump">
-        Features</a>
-      <a href="#uruz-g" class="jump">
-        Purchase</a>
+      <a href="#uruz" class="jump"> Overview</a>
+      <a href="#uruz-d" class="jump"> Design</a>
+      <a href="#uruz-f" class="jump"> Features</a>
+      <a href="#uruz-g" class="jump"> Purchase</a>
       <div class="close">&times;</div>
     </div>
-    <a href="#canticle" class="accordion jump">
-      Canticle</a>
+    <a href="#canticle" class="accordion jump"> Canticle</a>
     <div class="sub">
-      <a href="#canticle" class="jump">
-        Overview</a>
-      <a href="#cant-d" class="jump">
-        Design</a>
-      <a href="#cant-f" class="jump">
-        Features</a>
-      <a href="#cant-g" class="jump">
-        Purchase</a>
+      <a href="#canticle" class="jump"> Overview</a>
+      <a href="#cant-d" class="jump"> Design</a>
+      <a href="#cant-f" class="jump"> Features</a>
+      <a href="#cant-g" class="jump"> Purchase</a>
       <div class="close">&times;</div>
     </div>
 
-    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
+    <a href="javascript:void(0);" class="icon" onclick="mobileContents()"
+      >&#9776;</a
+    >
   </div>
 </div>
 
-<header style="
+<header
+  style="
     background: #08c; 
     height: calc(100vh - 30px); 
     display: flex;
-">
-  <img src="images/ergata/ergata.png">
+"
+>
+  <img src="images/ergata/ergata.png" />
 </header>
 
 <main>
-
-  <figure class="crop">
-    <img src="images/ergata-0.png">
-  </figure>
+  <figure class="crop"><img src="images/ergata-0.png" /></figure>
   <section style="background: var(--y11)">
-    <figure class="crop">
-      <img src="images/ergata-1.png">
-    </figure>
-    <figure class="crop">
-      <img src="images/ergata-2.png">
-    </figure>
+    <figure class="crop"><img src="images/ergata-1.png" /></figure>
+    <figure class="crop"><img src="images/ergata-2.png" /></figure>
     {% for content in site.contents %}
-    <p>
-      Hi, {{ content.title }}
-    </p>
+    <p>Hi, {{ content.title }}</p>
     {% endfor %}
   </section>
 
-
-
-  <!-- 
-  ---------------------------------------------------- BRAHMIN
-  -->
+  <!-- ---------------------------------------------------- BRAHMIN -->
   <figure class="crop" id="brahmin">
-    <img src="images/ergata-brahmin.png">
+    <img src="images/ergata-brahmin.png" />
   </figure>
   <section>
-    <figure>
-      <img src="images/ergata-brahmin-f0.png">
-    </figure>
-    <!--
-------------------------------------------------------- ABOUT
--->
+    <figure><img src="images/ergata-brahmin-f0.png" /></figure>
+    <!-- ------------------------------------------------------- ABOUT -->
     <p>
-      Brahmin is a typeface of pure ideals and simple truths. It invites readers with a grand promise&#x2014;a
-      world of abstract form. A rhythm of geometric circles and precise angles dazzles the eye as the letters
-      reveal their inner forms: smooth polygons with linguistic value.
+      Brahmin is a typeface of pure ideals and simple truths. It invites readers
+      with a grand promise&#x2014;a world of abstract form. A rhythm of
+      geometric circles and precise angles dazzles the eye as the letters reveal
+      their inner forms: smooth polygons with linguistic value.
     </p>
-    <!--
-------------------------------------------------------- SAMPLES
--->
+    <!-- ------------------------------------------------------- SAMPLES -->
     <section id="brahmin-s">
       <div class="spread quad" style="padding: 20px 0px 30px;">
         <figure class="column plus">
-          <img src="/images/ergata-brahmin-s1.png" data-action="zoom">
+          <img src="/images/ergata-brahmin-s1.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-brahmin-s2.png" data-action="zoom">
+          <img src="/images/ergata-brahmin-s2.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-brahmin-s3.png" data-action="zoom">
+          <img src="/images/ergata-brahmin-s3.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-brahmin-s4.png" data-action="zoom">
+          <img src="/images/ergata-brahmin-s4.png" data-action="zoom" />
         </figure>
       </div>
       <p>
-        But unlike most idealists, Brahmin&#x2019;s promise pans out. Words link into lines, lines into paragraphs,
-        without losing the reader in a labyrinth of alike forms. Nothing is sacrificed in search of geometric
-        perfection: with a fundamentally humanist structure and subtle formal asymmetries, Brahmin&#x2019;s
-        paragraphs are realized in stunning relief.
+        But unlike most idealists, Brahmin&#x2019;s promise pans out. Words link
+        into lines, lines into paragraphs, without losing the reader in a
+        labyrinth of alike forms. Nothing is sacrificed in search of geometric
+        perfection: with a fundamentally humanist structure and subtle formal
+        asymmetries, Brahmin&#x2019;s paragraphs are realized in stunning
+        relief.
       </p>
     </section>
-    <!--
--------------------------------------------- DESIGN
--->
+    <!-- -------------------------------------------- DESIGN -->
     <section id="brahmin-d">
-
       <h2 class="brahmin">Design</h2>
       <p>
-        Helvetica and Futura are not text typefaces. So why do visual designers use them that way?</p>
+        Helvetica and Futura are not text typefaces. So why do visual designers
+        use them that way?
+      </p>
       <p>
-        In short, they want to come across as casual and familiar. They should. These two
-        qualities&#x2014;&#x2018;informality&#x2019; and &#x2018;normality&#x2019;&#x2014;are the essence of
-        building mass appeal. </p>
-      <figure>
-        <img src="/images/ergata-brahmin-hvd.png"> </figure>
+        In short, they want to come across as casual and familiar. They should.
+        These two qualities&#x2014;&#x2018;informality&#x2019; and
+        &#x2018;normality&#x2019;&#x2014;are the essence of building mass
+        appeal.
+      </p>
+      <figure><img src="/images/ergata-brahmin-hvd.png" /></figure>
       <p>
-        Futura and Helvetica are massively appealing. They are informal: their letterforms need no special pens to
-        write or draw, so they look like handprinting. And they are normal: their designs, smooth and symmetrical,
-        evoke geometric circles&#x2014;the most regular shapes, the same shapes with which students learn to write.
-        Visually they draw no extra attention to themselves. They have no identifying characteristics to readers
-        without a trained eye.</p>
-      <figure>
-        <img src=/images/ergata-brahmin-hvt.png> </figure> <p>
-        But they are not text faces. Helvetica is spaced too tighly for text, especially at thinner weights,
-        making lighter paragraphs look like a pile of coathangers. Both it and Futura&#x2019;s designs are very
-        &#x2018;closed&#x2019;. forms are made more circular by subtracting as little as possible from the
-        &#x2018;o&#x2019;, which makes a &#x2018;c&#x2019;, for example, look too similar. Futura takes this
-        principle to an extreme. Its letterforms are geometrically modular, so a &#x2018;d&#x2019; is made from
-        the same pieces as its one-storey &#x2018;a&#x2019;. This makes for a dazzling look, but in a
-        paragraph, will throw the reader&#x2019;s eye into a maze of symmetry.</p>
-        <figure>
-          <img src=images/ergata-brahmin-boxy.png> </figure> <p>
-          Brahmin is made to exceed the standards of mass appeal, providing smooth, simple letters that still
-          give a great text experience at small sizes. Its slightly boxy appearance helps it render crisply
-          on screen and in laser-print, even at low resolutions.
-          </p>
+        Futura and Helvetica are massively appealing. They are informal: their
+        letterforms need no special pens to write or draw, so they look like
+        handprinting. And they are normal: their designs, smooth and
+        symmetrical, evoke geometric circles&#x2014;the most regular shapes, the
+        same shapes with which students learn to write. Visually they draw no
+        extra attention to themselves. They have no identifying characteristics
+        to readers without a trained eye.
+      </p>
+      <figure><img src=/images/ergata-brahmin-hvt.png></figure>
+      <p>
+        But they are not text faces. Helvetica is spaced too tighly for text,
+        especially at thinner weights, making lighter paragraphs look like a
+        pile of coathangers. Both it and Futura&#x2019;s designs are very
+        &#x2018;closed&#x2019;. forms are made more circular by subtracting as
+        little as possible from the &#x2018;o&#x2019;, which makes a
+        &#x2018;c&#x2019;, for example, look too similar. Futura takes this
+        principle to an extreme. Its letterforms are geometrically modular, so a
+        &#x2018;d&#x2019; is made from the same pieces as its one-storey
+        &#x2018;a&#x2019;. This makes for a dazzling look, but in a paragraph,
+        will throw the reader&#x2019;s eye into a maze of symmetry.
+      </p>
+      <figure><img src=images/ergata-brahmin-boxy.png></figure>
+      <p>
+        Brahmin is made to exceed the standards of mass appeal, providing
+        smooth, simple letters that still give a great text experience at small
+        sizes. Its slightly boxy appearance helps it render crisply on screen
+        and in laser-print, even at low resolutions.
+      </p>
     </section>
-    <!--
-------------------------------------------------------- FEATURES
--->
+    <!-- ------------------------------------------------------- FEATURES -->
     <section id="brahmin-f">
-
       <h2 class="brahmin">Features</h2>
       <figure>
-        <img src="images/ergata-brahmin-0.png" data-action="zoom">
-      </figure><img class="inset">
+        <img src="images/ergata-brahmin-0.png" data-action="zoom" />
+      </figure>
+      <img class="inset" />
       <figure class="graphic spread twin">
-        <img class="" src="images/ergata-brahmin-4.png" data-action="zoom">
-        <img class="" src="images/ergata-brahmin-7.png" data-action="zoom">
+        <img class="" src="images/ergata-brahmin-4.png" data-action="zoom" />
+        <img class="" src="images/ergata-brahmin-7.png" data-action="zoom" />
       </figure>
       <p>
-        Each of Brahmin&#x27;s eight weights comes with more than eight hundred characters, fully
-        equipping you take on the most complex and specialized typesetting jobs in any Latin language.
-        Read about Brahmin&#x27;s special characters and unique technologies below.
+        Each of Brahmin&#x27;s eight weights comes with more than eight hundred
+        characters, fully equipping you take on the most complex and specialized
+        typesetting jobs in any Latin language. Read about Brahmin&#x27;s
+        special characters and unique technologies below.
       </p>
       <div class="spread twin wide">
         <div class="column">
-          <figure>
-            <img src="/images/ergata-brahmin-f1.png">
-          </figure>
-          <h3 class="brahmin x">
-            latin plus
-          </h3>
+          <figure><img src="/images/ergata-brahmin-f1.png" /></figure>
+          <h3 class="brahmin x">latin plus</h3>
           <p class="xx">
-            Ergata Brahmin caters to every language that uses the Latin Alphabet, including
-            Vietnamese, Chinese Pinyin, and Turkish, as well as modern Germanic and Romance
-            languages. For details on the Latin Plus standard, visit <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.
+            Ergata Brahmin caters to every language that uses the Latin
+            Alphabet, including Vietnamese, Chinese Pinyin, and Turkish, as well
+            as modern Germanic and Romance languages. For details on the Latin
+            Plus standard, visit
+            <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.
           </p>
         </div>
         <div class="column plus">
-          <figure>
-            <img src="/images/ergata-brahmin-f2.png">
-          </figure>
-          <h3 class="brahmin x">
-            ligatures
-          </h3>
+          <figure><img src="/images/ergata-brahmin-f2.png" /></figure>
+          <h3 class="brahmin x">ligatures</h3>
           <p class="xx">
-            Sometimes, letters set side-by-side are so wide, they collide. This, I can’t abide. So
-            that’s why inside my type, I decided to hide ligatures, like ‘fi,’ computerized to
-            auto-apply to the words you write, to save you time and look pretty tight.
+            Sometimes, letters set side-by-side are so wide, they collide. This,
+            I can’t abide. So that’s why inside my type, I decided to hide
+            ligatures, like ‘fi,’ computerized to auto-apply to the words you
+            write, to save you time and look pretty tight.
           </p>
         </div>
       </div>
       <div class="wide double spread">
         <div class="column plus">
-          <figure>
-            <img src="/images/ergata-brahmin-f3.png">
-          </figure>
-          <h3 class="brahmin x">
-            adaptive caps
-          </h3>
+          <figure><img src="/images/ergata-brahmin-f3.png" /></figure>
+          <h3 class="brahmin x">adaptive caps</h3>
           <p class="xx">
-            <span style="font-feature-settings: 'liga' 0;">CAPITAL LETTERS</span> are made to be
-            put at the beginning of lowercase words. The <span style="font-feature-settings: 'liga' 0;">PROBLEM
-              WITH THEM</span> is, they don&#x2019;t look good next to each other unless you
-            <span style="font-feature-settings: 'liga' 0; letter-spacing: 2px;">SPACE THEM OUT</span>&#x2014;a
-            waste of time, because even then, they&#x2019;re so tall that they make the line look
-            awkward. Adaptive caps SOLVE THIS PROBLEM by replacing any string of ALL CAPITALS with
-            short, wide spacious caps&#x2014;as you type!
+            <span style="font-feature-settings: 'liga' 0;"
+              >CAPITAL LETTERS</span
+            >
+            are made to be put at the beginning of lowercase words. The
+            <span style="font-feature-settings: 'liga' 0;"
+              >PROBLEM WITH THEM</span
+            >
+            is, they don&#x2019;t look good next to each other unless you
+            <span style="font-feature-settings: 'liga' 0; letter-spacing: 2px;"
+              >SPACE THEM OUT</span
+            >&#x2014;a waste of time, because even then, they&#x2019;re so tall
+            that they make the line look awkward. Adaptive caps SOLVE THIS
+            PROBLEM by replacing any string of ALL CAPITALS with short, wide
+            spacious caps&#x2014;as you type!
           </p>
         </div>
         <div class="column plus">
-          <figure>
-            <img src="/images/ergata-brahmin-f4.png">
-          </figure>
-          <h3 class="brahmin x">
-            contextuals</h3>
+          <figure><img src="/images/ergata-brahmin-f4.png" /></figure>
+          <h3 class="brahmin x">contextuals</h3>
           <p class="xx">
-            Adaptive caps automatically modify certain punctuation and symbols next to them, such
-            as quotes, which are enlarged, and dashes, and parenthesis which are nudged up to float
-            at the capital optical center. When listing the time, the colon floats as well.</p>
-        </div>
-      </div>
-    </section>
-    <!--
-------------------------------------------------------- DOWNLOAD
--->
-    <section id="brahmin-g">
-
-      <h2 class="brahmin">Downloads</h2>
-
-      <div class="double wide spread">
-        <figure class="column slim">
-          <img src="/images/ergata-brahmin-g1.png"></figure>
-        <figure class="column slim">
-          <img src="/images/ergata-brahmin-g2.png"></figure>
-      </div>
-
-      <p class="half">
-        Both volumes of Brahmin are currently available as free downloads.</p>
-
-      <br>
-      <br>
-
-      <div class="wide spread" style="
-      grid-template: 
-      'a b' 320px 
-      'c c' 270px / 1fr 1fr">
-
-        <a href="/packages/jeremybanka~brahmin.zip" class="paper panel column block" style="grid-area: a;">
-          <p>
-            DOWNLOAD NOW</p>
-          <h2>
-            Eight Weights Free</h2>
-          <img src="images/ergata-brahmin-free.png">
-        </a>
-
-        <div href="" style="grid-area: b;" class=" column block panel">
-          <p>
-            AVAILABLE SOON</p>
-          <h2>
-            Brahmin Super</h2>
-          <img src="images/ergata-brahmin-super.png">
-        </div>
-
-        <div style=" 
-        grid-area: c;" class="wide block panel">
-          <p>AVAILABLE SOON</p>
-          <h2>
-            Brahmin Italic</h2>
-          <img src="images/ergata-brahmin-italic.png">
-        </div>
-      </div>
-    </section>
-
-  </section>
-
-  <!-- ------------------------------------------------ INTERLOPER
--------------------------------------------------------
-------------------------------------------------------->
-  <figure class="crop" id="xeno">
-    <img src="/images/ergata-interloper.png">
-  </figure>
-  <section>
-    <figure>
-      <img src="images/ergata-interloper-f0.png">
-    </figure>
-    <!--
-------------------------------------------------------- ABOUT
--->
-    <p class="xeno">
-      Interloper is a stylish text and display face
-      with a monoline design and wide, spacious
-      letters. Interloper is perfect for headings
-      and short text applications.
-      She pairs well with Uruz or Brahmin as a
-      pseudo-italic in rich text environments.
-    </p>
-    <!--
-------------------------------------------------------- SAMPLES
--->
-    <section id="xeno-s">
-      <div class="spread quad" style="padding: 30px 10px;">
-        <figure class="column plus">
-          <img src="/images/ergata-interloper-s1.png" data-action="zoom">
-        </figure>
-        <figure class="column plus">
-          <img src="/images/ergata-interloper-s2.png" data-action="zoom">
-        </figure>
-        <figure class="column plus">
-          <img src="/images/ergata-interloper-s3.png" data-action="zoom">
-        </figure>
-        <figure class="column plus">
-          <img src="/images/ergata-interloper-s4.png" data-action="zoom">
-        </figure>
-      </div>
-
-    </section>
-    <!--
-------------------------------------------------------- DESIGN
--->
-    <section id="xeno-d">
-
-      <h2 class="xeno">Design<br>
-        <!--<img style="max-width:50px;" src="/images/wait-paper.gif" alt="">-->
-      </h2>
-      <p class="xeno">
-        Like Museo, Interloper extends a monoline-skinned
-        geometric–humanist skeleton
-        into transitive slab-serifs.
-        Unlike Jos Buivenga’s contemporary classic,
-        Interloper's design emphasizes right angles,
-        long ascender-serifs, and organic curves.
-        This mysterious mix of features brings an
-        exotic, otherworldly flavor to the transitive style.
-      </p>
-
-    </section>
-    <!--
-------------------------------------------------------- FEATURES
--->
-    <section id="xeno-f">
-      <h2 class="xeno">Features</h2>
-      <figure><img src="/images/ergata-interloper-3.png" alt="" data-action="zoom">
-      </figure><img class="inset">
-      <figure class="graphic spread twin">
-        <img src="images/ergata-interloper-0.png" data-action="zoom">
-        <img src="images/ergata-interloper-5.png" data-action="zoom">
-      </figure>
-      <p class="xeno">
-        Each of Interloper&#x27; six weights comes with more than seven hundred characters, fully equipping you take on
-        the most complex and specialized typesetting jobs in any Latin language. Read about Brahmin&#x27;s special
-        characters and unique technologies below.</p>
-      <div class="spread double wide">
-        <div class="column slim">
-          <figure>
-            <img src="/images/ergata-interloper-f1.png"></figure>
-          <h3 class="xeno">
-            latin plus</h3>
-          <p class="xx xeno">
-            Ergata Interloper caters to every language that uses the Latin Alphabet, including Vietnamese,
-            Chinese Pinyin, and Turkish, as well as modern Germanic and Romance languages. For details on the
-            Latin Plus standard, visit <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.</p>
-        </div>
-        <div class="column slim">
-          <figure>
-            <img src="/images/ergata-interloper-f2.png"></figure>
-          <h3 class="xeno">
-            ligatures</h3>
-          <p class="xx xeno">
-            Sometimes, letters set side-by-side are so wide, they collide. This, I can’t abide. So that’s why
-            inside my type, I decided to hide ligatures, like ‘fi,’ computerized to auto-apply to the words you
-            write, to save you time and look pretty tight.</p>
-        </div>
-      </div>
-      <div class="spread double wide">
-        <div class="column slim">
-          <figure>
-            <img src="/images/ergata-interloper-f3.png">
-          </figure>
-          <h3 class="xeno">
-            adaptive caps</h3>
-          <p class="xx xeno">
-            <span class="xeno" style="font-feature-settings: 'liga' 0;">CAPITAL LETTERS</span> are made to be put at
-            the beginning of lowercase words. The
-            <span class="xeno" style="font-feature-settings: 'liga' 0;">PROBLEM WITH THEM</span> is, they
-            don&#x2019;t
-            look good next to each other unless you
-            <span class="xeno" style="font-feature-settings: 'liga' 0; letter-spacing: 2px;">SPACE THEM OUT</span>&#x2014;a
-            waste of time, because even then, they&#x2019;re so tall that they make the line look awkward.
-            Adaptive caps SOLVE THIS by replacing any string of ALL CAPITALS with short, wide spacious
-            caps&#x2014;as you type!</p>
-        </div>
-        <div class="column slim">
-          <figure>
-            <img src="/images/ergata-interloper-f4.png">
-          </figure>
-          <h3 class="xeno">
-            contextuals
-          </h3>
-          <p class="xx xeno">
-            Adaptive caps automatically modify certain punctuation and symbols next to them, such as quotes,
-            which are enlarged, and dashes, and parenthesis which are nudged up to float at the capital optical
+            Adaptive caps automatically modify certain punctuation and symbols
+            next to them, such as quotes, which are enlarged, and dashes, and
+            parenthesis which are nudged up to float at the capital optical
             center. When listing the time, the colon floats as well.
           </p>
         </div>
       </div>
     </section>
-    <!--
-------------------------------------------------------- PURCHASE
--->
+    <!-- ------------------------------------------------------- DOWNLOAD -->
+    <section id="brahmin-g">
+      <h2 class="brahmin">Downloads</h2>
+
+      <div class="double wide spread">
+        <figure class="column slim">
+          <img src="/images/ergata-brahmin-g1.png" />
+        </figure>
+
+        <figure class="column slim">
+          <img src="/images/ergata-brahmin-g2.png" />
+        </figure>
+      </div>
+
+      <p class="half">
+        Both volumes of Brahmin are currently available as free downloads.
+      </p>
+
+      <br />
+      <br />
+
+      <div
+        class="wide spread"
+        style="
+      grid-template: 
+      'a b' 320px 
+      'c c' 270px / 1fr 1fr"
+      >
+        <a
+          href="/packages/jeremybanka~brahmin.zip"
+          class="paper panel column block"
+          style="grid-area: a;"
+        >
+          <p>DOWNLOAD NOW</p>
+          <h2>Eight Weights Free</h2>
+          <img src="images/ergata-brahmin-free.png" />
+        </a>
+
+        <div href="" style="grid-area: b;" class=" column block panel">
+          <p>AVAILABLE SOON</p>
+          <h2>Brahmin Super</h2>
+          <img src="images/ergata-brahmin-super.png" />
+        </div>
+
+        <div
+          style=" 
+        grid-area: c;"
+          class="wide block panel"
+        >
+          <p>AVAILABLE SOON</p>
+          <h2>Brahmin Italic</h2>
+          <img src="images/ergata-brahmin-italic.png" />
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!--
+    ------------------------------------------------ INTERLOPER
+    -------------------------------------------------------
+    -----------------------------------------------------
+  -->
+  <figure class="crop" id="xeno">
+    <img src="/images/ergata-interloper.png" />
+  </figure>
+  <section>
+    <figure><img src="images/ergata-interloper-f0.png" /></figure>
+    <!-- ------------------------------------------------------- ABOUT -->
+    <p class="xeno">
+      Interloper is a stylish text and display face with a monoline design and
+      wide, spacious letters. Interloper is perfect for headings and short text
+      applications. She pairs well with Uruz or Brahmin as a pseudo-italic in
+      rich text environments.
+    </p>
+    <!-- ------------------------------------------------------- SAMPLES -->
+    <section id="xeno-s">
+      <div class="spread quad" style="padding: 30px 10px;">
+        <figure class="column plus">
+          <img src="/images/ergata-interloper-s1.png" data-action="zoom" />
+        </figure>
+        <figure class="column plus">
+          <img src="/images/ergata-interloper-s2.png" data-action="zoom" />
+        </figure>
+        <figure class="column plus">
+          <img src="/images/ergata-interloper-s3.png" data-action="zoom" />
+        </figure>
+        <figure class="column plus">
+          <img src="/images/ergata-interloper-s4.png" data-action="zoom" />
+        </figure>
+      </div>
+    </section>
+    <!-- ------------------------------------------------------- DESIGN -->
+    <section id="xeno-d">
+      <h2 class="xeno">
+        Design<br />
+        <!--
+          <img style="max-width:50px;" src="/images/wait-paper.gif" alt="">
+        -->
+      </h2>
+      <p class="xeno">
+        Like Museo, Interloper extends a monoline-skinned geometric–humanist
+        skeleton into transitive slab-serifs. Unlike Jos Buivenga’s contemporary
+        classic, Interloper's design emphasizes right angles, long
+        ascender-serifs, and organic curves. This mysterious mix of features
+        brings an exotic, otherworldly flavor to the transitive style.
+      </p>
+    </section>
+    <!-- ------------------------------------------------------- FEATURES -->
+    <section id="xeno-f">
+      <h2 class="xeno">Features</h2>
+      <figure>
+        <img src="/images/ergata-interloper-3.png" alt="" data-action="zoom" />
+      </figure>
+      <img class="inset" />
+      <figure class="graphic spread twin">
+        <img src="images/ergata-interloper-0.png" data-action="zoom" />
+        <img src="images/ergata-interloper-5.png" data-action="zoom" />
+      </figure>
+      <p class="xeno">
+        Each of Interloper&#x27; six weights comes with more than seven hundred
+        characters, fully equipping you take on the most complex and specialized
+        typesetting jobs in any Latin language. Read about Brahmin&#x27;s
+        special characters and unique technologies below.
+      </p>
+      <div class="spread double wide">
+        <div class="column slim">
+          <figure><img src="/images/ergata-interloper-f1.png" /></figure>
+
+          <h3 class="xeno">latin plus</h3>
+          <p class="xx xeno">
+            Ergata Interloper caters to every language that uses the Latin
+            Alphabet, including Vietnamese, Chinese Pinyin, and Turkish, as well
+            as modern Germanic and Romance languages. For details on the Latin
+            Plus standard, visit
+            <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.
+          </p>
+        </div>
+        <div class="column slim">
+          <figure><img src="/images/ergata-interloper-f2.png" /></figure>
+
+          <h3 class="xeno">ligatures</h3>
+          <p class="xx xeno">
+            Sometimes, letters set side-by-side are so wide, they collide. This,
+            I can’t abide. So that’s why inside my type, I decided to hide
+            ligatures, like ‘fi,’ computerized to auto-apply to the words you
+            write, to save you time and look pretty tight.
+          </p>
+        </div>
+      </div>
+      <div class="spread double wide">
+        <div class="column slim">
+          <figure><img src="/images/ergata-interloper-f3.png" /></figure>
+          <h3 class="xeno">adaptive caps</h3>
+          <p class="xx xeno">
+            <span class="xeno" style="font-feature-settings: 'liga' 0;"
+              >CAPITAL LETTERS</span
+            >
+            are made to be put at the beginning of lowercase words. The
+            <span class="xeno" style="font-feature-settings: 'liga' 0;"
+              >PROBLEM WITH THEM</span
+            >
+            is, they don&#x2019;t look good next to each other unless you
+            <span
+              class="xeno"
+              style="font-feature-settings: 'liga' 0; letter-spacing: 2px;"
+              >SPACE THEM OUT</span
+            >&#x2014;a waste of time, because even then, they&#x2019;re so tall
+            that they make the line look awkward. Adaptive caps SOLVE THIS by
+            replacing any string of ALL CAPITALS with short, wide spacious
+            caps&#x2014;as you type!
+          </p>
+        </div>
+        <div class="column slim">
+          <figure><img src="/images/ergata-interloper-f4.png" /></figure>
+          <h3 class="xeno">contextuals</h3>
+          <p class="xx xeno">
+            Adaptive caps automatically modify certain punctuation and symbols
+            next to them, such as quotes, which are enlarged, and dashes, and
+            parenthesis which are nudged up to float at the capital optical
+            center. When listing the time, the colon floats as well.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------------------------------- PURCHASE -->
     <section id="xeno-g">
       <h2 class="xeno">Purchase</h2>
 
       <div class="wide double spread">
         <figure class="column left slim">
-          <img src="/images/ergata-interloper-g.png">
+          <img src="/images/ergata-interloper-g.png" />
         </figure>
         <p class="column slim vcenter xeno">
-          Ergata Interloper includes six weights from razor thin to
-          medium text.
+          Ergata Interloper includes six weights from razor thin to medium text.
         </p>
       </div>
 
-      <br><br>
+      <br /><br />
       <div style="height: 270px; background: #b4c4cc;" class="wide block panel">
-        <p class="xeno" style="color:#788c96">
-          AVAILABLE SOON</p>
-        <img src="images/ergata-interloper-geometric.png">
+        <p class="xeno" style="color:#788c96">AVAILABLE SOON</p>
+        <img src="images/ergata-interloper-geometric.png" />
       </div>
     </section>
-
   </section>
-  <!--------------------------------------------------------------- URUZ
--------------------------------------------------------------------
------------------------------------------------------------------->
-  <figure class="crop" id="uruz">
-    <img src="/images/ergata-uruz.png">
-  </figure>
+  <!--
+    ------------------------------------------------------------- URUZ
+    -------------------------------------------------------------------
+    ----------------------------------------------------------------
+  -->
+  <figure class="crop" id="uruz"><img src="/images/ergata-uruz.png" /></figure>
   <section>
-    <figure>
-      <img src="images/ergata-uruz-f0.png"></figure>
-    <!--
-------------------------------------------------------- ABOUT
--->
+    <figure><img src="images/ergata-uruz-f0.png" /></figure>
+
+    <!-- ------------------------------------------------------- ABOUT -->
     <p class="uruz">
-      Uruz' oarsmen row in synchrony, surfaces smoothly sanded into
-      sublime alignment. Uprightly walking and gloomy-browed,
-      these squarebuilt creatures do not find an ideal in geometric perfection,
-      but only in the even texture of the emergent whole.</p>
-    <!--
-------------------------------------------------------- SAMPLES
--->
+      Uruz' oarsmen row in synchrony, surfaces smoothly sanded into sublime
+      alignment. Uprightly walking and gloomy-browed, these squarebuilt
+      creatures do not find an ideal in geometric perfection, but only in the
+      even texture of the emergent whole.
+    </p>
+    <!-- ------------------------------------------------------- SAMPLES -->
     <section id="uruz-s">
       <div class="quad spread" style="padding-top:10px">
         <figure class="column">
-          <img src="/images/ergata-uruz-s1.png" data-action="zoom"></figure>
-        <figure class="column">
-          <img src="/images/ergata-uruz-s2.png" data-action="zoom"></figure>
-        <figure class="column">
-          <img src="/images/ergata-uruz-s3.png" data-action="zoom"></figure>
-        <figure class="column">
-          <img src="/images/ergata-uruz-s4.png" data-action="zoom"></figure>
-      </div><br>
+          <img src="/images/ergata-uruz-s1.png" data-action="zoom" />
+        </figure>
 
+        <figure class="column">
+          <img src="/images/ergata-uruz-s2.png" data-action="zoom" />
+        </figure>
+
+        <figure class="column">
+          <img src="/images/ergata-uruz-s3.png" data-action="zoom" />
+        </figure>
+
+        <figure class="column">
+          <img src="/images/ergata-uruz-s4.png" data-action="zoom" />
+        </figure>
+      </div>
+      <br />
     </section>
-    <!--
-------------------------------------------------------- DESIGN
--->
+    <!-- ------------------------------------------------------- DESIGN -->
     <section id="uruz-d">
-
-      <h2 class="uruz">Design<br>
-        <!--<img style="max-width:50px;" src="/images/wait-paper.gif" alt="">-->
+      <h2 class="uruz">
+        Design<br />
+        <!--
+          <img style="max-width:50px;" src="/images/wait-paper.gif" alt="">
+        -->
       </h2>
 
       <p class="uruz">
-        The rule of the lines is stringently enforced among the Uruz
-        fonts. Any sharp or curved glyph that overshoots an alignment
-        boundary is flattened into a short bar. In the case of curved
-        glyphs like s, the exterior is flattened, but the counterform is not.
-        As in classical gothic lettering, the
-        lowercase appears to form a strip or band along the x-row, making
+        The rule of the lines is stringently enforced among the Uruz fonts. Any
+        sharp or curved glyph that overshoots an alignment boundary is flattened
+        into a short bar. In the case of curved glyphs like s, the exterior is
+        flattened, but the counterform is not. As in classical gothic lettering,
+        the lowercase appears to form a strip or band along the x-row, making
         the interval of lines in a paragraph especially distinct.
       </p>
-
     </section>
-    <!--
-------------------------------------------------------- FEATURES
--->
+    <!-- ------------------------------------------------------- FEATURES -->
     <section id="uruz-f">
       <h2 class="uruz">Features</h2>
-      <figure>
-        <img src="images/ergata-uruz-4.png" data-action="zoom">
-      </figure><img class="inset">
+      <figure><img src="images/ergata-uruz-4.png" data-action="zoom" /></figure>
+      <img class="inset" />
       <figure class="graphic spread twin">
-        <img class="" src="images/ergata-uruz-5c.png" data-action="zoom">
-        <img class="" src="images/ergata-uruz-7.png" data-action="zoom">
+        <img class="" src="images/ergata-uruz-5c.png" data-action="zoom" />
+        <img class="" src="images/ergata-uruz-7.png" data-action="zoom" />
       </figure>
       <p class="uruz">
-        Each of Uruz&#x27; eight weights comes with more than eight hundred characters, fully equipping you take on
-        the most complex and specialized typesetting jobs in any Latin language. Read about Uruz&#x27;s special
-        characters and unique technologies below.</p>
+        Each of Uruz&#x27; eight weights comes with more than eight hundred
+        characters, fully equipping you take on the most complex and specialized
+        typesetting jobs in any Latin language. Read about Uruz&#x27;s special
+        characters and unique technologies below.
+      </p>
       <div class="double spread wide">
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-uruz-f1.png"></figure>
-          <h3 class="x uruz">
-            latin plus</h3>
+          <figure><img src="/images/ergata-uruz-f1.png" /></figure>
+
+          <h3 class="x uruz">latin plus</h3>
           <p class="xx uruz">
-            Ergata Uruz caters to every language that uses the Latin Alphabet, including Vietnamese, Chinese
-            Pinyin, and Turkish, as well as modern Germanic and Romance languages. For details on the Latin
-            Plus standard, visit <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.</p>
+            Ergata Uruz caters to every language that uses the Latin Alphabet,
+            including Vietnamese, Chinese Pinyin, and Turkish, as well as modern
+            Germanic and Romance languages. For details on the Latin Plus
+            standard, visit
+            <a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.
+          </p>
         </div>
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-uruz-f2.png"></figure>
-          <h3 class="x uruz">
-            ligatures</h3>
+          <figure><img src="/images/ergata-uruz-f2.png" /></figure>
+
+          <h3 class="x uruz">ligatures</h3>
           <p class="xx uruz">
-            Sometimes, letters set side-by-side are so wide, they collide. This, I can’t abide. So that’s why
-            inside my type, I decided to hide ligatures, like ‘fi,’ computerized to auto-apply to the words you
-            write, to save you time and look pretty tight.</p>
+            Sometimes, letters set side-by-side are so wide, they collide. This,
+            I can’t abide. So that’s why inside my type, I decided to hide
+            ligatures, like ‘fi,’ computerized to auto-apply to the words you
+            write, to save you time and look pretty tight.
+          </p>
         </div>
       </div>
       <div class="spread double wide">
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-uruz-f3.png">
-          </figure>
-          <h3 class="x uruz">
-            adaptive caps
-          </h3>
+          <figure><img src="/images/ergata-uruz-f3.png" /></figure>
+          <h3 class="x uruz">adaptive caps</h3>
           <p class="xx uruz">
-            <span class="uruz" style="font-feature-settings: 'liga' 0;">CAPITAL LETTERS</span> are made to be
-            put at the beginning of lowercase words. The <span class="uruz" style="font-feature-settings: 'liga' 0;">PROBLEM
-              WITH THEM</span> is, they don&#x2019;t look good next to each other unless you <span class="uruz" style="font-feature-settings: 'liga' 0; letter-spacing: 2px;">SPACE
-              THEM OUT</span>&#x2014;a
-            waste of time, because even then, they&#x2019;re so tall that they make the line look awkward.
-            Adaptive caps SOLVE THIS PROBLEM by replacing any string of ALL CAPITALS with short, wide spacious
-            caps&#x2014;as you type!
+            <span class="uruz" style="font-feature-settings: 'liga' 0;"
+              >CAPITAL LETTERS</span
+            >
+            are made to be put at the beginning of lowercase words. The
+            <span class="uruz" style="font-feature-settings: 'liga' 0;"
+              >PROBLEM WITH THEM</span
+            >
+            is, they don&#x2019;t look good next to each other unless you
+            <span
+              class="uruz"
+              style="font-feature-settings: 'liga' 0; letter-spacing: 2px;"
+              >SPACE THEM OUT</span
+            >&#x2014;a waste of time, because even then, they&#x2019;re so tall
+            that they make the line look awkward. Adaptive caps SOLVE THIS
+            PROBLEM by replacing any string of ALL CAPITALS with short, wide
+            spacious caps&#x2014;as you type!
           </p>
         </div>
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-uruz-f4.png"></figure>
-          <h3 class="x uruz">
-            contextuals</h3>
+          <figure><img src="/images/ergata-uruz-f4.png" /></figure>
+
+          <h3 class="x uruz">contextuals</h3>
           <p class="xx uruz">
-            Adaptive caps automatically modify certain punctuation and symbols next to them, such as quotes,
-            which are enlarged, and dashes, and parenthesis which are nudged up to float at the capital optical
-            center. When listing the time, the colon floats as well.</p>
+            Adaptive caps automatically modify certain punctuation and symbols
+            next to them, such as quotes, which are enlarged, and dashes, and
+            parenthesis which are nudged up to float at the capital optical
+            center. When listing the time, the colon floats as well.
+          </p>
         </div>
       </div>
     </section>
 
-    <!--
-------------------------------------------------------- PURCHASE
--->
+    <!-- ------------------------------------------------------- PURCHASE -->
     <section id="uruz-g">
-
       <h2 class="uruz">Purchase</h2>
       <div class="wide double spread">
         <figure class="column slim">
-          <img src="/images/ergata-uruz-g1.png"></figure>
+          <img src="/images/ergata-uruz-g1.png" />
+        </figure>
+
         <p class="column slim vcenter uruz">
-          Uruz Text includes four weights
-          from Regular to Bold.
-          Licences are not yet for sale.</p>
+          Uruz Text includes four weights from Regular to Bold. Licences are not
+          yet for sale.
+        </p>
       </div>
 
       <div class="wide double spread">
         <figure class="column left slim">
-          <img src="/images/ergata-uruz-g2.png"></figure>
+          <img src="/images/ergata-uruz-g2.png" />
+        </figure>
+
         <p class="column slim vcenter uruz">
-          Uruz Condensed includes three weights: Regular, Medium, and Semibold. Licences are not yet for
-          sale.</p>
+          Uruz Condensed includes three weights: Regular, Medium, and Semibold.
+          Licences are not yet for sale.
+        </p>
       </div>
 
-      <div class="wide spread" style="
+      <div
+        class="wide spread"
+        style="
       grid-template: 
       'a a' 270px 
-      'b b' 180px">
-
-        <div href="/packages/jeremybanka~uruz.zip#ebe5e2" class="paper panel column block" style="grid-area: a; background: ">
-          <p class="uruz" style="color:#00324b">
-            AVAILABLE SOON</p>
-          <img src="images/ergata-uruz-workhorse.png">
+      'b b' 180px"
+      >
+        <div
+          href="/packages/jeremybanka~uruz.zip#ebe5e2"
+          class="paper panel column block"
+          style="grid-area: a; background: "
+        >
+          <p class="uruz" style="color:#00324b">AVAILABLE SOON</p>
+          <img src="images/ergata-uruz-workhorse.png" />
         </div>
 
-
-        <div style=" 
-        grid-area: b;" class="wide block panel">
-          <p class="uruz" style="color:#00324b">
-            AVAILABLE SOON</p>
-          <img src="images/ergata-uruz-compressed.png">
+        <div
+          style=" 
+        grid-area: b;"
+          class="wide block panel"
+        >
+          <p class="uruz" style="color:#00324b">AVAILABLE SOON</p>
+          <img src="images/ergata-uruz-compressed.png" />
         </div>
       </div>
-
     </section>
-
   </section>
 
-  <!-- ------------------------------------------------ CANTICLE
--------------------------------------------------------
-------------------------------------------------------->
+  <!--
+    ------------------------------------------------ CANTICLE
+    -------------------------------------------------------
+    -----------------------------------------------------
+  -->
   <figure class="crop" id="canticle">
-    <img src="/images/ergata-canticle-candor.png">
+    <img src="/images/ergata-canticle-candor.png" />
   </figure>
   <section>
-    <figure>
-      <img src="images/ergata-cant-f0.png">
-    </figure>
-    <!--
-------------------------------------------------------- ABOUT
--->
+    <figure><img src="images/ergata-cant-f0.png" /></figure>
+    <!-- ------------------------------------------------------- ABOUT -->
     <p class="cant">
       An unlikely duo: a well-mannered neo-classical and a bombastic egyptian.
-
-      Candor is a cousin of Interloper, and these fonts do a great job enlivening a complex page.
-      Uruz and Canticle are a good pair for a more sober approach.</p>
-    <!--
-------------------------------------------------------- SAMPLES
--->
+      Candor is a cousin of Interloper, and these fonts do a great job
+      enlivening a complex page. Uruz and Canticle are a good pair for a more
+      sober approach.
+    </p>
+    <!-- ------------------------------------------------------- SAMPLES -->
     <section id="xeno-s">
       <div class="spread quad" style="padding: 30px 10px;">
         <figure class="column plus">
-          <img src="/images/ergata-cant-s1.png" data-action="zoom">
+          <img src="/images/ergata-cant-s1.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-cant-s2.png" data-action="zoom">
+          <img src="/images/ergata-cant-s2.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-cant-s3.png" data-action="zoom">
+          <img src="/images/ergata-cant-s3.png" data-action="zoom" />
         </figure>
         <figure class="column plus">
-          <img src="/images/ergata-cant-s4.png" data-action="zoom">
+          <img src="/images/ergata-cant-s4.png" data-action="zoom" />
         </figure>
       </div>
-
     </section>
-    <!--
-------------------------------------------------------- DESIGN
--->
+    <!-- ------------------------------------------------------- DESIGN -->
     <section id="cant-d">
-
-      <h2 class="cant">Design<br><img style="max-width:50px;" src="/images/wait-paper.gif" alt=""></h2>
-
-
+      <h2 class="cant">
+        Design<br /><img
+          style="max-width:50px;"
+          src="/images/wait-paper.gif"
+          alt=""
+        />
+      </h2>
     </section>
-    <!--
-------------------------------------------------------- FEATURES
--->
+    <!-- ------------------------------------------------------- FEATURES -->
     <section id="cant-f">
       <h2 class="cant">Features</h2>
-      <figure><img src="/images/ergata-cant-3.png" alt="" data-action="zoom">
-      </figure><img class="inset">
+      <figure>
+        <img src="/images/ergata-cant-3.png" alt="" data-action="zoom" />
+      </figure>
+      <img class="inset" />
       <figure class="graphic spread twin">
-        <img src="images/ergata-canticle.png" data-action="zoom">
-        <img src="images/ergata-candor.png" data-action="zoom">
+        <img src="images/ergata-canticle.png" data-action="zoom" />
+        <img src="images/ergata-candor.png" data-action="zoom" />
       </figure>
       <p class="cant">
-        Canticle includes more than four hundred characters and supports both Cyrillic and Armenian as well
-        as many Latin languages. Candor, still in development, only includes a Latin Set and punctuation.
-        Read about Canticle and Candor&#x27;s special features below.</p>
+        Canticle includes more than four hundred characters and supports both
+        Cyrillic and Armenian as well as many Latin languages. Candor, still in
+        development, only includes a Latin Set and punctuation. Read about
+        Canticle and Candor&#x27;s special features below.
+      </p>
       <div class="spread twin wide">
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-latin.png"></figure>
-          <h3 class="cand">
-            latin plus</h3>
+          <figure><img src="/images/ergata-cant-latin.png" /></figure>
+
+          <h3 class="cand">latin plus</h3>
           <p class="xx cant">
-            Ergata Canticle currently supports around half of the languages in the latin plus standard.
-            Spanish and Portuguese are both supported.<a href="http://www.underware.nl/latin_plus/">Underware.nl</a>.</p>
+            Ergata Canticle currently supports around half of the languages in
+            the latin plus standard. Spanish and Portuguese are both
+            supported.<a href="http://www.underware.nl/latin_plus/"
+              >Underware.nl</a
+            >.
+          </p>
         </div>
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-f2.png"></figure>
-          <h3 class="cand">
-            ligatures</h3>
+          <figure><img src="/images/ergata-cant-f2.png" /></figure>
+
+          <h3 class="cand">ligatures</h3>
           <p class="xx cant">
-            Sometimes, letters set side-by-side are so wide, they collide. This, I can’t abide. So that’s why
-            inside my type, I decided to hide ligatures, like ‘fi,’ computerized to auto-apply to the words you
-            write, to save you time and look really tight.</p>
+            Sometimes, letters set side-by-side are so wide, they collide. This,
+            I can’t abide. So that’s why inside my type, I decided to hide
+            ligatures, like ‘fi,’ computerized to auto-apply to the words you
+            write, to save you time and look really tight.
+          </p>
         </div>
       </div>
       <div class="spread twin wide">
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-f3.png">
-          </figure>
-          <h3 class="cant">
-            adaptive caps</h3>
+          <figure><img src="/images/ergata-cant-f3.png" /></figure>
+          <h3 class="cant">adaptive caps</h3>
           <p class="xx cant">
-            <span class="cant" style="font-feature-settings: 'liga' 0;">CAPITAL LETTERS</span> are made to be put at
-            the beginning of lowercase words. The
-            <span class="cant" style="font-feature-settings: 'liga' 0;">PROBLEM WITH THEM</span> is, they
-            don&#x2019;t
-            look good next to each other unless you
-            <span class="cant" style="font-feature-settings: 'liga' 0; letter-spacing: 2px;">SPACE THEM OUT</span>&#x2014;a
-            waste of time, because even then, they&#x2019;re so tall that they make the line look awkward.
-            Adaptive caps SOLVE THIS by replacing any string of ALL CAPITALS with short, wide spacious
-            caps&#x2014;as you type!</p>
+            <span class="cant" style="font-feature-settings: 'liga' 0;"
+              >CAPITAL LETTERS</span
+            >
+            are made to be put at the beginning of lowercase words. The
+            <span class="cant" style="font-feature-settings: 'liga' 0;"
+              >PROBLEM WITH THEM</span
+            >
+            is, they don&#x2019;t look good next to each other unless you
+            <span
+              class="cant"
+              style="font-feature-settings: 'liga' 0; letter-spacing: 2px;"
+              >SPACE THEM OUT</span
+            >&#x2014;a waste of time, because even then, they&#x2019;re so tall
+            that they make the line look awkward. Adaptive caps SOLVE THIS by
+            replacing any string of ALL CAPITALS with short, wide spacious
+            caps&#x2014;as you type!
+          </p>
         </div>
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-f4.png">
-          </figure>
-          <h3 class="cand">
-            contextuals
-          </h3>
+          <figure><img src="/images/ergata-cant-f4.png" /></figure>
+          <h3 class="cand">contextuals</h3>
           <p class="xx cant">
-            Adaptive caps automatically modify certain punctuation and symbols next to them, such as quotes,
-            which are enlarged, and dashes, and parenthesis which are nudged up to float at the capital optical
+            Adaptive caps automatically modify certain punctuation and symbols
+            next to them, such as quotes, which are enlarged, and dashes, and
+            parenthesis which are nudged up to float at the capital optical
             center. When listing the time, the colon floats as well.
           </p>
         </div>
@@ -761,46 +750,36 @@ description: A text typography system.
 
       <div class="spread twin wide">
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-cy.png">
-          </figure>
-          <h3 class="cant">
-            cyrillic</h3><br class="mobile">
+          <figure><img src="/images/ergata-cant-cy.png" /></figure>
+          <h3 class="cant">cyrillic</h3>
+          <br class="mobile" />
         </div>
         <div class="column slim">
-          <figure>
-            <img src="/images/ergata-cant-arm.png">
-          </figure>
-          <h3 class="cant">
-            armenian
-          </h3>
+          <figure><img src="/images/ergata-cant-arm.png" /></figure>
+          <h3 class="cant">armenian</h3>
         </div>
       </div>
     </section>
-    <!--
-------------------------------------------------------- PURCHASE
--->
+    <!-- ------------------------------------------------------- PURCHASE -->
     <section id="cant-g">
       <h2 class="cant">Purchase</h2>
 
       <div class="wide double spread">
         <figure class="column left slim">
-          <img src="/images/ergata-cant-g.png">
+          <img src="/images/ergata-cant-g.png" />
         </figure>
         <p class="column slim vcenter cant" style="text-align:center">
           Just two fonts that work well together.
         </p>
       </div>
 
-      <br><br>
+      <br /><br />
       <div style="height: 270px; background: #d0c6d2;" class="wide block panel">
         <p class="cant" style="color:#788c96"></p>
-        <img src="images/ergata-cant-hieroglyph.png">
+        <img src="images/ergata-cant-hieroglyph.png" />
       </div>
     </section>
-
   </section>
-
 </main>
 
 <script>
@@ -809,31 +788,23 @@ description: A text typography system.
   var i;
 
   for (i = 0; i < accordions.length; i++) {
-    accordions[i].addEventListener("click", function () {
-      this.classList.toggle("active");
+    accordions[i].addEventListener("click", function() {
+      this.classList.add("active");
       var sub = this.nextElementSibling;
-      if (sub.style.maxHeight) {
-        sub.style.maxHeight = null;
-      } else {
-        sub.style.maxHeight = sub.scrollHeight + "px";
-      }
+      sub.style.maxHeight = sub.scrollHeight + "px";
     });
   }
   for (i = 0; i < closeElements.length; i++) {
-    closeElements[i].addEventListener("click", function () {
+    closeElements[i].addEventListener("click", function() {
       var sect = this.parentElement;
-      sect.previousElementSibling.classList.toggle("active");
-      if (sect.style.maxHeight) {
-        sect.style.maxHeight = null;
-      } else {
-        sect.style.maxHeight = auto;
-      }
+      sect.previousElementSibling.classList.remove("active");
+      sect.style.maxHeight = null;
     });
-  } 
+  }
 </script>
 <script>
-  (function ($) {
-    $(window).on("load", function () {
+  (function($) {
+    $(window).on("load", function() {
       $(".tocbar").mCustomScrollbar({ alwaysShowScrollbar: 2 });
       $(".tocbar").mCustomScrollbar({ scrollInertia: i });
     });
