@@ -1,8 +1,7 @@
 let lightswitch = document.getElementById("lightswitch");
 let theme = document.getElementById("theme");
 
-function triggerAnimation(e) {
-  e.preventDefault;
+function triggerAnimation() {
   lightswitch.classList.remove("run-animation");
   void lightswitch.offsetWidth;
   lightswitch.classList.add("run-animation");
@@ -10,17 +9,17 @@ function triggerAnimation(e) {
 
 /* eslint-disable no-unused-vars */
 
-function flipSwitch(e) {
-  if (lightswitch.style.animationDirection === "reverse") {
+function flipSwitch() {
+  if (lightswitch.classList.contains("dark")) {
     theme.setAttribute("href", "/styles/themes/graphite.css");
-    lightswitch.style.animationDirection = null;
-    console.log("pencil's down"); // eslint-disable-line
+    lightswitch.classList.remove("dark");
+    console.log("enable graphite"); // eslint-disable-line
   } else {
     theme.setAttribute("href", "/styles/themes/twilight.css");
-    lightswitch.style.animationDirection = "reverse";
-    console.log("graph"); // eslint-disable-line
+    lightswitch.classList.add("dark");
+    console.log("enable twilight"); // eslint-disable-line
   }
-  triggerAnimation(e);
+  triggerAnimation();
 }
 
 /* eslint-enable no-unused-vars */
