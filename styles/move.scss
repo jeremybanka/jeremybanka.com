@@ -28,18 +28,17 @@
   font-family: BlueCanary;
   font-size: 32px;
   color: var(--x3);
-  animation: dawn 01s;
+  animation: dawn 0.6s;
   &.dark {
-    animation: dusk 01s;
+    animation: dusk 0.6s;
     font-variation-settings: "TIME" 1000;
   }
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--b);
   }
-  &:active {
+  /*  &:active {
     color: var(--x);
-  }
+  }*/
 
   &:before {
     display: none;
