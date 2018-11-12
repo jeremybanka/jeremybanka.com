@@ -1,9 +1,9 @@
 /* NEUTRAL IS A LIGHT BOLD BLACK AND WHITE THEME */
 :root {
-  --a: white;
-  --b: black;
+  --a: black;
+  --b: white;
 
-  --x: #ffb92d; /* link the quick brown fox jumps over the lazy dog*/
+  --x: black; /* link the quick brown fox jumps over the lazy dog*/
   --x0: #111;
   --x00: #222;
   --x1: #eee;

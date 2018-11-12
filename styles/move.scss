@@ -1,0 +1,47 @@
+---
+---
+
+@font-face {
+  font-family: BlueCanary;
+  src: url("/fonts/BlueCanaryGX.ttf");
+}
+
+@keyframes dawn {
+  from {
+    font-variation-settings: "TIME" 1000;
+  }
+  to {
+    font-variation-settings: "TIME" 0;
+  }
+}
+@keyframes dusk {
+  from {
+    font-variation-settings: "TIME" 0;
+  }
+  to {
+    font-variation-settings: "TIME" 1000;
+  }
+}
+
+#lightswitch {
+  cursor: pointer;
+  font-family: BlueCanary;
+  font-size: 32px;
+  color: var(--x3);
+  animation: dawn 01s;
+  &.dark {
+    animation: dusk 01s;
+    font-variation-settings: "TIME" 1000;
+  }
+  &:hover,
+  &:focus {
+    color: var(--b);
+  }
+  &:active {
+    color: var(--x);
+  }
+
+  &:before {
+    display: none;
+  }
+}
