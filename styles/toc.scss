@@ -4,10 +4,10 @@
 /* BASE———————————————————————————————————————————————————————
 the content sits on the bottom. 
 ——————————————————————————————————————————————————————————— */
-.toc-wrap {
+#toc-wrap {
   /* background-color: white;  for testing */
   position: fixed;
-  bottom: -1px;
+  bottom: -1px; /* 0 caused artifact on rounded screens */
   height: 100%;
   max-height: 100%;
   display: flex;
@@ -18,7 +18,7 @@ the content sits on the bottom.
   width: 180px;
   padding-right: 20px; /* ? */
 }
-.tocbar {
+.toc {
   width: 210px; /* The 30px overflow is enough to stow the scrollbar. */
   overflow-y: hidden;
   transition: height 0.1s ease-out;
@@ -32,10 +32,13 @@ the content sits on the bottom.
     text-align: center;
     font-size: 17px;
     font-weight: 500;
-  }
-  .icon {
-    /* Hide the responsive toggle by default. */
-    display: none;
+    &.icon {
+      font-family: Sudo;
+      display: block;
+    }
+    &#return {
+      font-size: 21px;
+    }
   }
 } /* ADVANCED———————————————————————————————————————————————————
 Used in documents with subdirectories.
@@ -69,7 +72,7 @@ Used in documents with subdirectories.
   .accordion:hover {
     background-color: var(--y11);
   }
-  .tocbar:hover .sub {
+  .toc:hover .sub {
     background: #bbb;
   } /* !!!!!!!!!!!!!!!!!!!!!!!!! */
   .close:hover {
@@ -81,19 +84,16 @@ Used in documents with subdirectories.
 Not enough room for the sidebar! 
 ——————————————————————————————————————————————————————————— */
 @media screen and (max-width: 920px) {
-  .toc-wrap {
+  #toc-wrap {
     width: calc(100% + 30px);
     height: auto;
   }
-  .tocbar {
+  .toc {
     padding: 0;
     border-top: solid 3px var(--y1);
     background-color: var(--a);
     width: 100%;
     opacity: 0.92;
-    * {
-      opacity: 1;
-    }
     a {
       padding-right: 45px;
     }
@@ -102,13 +102,9 @@ Not enough room for the sidebar!
     }
     a {
       display: none;
-      &.icon {
-        display: block;
-        font-family: Sudo;
-      }
     }
   }
-  .responsive a {
+  .toc.browse a {
     float: none;
     display: block; /* significant! Overwrites flex, thus, flex-direction. */
     text-align: center;
@@ -120,11 +116,15 @@ Not enough room for the sidebar!
   .sub {
     background: var(--y120);
   }
-} /* WIDE SCREEN————————————————————————————————————————————————
+}
+/* WIDE SCREEN————————————————————————————————————————————————
 enough room for sidebar 
 ——————————————————————————————————————————————————————————— */
 @media screen and (min-width: 920px) {
   /* Clear space on the left for the sidebar to fit. */
+  div#toc > a.icon {
+    display: none;
+  }
   main,
   footer {
     padding-left: 20vw;
@@ -139,7 +139,7 @@ enough room for sidebar
   .active:hover {
     color: var(--b);
   }
-  .tocbar {
+  .toc {
     a:before {
       background: var(--y121);
     }
@@ -164,10 +164,10 @@ enough room for side panel
   footer {
     padding-left: 400px;
   }
-  .toc-wrap {
+  #toc-wrap {
     width: 360px;
   }
-  .tocbar {
+  .toc {
     width: 390px;
     a {
       transition: 0.2s;
@@ -177,10 +177,11 @@ enough room for side panel
     color: var(--b);
     background: var(--y121);
   }
-  .tocbar:hover {
+  .toc:hover {
     background: none;
   }
-} /* ***************************
+}
+/* ***************************
 ************LEGACY***********
 *************************** */ /* OLD FORMULA 
 .tocbar {

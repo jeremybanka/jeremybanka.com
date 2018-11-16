@@ -43,17 +43,16 @@ title: Sudo
     }
   }
 </style>
-<script src="/scripts/table-of-contents.js"></script>
 
-<div class="toc-wrap">
-  <div class="tocbar" id="contents">
+<div id="toc-wrap">
+  <div id="toc" class="toc">
 
-    <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
+    <a href="#top" id="return" class="jump">&uarr;</a>
     <a href="#features" class="jump">Features</a>
     <a href="#lang" class="jump">Languages</a>
     <a href="#design" class="jump">Making Of</a>
     <a href="#download" class="jump">Download</a>
-    <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleTOC()">&#9776;</a>
 
   </div>
 </div>
@@ -288,3 +287,5 @@ title: Sudo
       </section>
     </section>
 </main>
+
+<script src="/scripts/table-of-contents.js"></script>

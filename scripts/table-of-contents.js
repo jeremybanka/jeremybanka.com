@@ -1,13 +1,74 @@
-/* Toggle add-remove the "responsive" class to the table of contents when the user clicks on the icon */
-function mobileContents() {
-  var x = document.getElementById("contents");
-  if (x.className === "tocbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "tocbar";
-  }
-}
+/* :::: Smoothscroll :::::::::::::::::::::::::::::::::::: */
+$(document).on("click", "a[href^=\"#\"]", function(event) {
+  event.preventDefault();
 
+  $("html, body").animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top
+    },
+    500
+  );
+});
+/* :::: Mobile Contents Browser :::::::::::::::::::::::::: */
+let toc = document.getElementById("toc");
+
+function toggleTOC() {
+  toc.classList.toggle("browse");
+}
+/* :::: Subsection Activators :::::::::::::::::::::::::: */
+var accordions = document.getElementsByClassName("accordion");
+var closeElements = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < accordions.length; i++) {
+  accordions[i].addEventListener("click", function() {
+    this.classList.add("active");
+    var sub = this.nextElementSibling;
+    sub.style.maxHeight = sub.scrollHeight + "px";
+  });
+}
+for (i = 0; i < closeElements.length; i++) {
+  closeElements[i].addEventListener("click", function() {
+    var sect = this.parentElement;
+    sect.previousElementSibling.classList.remove("active");
+    sect.style.maxHeight = null;
+  });
+}
+/* :::: Scrollbar Hack ::::::::::::::::::::::::::::::::::: */
+(function($) {
+  $(window).on("load", function() {
+    $(".tocbar").mCustomScrollbar({ alwaysShowScrollbar: 2 });
+    $(".tocbar").mCustomScrollbar({ scrollInertia: i });
+  });
+})(jQuery);
+
+/*
+var accordions = document.getElementsByClassName("accordion");
+var closeElements = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < accordions.length; i++) {
+  accordions[i].addEventListener("click", function() {
+    this.classList.add("active");
+    var sub = this.nextElementSibling;
+    sub.style.maxHeight = sub.scrollHeight + "px";
+  });
+}
+for (i = 0; i < closeElements.length; i++) {
+  closeElements[i].addEventListener("click", function() {
+    var sect = this.parentElement;
+    sect.previousElementSibling.classList.remove("active");
+    sect.style.maxHeight = null;
+  });
+}
+</script>
+<script>
+(function($) {
+  $(window).on("load", function() {
+    $(".tocbar").mCustomScrollbar({ alwaysShowScrollbar: 2 });
+    $(".tocbar").mCustomScrollbar({ scrollInertia: i });
+  });
+})(jQuery);
 /* get 
 var accordions = document.getElementsByClassName("accordion");
 var closeElements = document.getElementsByClassName("close");
@@ -35,17 +96,3 @@ for (i = 0; i < closeElements.length; i++) {
     }
   });
 } */
-
-/* Smoothscroll charm */
-$(document).on("click", 'a[href^="#"]', function(event) {
-  event.preventDefault();
-
-  $("html, body").animate(
-    {
-      scrollTop: $($.attr(this, "href")).offset().top
-    },
-    500
-  );
-});
-
-/* Smoothscroll charm */

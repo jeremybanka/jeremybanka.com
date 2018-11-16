@@ -2,90 +2,97 @@
 layout: book
 title: Display Type
 ---
-<link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all">
-<link rel="stylesheet" href="/styles/ergata.css">
-<link rel="stylesheet" href="/styles/themes/stone.css" type="text/css" media="all">
+
+<link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/styles/ergata.css" />
+<link
+  rel="stylesheet"
+  href="/styles/themes/stone.css"
+  type="text/css"
+  media="all"
+/>
 <style>
-    html,
-    #bottom,
-    #left {
-        background: #2d0f00
-    }
+  html,
+  #bottom,
+  #left {
+    background: black;
+  }
 
-    @media (max-width: 1259px) {
-        nav {
-            background: var(--x0)
-        }
+  @media (max-width: 1259px) {
+    nav {
+      background: var(--x0);
     }
+  }
 </style>
-<script src="/scripts/table-of-contents.js"></script>
 
-<div class="toc-wrap">
-    <div class="tocbar" id="contents">
-
-        <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
-        <a href="#aktivo" class="jump">
-            Aktivo</a>
-        <a href="#hans" class="jump">
-            Hans</a>
-        <a href="#magescule" class="jump">
-            Magescule</a>
-        <a href="#neurune" class="jump">
-            Neurune</a>
-        <a href="javascript:void(0);" class="icon" onclick="mobileContents()">&#9776;</a>
-
-    </div>
+<div id="toc-wrap">
+  <div id="toc" class="toc">
+    <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
+    <a href="#logotype" class="jump"> Logotype</a>
+    <a href="#aktivo" class="jump"> Aktivo</a>
+    <a href="#hans" class="jump"> Hans</a>
+    <a href="#magescule" class="jump"> Magescule</a>
+    <a href="#neurune" class="jump"> Neurune</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleTOC()">&#9776;</a>
+  </div>
 </div>
 
-<header style="
-    background: #9b4b23; 
+<header
+  style="
+    background: #782800; 
     height: calc(100vh - 30px); 
     display: flex;
-">
-    <img src="/images/disp-head.png">
+"
+>
+  <img src="/images/disp-head.png" />
 </header>
-<br>
+<br />
 <main>
-    <figure id="aktivo">
-        <img src="/images/disp-aktivo.png">
-    </figure>
-    <section style="background:#788c96">
-        <h2 class="brahmin" style="color:#00324b">An Energetic Poster Font</h2>
-        <img src="/images/disp-aktivo-heavy.png" alt="">
-        <img src="/images/disp-aktivo-light.png" alt="">
-        <figure>
-            <img src="/images/disp-aktivo-full.png" alt="">
-        </figure>
-    </section>
+  <figure id="logotype">
+    <img src="/images/logotype-jeremybanka.png" data-action="scrollpoint" />
+  </figure>
+  <figure id="mishko"><img src="/images/logotype-mishko.png" /></figure>
+  <figure id="wldmnd"><img src="/images/logotype-wldmnd.png" /></figure>
+  <figure id="mortal"><img src="/images/disp-mortal.png" /></figure>
+  <figure id="fastly"><img src="/images/logotype-fastly.png" /></figure>
+  <br />
+  <br />
 
-    <figure id="hans">
-        <img src="/images/disp-hans.png">
-    </figure>
-    <section style="background:#0096e1">
-        <h2 class="brahmin" style="color:white">A Smooth Geometric Script</h2>
+  <figure id="aktivo" data-action="scrollpoint">
+    <img src="/images/disp-aktivo.png" />
+  </figure>
+  <section style="background:#788c96">
+    <h2 class="brahmin" style="color:#00324b">An Energetic Poster Font</h2>
+    <img src="/images/disp-aktivo-heavy.png" alt="" />
+    <img src="/images/disp-aktivo-light.png" alt="" />
+    <figure><img src="/images/disp-aktivo-full.png" alt="" /></figure>
+  </section>
 
-        <img src="/images/disp-hans-full.png" alt="">
-    </section>
+  <figure id="hans" data-action="scrollpoint">
+    <img src="/images/disp-hans.png" />
+  </figure>
+  <section style="background:#0096e1">
+    <h2 class="brahmin" style="color:white">A Smooth Geometric Script</h2>
 
-    <figure id="magescule">
-        <img src="/images/disp-magescule.png">
-    </figure>
-    <section style="background:#5f5956">
-        <h2 class="uruz" style="color:#d28c00">An Otherworldly Capital Set</h2>
-        <img src="/images/disp-magescule-full.png" alt="">
-    </section>
+    <img src="/images/disp-hans-full.png" alt="" />
+  </section>
 
-    <figure id="neurune">
-        <img src="/images/disp-neurune.png">
-    </figure>
-    <section style="background:#ebebeb">
-        <h2 class="xeno" style="color:#afa9a6">An Ultraminimalist Geometric</h2>
-        <img src="/images/disp-neurune-wide.png" alt="">
-        <figure>
-            <img src="/images/disp-neurune-animation.gif" alt="">
-        </figure>
-    </section>
+  <figure id="magescule" data-action="scrollpoint">
+    <img src="/images/disp-magescule.png" />
+  </figure>
+  <section style="background:#5f5956">
+    <h2 class="uruz" style="color:#d28c00">An Otherworldly Capital Set</h2>
+    <img src="/images/disp-magescule-full.png" alt="" />
+  </section>
 
-
-
+  <figure id="neurune" data-action="scrollpoint">
+    <img src="/images/disp-neurune.png" />
+  </figure>
+  <section style="background:#ebebeb">
+    <h2 class="xeno" style="color:#afa9a6">An Ultraminimalist Geometric</h2>
+    <img src="/images/disp-neurune-wide.png" alt="" />
+    <figure><img src="/images/disp-neurune-animation.gif" alt="" /></figure>
+  </section>
 </main>
+
+<script src="/scripts/table-of-contents.js"></script>

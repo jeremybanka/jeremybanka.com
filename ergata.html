@@ -8,8 +8,7 @@ description: A text typography system.
 <link rel="stylesheet" href="/styles/nav/work.css" />
 <link rel="stylesheet" href="/styles/ergata.css" />
 <link rel="stylesheet" href="/styles/themes/paper.css" />
-<script src="/scripts/table-of-contents.js"></script>
-<script src="/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+
 <style>
   @media (max-width: 1259px) {
     nav {
@@ -18,13 +17,14 @@ description: A text typography system.
   }
 </style>
 
-<div class="toc-wrap">
-  <div class="tocbar" data-mcs-theme="dark" id="contents">
+<div id="toc-wrap">
+  <div id="toc" class="toc">
     <a href="#top" class="jump" style="font-size: 21px">&uarr;</a>
+
+    <a href="#intro" class="jump">Overview</a>
 
     <a href="#brahmin" class="accordion jump"> Brahmin</a>
     <div class="sub">
-      <a href="#brahmin" class="jump"> Overview</a>
       <a href="#brahmin-d" class="jump"> Design</a>
       <a href="#brahmin-f" class="jump"> Features</a>
       <a href="#brahmin-g" class="jump"> Downloads</a>
@@ -33,7 +33,6 @@ description: A text typography system.
 
     <a href="#xeno" class="accordion jump"> Interloper</a>
     <div class="sub">
-      <a href="#xeno" class="jump"> Overview</a>
       <a href="#xeno-d" class="jump"> Design</a>
       <a href="#xeno-f" class="jump"> Features</a>
       <a href="#xeno-g" class="jump"> Purchase</a>
@@ -42,7 +41,6 @@ description: A text typography system.
 
     <a href="#uruz" class="accordion jump"> Uruz</a>
     <div class="sub">
-      <a href="#uruz" class="jump"> Overview</a>
       <a href="#uruz-d" class="jump"> Design</a>
       <a href="#uruz-f" class="jump"> Features</a>
       <a href="#uruz-g" class="jump"> Purchase</a>
@@ -50,16 +48,13 @@ description: A text typography system.
     </div>
     <a href="#canticle" class="accordion jump"> Canticle</a>
     <div class="sub">
-      <a href="#canticle" class="jump"> Overview</a>
       <a href="#cant-d" class="jump"> Design</a>
       <a href="#cant-f" class="jump"> Features</a>
       <a href="#cant-g" class="jump"> Purchase</a>
       <div class="close">&times;</div>
     </div>
 
-    <a href="javascript:void(0);" class="icon" onclick="mobileContents()"
-      >&#9776;</a
-    >
+    <a href="javascript:void(0);" class="icon" onclick="toggleTOC()">&#9776;</a>
   </div>
 </div>
 
@@ -74,7 +69,9 @@ description: A text typography system.
 </header>
 
 <main>
-  <figure class="crop"><img src="images/ergata-0.png" /></figure>
+  <figure id="intro" class="crop" data-action="scrollpoint">
+    <img src="images/ergata-0.png" />
+  </figure>
   <section style="background: var(--y11)">
     <figure class="crop"><img src="images/ergata-1.png" /></figure>
     <figure class="crop"><img src="images/ergata-2.png" /></figure>
@@ -674,9 +671,6 @@ description: A text typography system.
     <!-- ------------------------------------------------------- FEATURES -->
     <section id="cant-f">
       <h2 class="cant">Features</h2>
-      <figure>
-        <img src="/images/ergata-cant-3.png" alt="" data-action="zoom" />
-      </figure>
       <img class="inset" />
       <figure class="graphic spread twin">
         <img src="images/ergata-canticle.png" data-action="zoom" />
@@ -764,14 +758,14 @@ description: A text typography system.
     <section id="cant-g">
       <h2 class="cant">Purchase</h2>
 
-      <div class="wide double spread">
+      <garfield class="wide double spread">
         <figure class="column left slim">
           <img src="/images/ergata-cant-g.png" />
         </figure>
         <p class="column slim vcenter cant" style="text-align:center">
           Just two fonts that work well together.
         </p>
-      </div>
+      </garfield>
 
       <br /><br />
       <div style="height: 270px; background: #d0c6d2;" class="wide block panel">
@@ -781,32 +775,5 @@ description: A text typography system.
     </section>
   </section>
 </main>
-
-<script>
-  var accordions = document.getElementsByClassName("accordion");
-  var closeElements = document.getElementsByClassName("close");
-  var i;
-
-  for (i = 0; i < accordions.length; i++) {
-    accordions[i].addEventListener("click", function() {
-      this.classList.add("active");
-      var sub = this.nextElementSibling;
-      sub.style.maxHeight = sub.scrollHeight + "px";
-    });
-  }
-  for (i = 0; i < closeElements.length; i++) {
-    closeElements[i].addEventListener("click", function() {
-      var sect = this.parentElement;
-      sect.previousElementSibling.classList.remove("active");
-      sect.style.maxHeight = null;
-    });
-  }
-</script>
-<script>
-  (function($) {
-    $(window).on("load", function() {
-      $(".tocbar").mCustomScrollbar({ alwaysShowScrollbar: 2 });
-      $(".tocbar").mCustomScrollbar({ scrollInertia: i });
-    });
-  })(jQuery);
-</script>
+<script src="/scripts/table-of-contents.js"></script>
+<script src="/scripts/jquery.mCustomScrollbar.concat.min.js"></script>

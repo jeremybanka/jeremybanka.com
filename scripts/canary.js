@@ -3,7 +3,7 @@ let theme = document.getElementById("theme");
 
 /* eslint-disable no-unused-vars */
 
-function flipSwitch() {
+function hitLights() {
   const isDark = lightswitch.classList.contains("dark");
   const newTheme = isDark ? "graphite" : "charcoal";
   theme.setAttribute("href", `/styles/themes/${newTheme}.css`);
