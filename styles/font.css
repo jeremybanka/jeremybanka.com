@@ -157,7 +157,7 @@ sub {
   font-style: normal;
 } /* regular */
 
-/* Talhertz */
+/* Brahmin */
 @font-face {
   font-family: Brahmin;
   src: url("/fonts/Ergata-Talhertz1.woff") format("woff");
@@ -208,10 +208,52 @@ sub {
 } /* bold */
 @font-face {
   font-family: Brahmin;
-  src: url("/fonts/Fokuso-Antoinette5.woff") format("woff");
+  src: url("/fonts/Ergata-Talhertz1i.woff") format("woff");
+  font-weight: thin;
+  font-style: italic;
+} /* thin italic */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz1i.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz2i.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz3i.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz4i.woff") format("woff");
   font-weight: medium;
   font-style: italic;
-} /* "italic" */
+} /* regular */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz5i.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+} /* medium */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz6i.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+} /* semibold */
+@font-face {
+  font-family: Brahmin;
+  src: url("/fonts/Ergata-Talhertz7i.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+} /* bold */
 
 /* Runa */
 @font-face {

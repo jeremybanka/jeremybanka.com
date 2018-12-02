@@ -1,30 +1,40 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="/styles/nav/blog.css" type="text/css" media="all">
-<link rel="stylesheet" href="/styles/themes/paper.css" type="text/css" media="all">
+
+<link
+  rel="stylesheet"
+  href="/styles/nav/blog.css"
+  type="text/css"
+  media="all"
+/>
 
 <style>
-    html,
-    section {
-        background: white;
-    }
+  :root {
+    --z: #{{ page.color }};
+  }
+  html {
+    background: var(--y110)
+  }
+  section {
+    background: none;
+  }
 </style>
 
 <header>
-    <!-- <p>{{ page.date | date: '%B %d, %Y' }}</p> -->
-    <h2>{{ page.title }}<span class="date">{{ page.date | date_to_string }}</span></h2>
+  <!-- <p>{{ page.date | date: '%B %d, %Y' }}</p> -->
+  <h2>
+    {{ page.title }}<span class="date">{{ page.date | date_to_string }}</span>
+  </h2>
 </header>
 
 <main>
-    <hr>
-    <section>
-        {{ content }}
-    </section>
-    {% if page.previous.url %}
-    <a class="slim panel block light rad24" href="{{page.previous.url}}">
-        <p>previous post</p>
-        <h3>{{ page.previous.title }}</h3>
-    </a>
-    {% endif %}
+  <hr />
+  <section>{{ content }}</section>
+  {% if page.previous.url %}
+  <a class="slim panel block light rad24" href="{{page.previous.url}}">
+    <p>previous post</p>
+    <h3>{{ page.previous.title }}</h3>
+  </a>
+  {% endif %}
 </main>

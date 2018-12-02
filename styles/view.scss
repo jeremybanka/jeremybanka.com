@@ -2,13 +2,14 @@
 ---
 
 @media (min-width: 600px) {
-  .mobile: {
+  .mobile {
     display: none;
   }
 } /* MULTICOLUMN-————————————————————————————————————————————
 Activate .spreads! 
 ——————————————————————————————————————————————————————————— */
 @media (min-width: 600px) {
+  spread,
   .spread {
     margin: auto;
     display: grid;
@@ -31,17 +32,18 @@ Activate .spreads!
     }
     &.quad {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      height: 9vw;
       grid-gap: 10px;
     }
     &.graphic {
-      height: 25vw;
-      max-height: 180px;
+      height: 100vh; /* hack! this keeps zoom from bumping stuff around */
+      max-height: 180px; /* hackfix */
     }
   }
+  .crunch,
   .inset {
     margin-bottom: -15px;
   }
+  column,
   .column {
     display: flex;
     position: relative;

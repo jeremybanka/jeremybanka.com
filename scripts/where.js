@@ -1,4 +1,4 @@
-let scrollpoint = document.getElementsByClassName(".scrollpoint");
+let scrollpoint = document.getElementsB(".scrollpoint");
 let allpoints = {};
 let i = 0;
 
