@@ -1,9 +1,12 @@
 url: http://www.jeremybanka.com
 author: Jeremy Banka
 twitter:
-    username: jeremybanka
+  username: jeremybanka
 title_image: /images/jem_touch-icon.png
 description: Type, graphics, and the Wayfarer Card Game.
 
 plugins:
-    - jekyll-seo-tag
+  - jekyll-seo-tag
+
+collections:
+  - products

@@ -1,0 +1,28 @@
+<figure 
+  class="spread graphic tall {{ include.class }}" 
+  style="grid-template:
+        'a a' auto
+        'b c' 270px / 1fr 1fr;'
+">
+  <img
+    src="/images/{{ include.top }}"
+    alt="{{ include.alt }}"
+    data-action="zoom"
+    style="grid-area: a;"
+  />
+  <img
+    src="/images/{{ include.left }}"
+    alt="{{ include.l-alt }}"
+    data-action="zoom"
+    style="grid-area: b;"
+  />
+  <img
+    src="/images/{{ include.right }}"
+    alt="{{ include.r-alt }}"
+    data-action="zoom"
+    style="grid-area: c;"
+  />
+  {% if caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

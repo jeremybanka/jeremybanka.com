@@ -1,0 +1,39 @@
+/* CHARCOAL IS A DARK BOLD BLACK AND WHITE THEME */
+:root {
+  --a: black;
+  --b: white;
+
+  --x: #fff; /* link the quick brown fox jumps over the lazy dog*/
+  --x0: #0065a9;
+  --x00: #0071bb;
+  --x1: #111;
+  --x10: #181818;
+  --x110: #111;
+  --x11: #0b0b0b;
+  --x111: #222;
+  --x120: #333;
+  --x12: #444;
+  --x121: #555;
+  --x13: #666;
+  --x2: #777;
+  --x3: #aaa; /* text */
+  --x4: #bbb; /* header */
+
+  --y: black;
+  --y0: #111;
+  --y1: #111; /* #left */
+  --y10: #181818; /* section */
+  --y110: #111;
+  --y11: black; /* html */
+  --y111: #222;
+  --y120: #333;
+  --y12: #444;
+  --y121: #0071bb; /* toc link flare */
+  --y13: #666;
+  --y2: #777;
+  --y3: #888;
+  --y4: #999;
+
+  --z: #666; /* hr */
+  --z0: #ff5a27;
+}

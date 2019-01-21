@@ -1,0 +1,10 @@
+<figure class="{{ include.class }}">
+  <img
+    src="/images/{{ include.img }}"
+    alt="{{ include.alt }}"
+    data-action="{{ include.action }}"
+  />
+  {% if include.caption %} 
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

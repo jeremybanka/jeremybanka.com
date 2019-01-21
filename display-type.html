@@ -1,16 +1,19 @@
 ---
+title: Imagery
 layout: book
-title: Display Type
+cover: disp-head.png
+sections: 
+  - Logotype
+  - Aktivo
+  - Hans
+  - Magescule
+  - Neurune
+theme: stone
+accent: dark
 ---
 
 <link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all" />
-<link rel="stylesheet" href="/styles/ergata.css" />
-<link
-  rel="stylesheet"
-  href="/styles/themes/stone.css"
-  type="text/css"
-  media="all"
-/>
+
 <style>
   html,
   #bottom,
@@ -25,28 +28,10 @@ title: Display Type
   }
 </style>
 
-<div id="toc-wrap">
-  <div id="toc" class="toc">
-    <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
-    <a href="#logotype" class="jump"> Logotype</a>
-    <a href="#aktivo" class="jump"> Aktivo</a>
-    <a href="#hans" class="jump"> Hans</a>
-    <a href="#magescule" class="jump"> Magescule</a>
-    <a href="#neurune" class="jump"> Neurune</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleTOC()">&#9776;</a>
-  </div>
-</div>
+{% include cover.html %}
 
-<header
-  style="
-    background: #782800; 
-    height: calc(100vh - 30px); 
-    display: flex;
-"
->
-  <img src="/images/disp-head.png" />
-</header>
-<br />
+{% include simple-toc.html %}
+
 <main>
   <figure id="logotype">
     <img src="/images/logotype-jeremybanka.png" data-action="scrollpoint" />

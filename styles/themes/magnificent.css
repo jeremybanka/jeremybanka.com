@@ -1,139 +1,38 @@
-/* ff5a27
-BEHIND--------------------------------
-*/
-html {
-  background: #def;
-}
-section {
-  background: #ffe;
-}
-nav {
-  background: #ccddf0;
-}
-.toc-wrap {
-  background: #ccddf0;
-  border-right: solid 3px #bbd4e8;
-}
-@media (min-width: 920px) {
-  .logo:hover span,
-  .logo:focus span {
-    color: #def;
-  }
-}
-/* 
-TEXT-----------------------------
-*/
-nav *,
-.logo *,
-h1,
-h2,
-h3,
-p,
-li {
-  color: #404;
-}
-h2 {
-  color: black;
-}
-/*
-FLARE-----------------------------------
-*/
-/* link color sweep */
-a:before {
-  background: #08c;
-}
+/* PAPER IS A LIGHT SUBTLE BLUE-ORANGE THEME */
 
-/* link underline */
-p > a {
-  box-shadow: inset 0 -2px 0 #08c;
-}
+:root {
+  --a: black;
+  --b: white;
 
-/* left padding for links */
-@media (min-width: 920px) {
-  p > a:hover,
-  p > a:focus {
-    box-shadow: -3px 0 0 #08c;
-  }
-}
-/*
-SUBTLE---------------------------------
-*/
-hr {
-  background: #aaa;
-}
+  --x: #820096;
+  --x0: #9600b4;
+  --x1: #ebe5e2;
+  --x10: #f5efec;
+  --x110: #e1dbd8;
+  --x11: #d7d1ce;
+  --x111: #d2ccc9;
+  --x120: #cdc7c4;
+  --x12: #c3bdba;
+  --x121: #b9b3b0;
+  --x13: #afa9a6;
+  --x2: #3c505a;
+  --x3: #b4c4cc;
+  --x4: #3c505a;
 
-aside,
-figcaption {
-  color: #aaa;
-}
-aside {
-  border-left: solid 3px #aaa;
-}
+  --y: #820096;
+  --y0: #9600b4;
+  --y1: #b4c4cc;
+  --y10: #b4c4cc;
+  --y110: #d2dce1;
+  --y11: #c9d3d8;
+  --y111: #c3cdd2;
+  --y120: #b9c9d1;
+  --y12: #b4c4cc;
+  --y121: #ffffff33;
+  --y13: #96aab4;
+  --y2: #788c96;
+  --y3: #3c505a;
+  --y4: #00324b;
 
-/* 
-PANEL-----------------------------------
-*/
-
-.panel {
-  background: #f9f9f9;
-}
-
-.pure {
-  background: #e4f0ff;
-}
-
-.dark {
-  background: #cde;
-}
-.dark .icon {
-  color: #d6eaff;
-}
-
-.red {
-  background: #d4e5f6;
-}
-.red .icon {
-  color: #c0d2e4;
-}
-
-.blue {
-  background: #ddeef8;
-}
-.blue .icon {
-  color: #cde;
-}
-
-.amber {
-  background: #d0d0d0;
-}
-.amber .icon {
-  color: #bbb;
-}
-
-.violet {
-  background: #cce5ff;
-}
-.violet .icon {
-  color: #b6b6b6;
-}
-
-.aqua {
-  background: #d0d0d0;
-}
-.aqua .icon {
-  color: #bbb;
-}
-
-.pink {
-  background: #d0d0d0;
-}
-.pink .icon {
-  color: #bbb;
-}
-
-.green {
-  background: #c0c0c0;
-}
-.green .icon {
-  color: #aaa;
+  --z: #d28c00;
 }

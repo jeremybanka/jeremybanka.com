@@ -1,0 +1,15 @@
+<figure class="graphic spread twin {{ include.class }}">
+  <img
+    src="/images/{{ include.left }}"
+    alt="{{ include.l-alt }}"
+    data-action="zoom"
+  />
+  <img
+    src="/images/{{ include.right }}"
+    alt="{{ include.r-alt }}"
+    data-action="zoom"
+  />
+  {% if caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

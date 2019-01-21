@@ -252,3 +252,13 @@ $colors: ("blue" #08c #0079b9 "12" "121") ("aqua" #00d2af #00c0a0 "12" "121")
     }
   }
 }
+
+@each $tuple in $colors {
+  /* PALETTE INDEX----------------------------------
+  a > span: "B"
+  ------------------------------------------------------------ */
+  :root {
+    --color1#{nth($tuple, 1)}: #{nth($tuple, 2)};
+    --color2#{nth($tuple, 1)}: #{nth($tuple, 3)};
+  }
+}

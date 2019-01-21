@@ -142,7 +142,7 @@ section {
     margin-bottom: 20px;
   }
   code {
-    background: black;
+    background: var(--a);
     color: #9896a2;
     max-width: 650px;
     display: block;
@@ -226,6 +226,10 @@ Quick classes for different max-widths.
 .slim {
   max-width: 670px;
 }
+.bloq {
+  max-width: 640px;
+  margin-bottom: -20px;
+}
 .plus {
   max-width: 500px;
 }
@@ -258,7 +262,8 @@ h2 {
   line-height: 50px;
   font-weight: 700; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
-h3 {
+h3,
+h3 * {
   font-size: 25px;
   line-height: 35px;
   font-weight: 400; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -292,6 +297,14 @@ aside {
     font-size: 15px;
     line-height: 20px;
     font-weight: 600; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  }
+}
+.description {
+  padding-top: 10px;
+  font-style: italic;
+  font-weight: 500;
+  .post & {
+    padding-left: 10px;
   }
 }
 .date {

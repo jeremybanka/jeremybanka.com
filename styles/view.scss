@@ -1,15 +1,11 @@
 ---
 ---
 
-@media (min-width: 600px) {
-  .mobile {
-    display: none;
-  }
-} /* MULTICOLUMN-————————————————————————————————————————————
+/* MULTICOLUMN-————————————————————————————————————————————
 Activate .spreads! 
 ——————————————————————————————————————————————————————————— */
 @media (min-width: 600px) {
-  spread,
+  spread, /* spreads & hacks -------------------------------*/
   .spread {
     margin: auto;
     display: grid;
@@ -35,15 +31,24 @@ Activate .spreads!
       grid-gap: 10px;
     }
     &.graphic {
-      height: 100vh; /* hack! this keeps zoom from bumping stuff around */
+      height: 100vh; /* hack! this keeps zoom.js from bumping stuff around */
       max-height: 180px; /* hackfix */
+      &.tall {
+        max-height: 540px; /* hackfix */
+      }
     }
   }
-  .crunch,
-  .inset {
-    margin-bottom: -15px;
+  .imagestrip {
+    width: 100%;
+    img {
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+
+      width: calc(var(--rP-I-CI) * (100% - var(--wT-GG)));
+    }
   }
-  column,
+  column, /* columns & hacks -------------------------------*/
   .column {
     display: flex;
     position: relative;
@@ -54,6 +59,9 @@ Activate .spreads!
     &.panel {
       display: block;
     }
+    &.vcenter {
+      justify-content: center;
+    }
     h3 {
       padding-top: 0px;
       margin-bottom: 10px;
@@ -63,11 +71,16 @@ Activate .spreads!
       margin-bottom: 10px;
     }
   }
+  /* columns & fixes -------------------------------*/
+  .mobile {
+    display: none;
+  }
   figure.smol {
     padding-top: 30px;
   }
-  .vcenter {
-    justify-content: center;
+  .crunch,
+  .inset {
+    margin-bottom: -15px;
   }
 }
 @media (min-width: 630px) and (max-width: 920px) {

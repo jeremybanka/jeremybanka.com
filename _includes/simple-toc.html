@@ -1,0 +1,10 @@
+<div id="toc-wrap">
+  <div id="toc" class="toc">
+    <a href="#top" id="return" style="font-size: 21px" class="jump">&uarr;</a>
+    {% for section in page.sections %}
+    <a href="#{{ section | slugify }}" class="jump"> {{ section }}</a>
+    {% endfor %}
+    <a href="javascript:void(0);" class="icon" onclick="toggleTOC()">&#9776;</a>
+
+  </div>
+</div>
