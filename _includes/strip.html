@@ -1,4 +1,4 @@
-<figure class="max imagestrip">
+<figure {% if include.name !=null %} id="{{ include.name }}" {% endif %} class="max imagestrip">
   {% if include.one != null %}
     <img src="/images/{{ include.one }}" data-action="zoom" />
   {% endif %}
@@ -13,5 +13,50 @@
   {% endif %}
   {% if include.five != null %}
     <img src="/images/{{ include.five }}" data-action="zoom" />
+  {% endif %}
+  {% if include.six != null %}
+    <img src="/images/{{ include.six }}" data-action="zoom" />
+  {% endif %}
+  {% if include.seven != null %}
+    <img src="/images/{{ include.seven }}" data-action="zoom" />
+  {% endif %}
+  {% if include.eight != null %}
+    <img src="/images/{{ include.eight }}" data-action="zoom" />
+  {% endif %}
+  {% if include.nine != null %}
+    <img src="/images/{{ include.nine }}" data-action="zoom" />
+  {% endif %}
+  {% if include.ten != null %}
+    <img src="/images/{{ include.ten }}" data-action="zoom" />
+  {% endif %}
+    {% if include.a != null %}
+    <img src="/images/{{ include.a }}" data-action="zoom" />
+  {% endif %}
+  {% if include.b != null %}
+  <img src="/images/{{ include.b }}" data-action="zoom" />
+  {% endif %}
+  {% if include.c != null %}
+    <img src="/images/{{ include.c }}" data-action="zoom" />
+  {% endif %}
+  {% if include.d != null %}
+    <img src="/images/{{ include.d }}" data-action="zoom" />
+  {% endif %}
+  {% if include.e != null %}
+    <img src="/images/{{ include.e }}" data-action="zoom" />
+  {% endif %}
+  {% if include.f != null %}
+    <img src="/images/{{ include.f }}" data-action="zoom" />
+  {% endif %}
+  {% if include.g != null %}
+    <img src="/images/{{ include.g }}" data-action="zoom" />
+  {% endif %}
+  {% if include.h != null %}
+    <img src="/images/{{ include.h }}" data-action="zoom" />
+  {% endif %}
+  {% if include.i != null %}
+    <img src="/images/{{ include.i }}" data-action="zoom" />
+  {% endif %}
+  {% if include.j != null %}
+    <img src="/images/{{ include.j }}" data-action="zoom" />
   {% endif %}
 </figure>

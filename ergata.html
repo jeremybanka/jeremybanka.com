@@ -1,13 +1,15 @@
 ---
 layout: book
 title: Ergata
+accent: blue
+theme: paper
+cover: /ergata/ergata.png
 image: /images/ergata.png
 description: A text typography system.
 ---
 
 <link rel="stylesheet" href="/styles/nav/work.css" />
 <link rel="stylesheet" href="/styles/ergata.css" />
-<link rel="stylesheet" href="/styles/themes/paper.css" />
 
 <style>
   @media (max-width: 1259px) {
@@ -58,15 +60,8 @@ description: A text typography system.
   </div>
 </div>
 
-<header
-  style="
-    background: #08c; 
-    height: calc(100vh - 30px); 
-    display: flex;
-"
->
-  <img src="images/ergata/ergata.png" />
-</header>
+{% include accent.html %}
+{% include cover.html %}
 
 <main>
   <figure id="intro" class="crop" data-action="scrollpoint">

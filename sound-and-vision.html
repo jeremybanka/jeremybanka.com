@@ -2,10 +2,11 @@
 layout: book
 title: Sound &amp; Vision
 image: /images/sound-vision/sv-cover.png
+cover: /sound-vision/sv-cover.png
 description: A guide detailing the color system used in Wayfarer.
 ---
 <link rel="stylesheet" href="/styles/nav/work.css" type="text/css" media="all">
-<link id="theme" name="theme" rel="stylesheet" href="/styles/themes/graphite.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme" href="/styles/themes/graphite.css">
 <link rel="stylesheet" href="/styles/ergata.css">
 <link rel="stylesheet" href="/styles/move.css">
 
@@ -20,10 +21,6 @@ description: A guide detailing the color system used in Wayfarer.
         background-color: #ddd;
     }
 
-    #top {
-        background: var(--x0)
-    }
-
     #bottom {
         background: var(--y1)
     }
@@ -34,8 +31,6 @@ description: A guide detailing the color system used in Wayfarer.
         }
     }
 </style>
-
-
 
 <div id="toc-wrap">
     <div id="toc" class="toc">
@@ -53,13 +48,15 @@ description: A guide detailing the color system used in Wayfarer.
     </div>
 </div>
 
-<header style="
+{% include cover.html %}
+
+<!--<header style="
     background: var(--x00); 
     height: calc(100vh - 30px); 
     display: flex;
 ">
     <img src="images/sound-vision/sv-cover.png">
-</header>
+</header>-->
 
 <main>
     <section id="abstract">

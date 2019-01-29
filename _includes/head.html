@@ -38,7 +38,8 @@
 {% if page.accent %}
   :root {
     --z: {{ page.accent }};
-    --
+    --x0:var(--color1{{ page.accent }})
+    --x:var(--color2{{ page.accent }})
   }
 {% endif %}
 </style>

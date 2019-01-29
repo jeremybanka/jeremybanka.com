@@ -208,9 +208,9 @@ soft colors chosen by the the theme. A color tuple:
 -------------------------------------------------------------- */
 $colors: ("blue" #08c #0079b9 "12" "121") ("aqua" #00d2af #00c0a0 "12" "121")
   ("orange" #aa5a32 #9b4b23 "120" "12") ("red" #960019 #a50f28 "12" "120")
-  ("amber" #c90 #b80 "121" "12") ("canary" #d2af00 #deb900 "12" "120")
+  ("amber" #c90 #b80 "12" "121") ("canary" #d2af00 #deb900 "12" "120")
   ("indigo" #4628dc #3214c8 "120" "121") ("dark" black var(--x4) "120" "121")
-  ("violet" #820096 #9600b4 "121" "12");
+  ("violet" #820096 #9600b4 "121" "12") ("crimson" #b22e29 #ee4035 "121" "12");
 @each $tuple in $colors {
   /* LINKED SPECIAL PANELS -----------------------------------
   a > span: "B"

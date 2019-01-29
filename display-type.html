@@ -1,5 +1,5 @@
 ---
-title: Imagery
+title: Display Type
 layout: book
 cover: disp-head.png
 sections: 
@@ -8,25 +8,20 @@ sections:
   - Hans
   - Magescule
   - Neurune
-theme: stone
-accent: dark
+theme: umbral
+accent: orange
 ---
 
 <link rel="stylesheet" href="styles/nav/work.css" type="text/css" media="all" />
 
 <style>
-  html,
-  #bottom,
-  #left {
-    background: black;
-  }
-
-  @media (max-width: 1259px) {
+    @media (max-width: 1259px) {
     nav {
       background: var(--x0);
     }
   }
 </style>
+{% include accent.html %}
 
 {% include cover.html %}
 

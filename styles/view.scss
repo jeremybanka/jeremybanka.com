@@ -40,12 +40,15 @@ Activate .spreads!
   }
   .imagestrip {
     width: 100%;
+    float: left;
+    clear: both;
     img {
       float: left;
+      margin: 0px;
+      padding: 0px;
       margin-left: 10px;
       margin-top: 10px;
-
-      width: calc(var(--rP-I-CI) * (100% - var(--wT-GG)));
+      width: calc((var(--RP-I-CI) - 0) * (100% - var(--WT-G) + 10px));
     }
   }
   column, /* columns & hacks -------------------------------*/

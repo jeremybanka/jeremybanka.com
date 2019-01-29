@@ -1,13 +1,13 @@
 <style cover>
-:root {--x0:var(--color1{{ page.accent }})}
 @media (min-width: 1260px) {
   #top {
     position: absolute;
     width: 380px;
+    top: 0px;
     bottom: 0;
     height: 100%;
     background: var(--x0);
-    z-index: 0;
+    z-index: 1;
   }
   #bottom {
     position: sticky;
@@ -22,12 +22,9 @@
 }
 </style>
 
-<div id="top"></div>
-<div id="bottom"></div>
-
 <header
   style="
-    background: var(--color2{{ page.accent }}); 
+    background: var(--x); 
     height: calc(100vh - 30px); 
     display: flex;
 "

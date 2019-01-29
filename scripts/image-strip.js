@@ -1,22 +1,21 @@
-const W_GRIDGAP = 10;
+const W_GUTTER = 10;
 
 function buildStrip() {
-  const a_Imagestrip = Array.from(
-    document.getElementsByClassName("imagestrip")
-  );
-  a_Imagestrip.forEach(e_Imagestrip => {
-    const a_Image = Array.from(e_Imagestrip.children);
-    const rT_ConstrainedImage = a_Image.reduce(
-      (memo, e_Image) => memo + e_Image.naturalWidth / e_Image.naturalHeight,
+  const A_strips = Array.from(document.getElementsByClassName("imagestrip"));
+  A_strips.forEach(E_strip => {
+    const A_images = Array.from(E_strip.children);
+    const RT_constrainedImage = A_images.reduce(
+      (memo, E_image) => memo + E_image.naturalWidth / E_image.naturalHeight,
       0
     );
 
-    const wT_GridGap = W_GRIDGAP * (a_Image.length + 1);
-    a_Image.forEach(e_Image => {
-      const r_Landscape = e_Image.naturalWidth / e_Image.naturalHeight;
-      const rP_Image_ConstrainedImage = r_Landscape / rT_ConstrainedImage;
-      e_Image.style.setProperty("--rP-I-CI", rP_Image_ConstrainedImage);
-      e_Image.style.setProperty("--wT-GG", wT_GridGap + "px");
+    const WT_gutters = W_GUTTER * (A_images.length + 1);
+    console.log(WT_gutters);
+    A_images.forEach(E_image => {
+      const R_landscape = E_image.naturalWidth / E_image.naturalHeight;
+      const RP_image_constrainedImage = R_landscape / RT_constrainedImage;
+      E_image.style.setProperty("--RP-I-CI", RP_image_constrainedImage);
+      E_image.style.setProperty("--WT-G", WT_gutters + "px");
     });
   });
 }
