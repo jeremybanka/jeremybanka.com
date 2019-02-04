@@ -343,3 +343,10 @@ can be applied one-at-a-time or all at once
 garfield.spread * {
   color: orange;
 }
+
+body > img {
+  /*FOR LOADING MODULE ONLY*/
+  display: block;
+  margin: auto;
+  padding: 40vh 0;
+}
