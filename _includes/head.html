@@ -5,7 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130237523-1"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -35,15 +35,16 @@
 <link rel="stylesheet" href="/styles/button.css" />
 <link rel="stylesheet" href="/styles/zoom.css" />
 <link rel="stylesheet" href="/styles/themes/{{ page.theme }}.css" />
-<style head>
 {% if page.accent %}
+<style>
   :root {
     --z: {{ page.accent }};
     --x0:var(--color1{{ page.accent }})
     --x:var(--color2{{ page.accent }})
   }
-{% endif %}
 </style>
+{% endif %}
+
 
 <script src="/scripts/zoom.js"></script>
 <script src="/scripts/transition.js"></script>
